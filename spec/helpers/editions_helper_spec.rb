@@ -1,11 +1,17 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe EditionsHelper do
-  
-  #Delete this example and add some real ones or delete this file
-  it "should be included in the object returned by #helper" do
-    included_modules = (class << helper; self; end).send :included_modules
-    included_modules.should include(EditionsHelper)
-  end
 
+  before do
+    @edition = mock_model(Edition)
+    @article1 = mock_model(Article, :title => "First impression")
+    @article2 = mock_model(Article, :title => "Second Impression")
+    @edition.stub!(:articles).and_return([@article1, @article2])
+  end
+  
+  it "should separate article titles with comma" do
+    result = helper.articles_column(@edition)
+    result.should be_eql "First impression, Second Impression"
+  end
+  
 end

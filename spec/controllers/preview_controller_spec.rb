@@ -20,7 +20,7 @@ describe PreviewController do
   it "should close an Edition" do
     Edition.should_receive(:find).with("1").and_return(@edition)
     @edition.should_receive(:close!).with(no_args())
-    get :reopen, :id => "1"
+    get :close, :id => "1"
   end
 
   

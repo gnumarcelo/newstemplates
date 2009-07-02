@@ -5305,3 +5305,1010 @@ Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 09:41:50) [GET]
   Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
 Completed in 0.00369 (271 reqs/sec) | Rendering: 0.00033 (9%) | DB: 0.00039 (10%) | 200 OK [http://test.host/preview/reopen/1]
   [4;35;1mSQL (0.000122)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001943)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.002189)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.002495)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001647)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.001720)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000076)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 11:20:26) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00381 (262 reqs/sec) | Rendering: 0.00053 (14%) | DB: 0.01109 (291%) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 11:20:26) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00567 (176 reqs/sec) | Rendering: 0.00056 (9%) | DB: 0.00022 (3%) | 200 OK [http://test.host/articles/source/1]
+  [4;35;1mSQL (0.000117)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 11:20:26) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00230 (435 reqs/sec) | Rendering: 0.00031 (13%) | DB: 0.00024 (10%) | 200 OK [http://test.host/articles/preview/1]
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000086)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:20:26) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+  [4;35;1mSQL (0.000107)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:20:26) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00070 (1432 reqs/sec) | Rendering: 0.00033 (47%) | DB: 0.00058 (83%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;35;1mSQL (0.000096)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 11:20:26) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00376 (265 reqs/sec) | Rendering: 0.00044 (11%) | DB: 0.00020 (5%) | 200 OK [http://test.host/search]
+  [4;35;1mSQL (0.000103)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001723)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001368)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.002043)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001587)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.001758)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000096)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000089)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 11:21:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00379 (263 reqs/sec) | Rendering: 0.00053 (13%) | DB: 0.00958 (252%) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.000123)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 11:21:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00557 (179 reqs/sec) | Rendering: 0.00052 (9%) | DB: 0.00022 (3%) | 200 OK [http://test.host/articles/source/1]
+  [4;35;1mSQL (0.000107)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000074)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 11:21:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00220 (453 reqs/sec) | Rendering: 0.00030 (13%) | DB: 0.00018 (8%) | 200 OK [http://test.host/articles/preview/1]
+  [4;35;1mSQL (0.000095)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000089)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 11:21:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00376 (266 reqs/sec) | Rendering: 0.00043 (11%) | DB: 0.00038 (10%) | 200 OK [http://test.host/search]
+  [4;35;1mSQL (0.000093)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#close (for 0.0.0.0 at 2009-07-02 11:21:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"close", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00362 (276 reqs/sec) | Rendering: 0.00032 (8%) | DB: 0.00019 (5%) | 200 OK [http://test.host/preview/close/1]
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:21:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00049 (2024 reqs/sec) | Rendering: 0.00013 (25%) | DB: 0.00020 (40%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;35;1mSQL (0.000083)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001682)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001876)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.002030)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001608)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.001736)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000082)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000076)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000081)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000069)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 11:22:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00400 (250 reqs/sec) | Rendering: 0.00056 (14%) | DB: 0.00998 (249%) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.000130)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 11:22:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00555 (180 reqs/sec) | Rendering: 0.00053 (9%) | DB: 0.00025 (4%) | 200 OK [http://test.host/articles/source/1]
+  [4;35;1mSQL (0.000102)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 11:22:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00253 (395 reqs/sec) | Rendering: 0.00039 (15%) | DB: 0.00020 (7%) | 200 OK [http://test.host/articles/preview/1]
+  [4;35;1mSQL (0.000132)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000091)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#close (for 0.0.0.0 at 2009-07-02 11:22:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"close", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00363 (275 reqs/sec) | Rendering: 0.00032 (8%) | DB: 0.00041 (11%) | 200 OK [http://test.host/preview/close/1]
+  [4;35;1mSQL (0.000105)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:22:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00050 (2007 reqs/sec) | Rendering: 0.00013 (25%) | DB: 0.00021 (42%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;35;1mSQL (0.000097)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 11:22:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00377 (265 reqs/sec) | Rendering: 0.00044 (11%) | DB: 0.00021 (5%) | 200 OK [http://test.host/search]
+  [4;35;1mSQL (0.000108)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000256)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001646)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.002424)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.002057)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001301)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.001757)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 11:28:53) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00379 (263 reqs/sec) | Rendering: 0.00053 (13%) | DB: 0.01029 (271%) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.000116)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 11:28:53) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00556 (179 reqs/sec) | Rendering: 0.00051 (9%) | DB: 0.00022 (3%) | 200 OK [http://test.host/articles/source/1]
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 11:28:53) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00232 (430 reqs/sec) | Rendering: 0.00033 (14%) | DB: 0.00021 (8%) | 200 OK [http://test.host/articles/preview/1]
+  [4;35;1mSQL (0.000124)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000084)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#close (for 0.0.0.0 at 2009-07-02 11:28:53) [GET]
+  Session ID: 
+  Parameters: {"action"=>"close", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00361 (276 reqs/sec) | Rendering: 0.00033 (9%) | DB: 0.00040 (11%) | 200 OK [http://test.host/preview/close/1]
+  [4;35;1mSQL (0.000115)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:28:53) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00050 (1995 reqs/sec) | Rendering: 0.00013 (25%) | DB: 0.00020 (40%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;35;1mSQL (0.000099)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#results (for 0.0.0.0 at 2009-07-02 11:28:53) [POST]
+  Session ID: 
+  Parameters: {"action"=>"results", "controller"=>"search", "query"=>"linux"}
+Rendering template within layouts/application
+Rendering search/results
+Completed in 0.00375 (266 reqs/sec) | Rendering: 0.00050 (13%) | DB: 0.00020 (5%) | 200 OK [http://test.host/search/results?query=linux]
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 11:28:53) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00063 (1576 reqs/sec) | Rendering: 0.00023 (35%) | DB: 0.00057 (89%) | 200 OK [http://test.host/search]
+  [4;36;1mSQL (0.000094)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001782)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001438)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.002049)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001623)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.001843)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000087)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000082)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000075)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 11:29:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00371 (269 reqs/sec) | Rendering: 0.00052 (14%) | DB: 0.00983 (265%) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.000110)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 11:29:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00566 (176 reqs/sec) | Rendering: 0.00054 (9%) | DB: 0.00022 (3%) | 200 OK [http://test.host/articles/source/1]
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 11:29:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00220 (454 reqs/sec) | Rendering: 0.00030 (13%) | DB: 0.00020 (9%) | 200 OK [http://test.host/articles/preview/1]
+  [4;35;1mSQL (0.000092)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#close (for 0.0.0.0 at 2009-07-02 11:29:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"close", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00370 (270 reqs/sec) | Rendering: 0.00037 (10%) | DB: 0.00036 (9%) | 200 OK [http://test.host/preview/close/1]
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:29:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00050 (2000 reqs/sec) | Rendering: 0.00013 (25%) | DB: 0.00020 (39%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;35;1mSQL (0.000098)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#results (for 0.0.0.0 at 2009-07-02 11:29:49) [POST]
+  Session ID: 
+  Parameters: {"action"=>"results", "controller"=>"search", "query"=>"linux"}
+Rendering template within layouts/application
+Rendering search/results
+Completed in 0.00387 (258 reqs/sec) | Rendering: 0.00052 (13%) | DB: 0.00021 (5%) | 200 OK [http://test.host/search/results?query=linux]
+  [4;35;1mSQL (0.000110)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 11:29:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00063 (1587 reqs/sec) | Rendering: 0.00023 (36%) | DB: 0.00020 (31%) | 200 OK [http://test.host/search]
+  [4;35;1mSQL (0.000088)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.003224)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001743)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.002892)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001634)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.001722)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 11:30:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00372 (268 reqs/sec) | Rendering: 0.00053 (14%) | DB: 0.01228 (329%) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.000106)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 11:30:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00555 (180 reqs/sec) | Rendering: 0.00051 (9%) | DB: 0.00021 (3%) | 200 OK [http://test.host/articles/source/1]
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 11:30:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00227 (439 reqs/sec) | Rendering: 0.00031 (13%) | DB: 0.00020 (8%) | 200 OK [http://test.host/articles/preview/1]
+  [4;35;1mSQL (0.000108)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000098)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#close (for 0.0.0.0 at 2009-07-02 11:30:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"close", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00382 (261 reqs/sec) | Rendering: 0.00033 (8%) | DB: 0.00040 (10%) | 200 OK [http://test.host/preview/close/1]
+  [4;35;1mSQL (0.000103)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:30:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00056 (1795 reqs/sec) | Rendering: 0.00015 (26%) | DB: 0.00019 (34%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;35;1mSQL (0.000122)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#results (for 0.0.0.0 at 2009-07-02 11:30:58) [POST]
+  Session ID: 
+  Parameters: {"action"=>"results", "controller"=>"search", "query"=>"linux"}
+Rendering template within layouts/application
+Rendering search/results
+Completed in 0.00376 (265 reqs/sec) | Rendering: 0.00051 (13%) | DB: 0.00023 (6%) | 200 OK [http://test.host/search/results?query=linux]
+  [4;35;1mSQL (0.000106)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000069)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 11:30:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00068 (1468 reqs/sec) | Rendering: 0.00027 (39%) | DB: 0.00018 (25%) | 200 OK [http://test.host/search]
+  [4;35;1mSQL (0.000097)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000231)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001809)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001735)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.002057)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001368)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.001781)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000085)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000081)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 11:31:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00373 (268 reqs/sec) | Rendering: 0.00053 (14%) | DB: 0.00988 (265%) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 11:31:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00557 (179 reqs/sec) | Rendering: 0.00052 (9%) | DB: 0.00022 (3%) | 200 OK [http://test.host/articles/source/1]
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 11:31:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00223 (449 reqs/sec) | Rendering: 0.00031 (13%) | DB: 0.00021 (9%) | 200 OK [http://test.host/articles/preview/1]
+  [4;35;1mSQL (0.000100)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000074)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#close (for 0.0.0.0 at 2009-07-02 11:31:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"close", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00361 (276 reqs/sec) | Rendering: 0.00033 (9%) | DB: 0.00037 (10%) | 200 OK [http://test.host/preview/close/1]
+  [4;35;1mSQL (0.000113)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 11:31:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00055 (1818 reqs/sec) | Rendering: 0.00013 (24%) | DB: 0.00019 (34%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;35;1mSQL (0.000122)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#results (for 0.0.0.0 at 2009-07-02 11:31:45) [POST]
+  Session ID: 
+  Parameters: {"action"=>"results", "controller"=>"search", "query"=>"linux"}
+Rendering template within layouts/application
+Rendering search/results
+Completed in 0.00377 (265 reqs/sec) | Rendering: 0.00049 (13%) | DB: 0.00023 (6%) | 200 OK [http://test.host/search/results?query=linux]
+  [4;35;1mSQL (0.000103)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 11:31:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00063 (1579 reqs/sec) | Rendering: 0.00023 (35%) | DB: 0.00019 (30%) | 200 OK [http://test.host/search]
+  [4;35;1mSQL (0.000090)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.002060)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001691)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000159)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001985)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001655)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000123)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000071)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000099)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000077)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001934)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001652)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000137)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000119)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001908)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001682)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000077)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000111)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000228)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001921)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001640)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000129)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000130)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000230)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001900)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001681)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000165)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000076)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000077)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000099)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000453)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001927)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001432)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000945)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.332856)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001369)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000163)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000474)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000147)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000076)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000104)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001659)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001587)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001615)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001450)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000143)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000107)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000075)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000133)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001589)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.002789)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000114)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001842)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.001403)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000122)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001606)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.003161)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000111)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+** ultrasphinx: configuration file not found for "test" environment
+** ultrasphinx: please run 'rake ultrasphinx:configure'
+** ultrasphinx: spelling support not available (raspell configuration raised "uninitialized constant Ultrasphinx::Spell::Aspell")
+  [4;35;1mArticle Columns (0.001833)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mEdition Columns (0.002322)[0m   [0;1mSHOW FIELDS FROM `editions`[0m
+  [4;35;1mNewsletter Columns (0.001854)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mList Columns (0.001778)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mAuthor Columns (0.002065)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mBEGIN[0m
+  [4;35;1mNewsletter Create (0.000256)[0m   [0mINSERT INTO `newsletters` (`from_email`, `from_name`, `confirmation_email`, `updated_at`, `title`, `assets`, `template`, `url`, `send_automatically`, `reply_to_email`, `short_name`, `email_subject`, `created_at`) VALUES(NULL, NULL, NULL, '2009-07-02 13:11:47', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-07-02 13:11:47')[0m
+  [4;36;1mEdition Create (0.000171)[0m   [0;1mINSERT INTO `editions` (`updated_at`, `newsletter_id`, `parent_edition_id`, `published_on`, `state`, `created_at`) VALUES('2009-07-02 13:11:47', NULL, NULL, NULL, 'open', '2009-07-02 13:11:47')[0m
+  [4;35;1mNewsletter Load (0.000324)[0m   [0mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 1) [0m
+  [4;36;1mEdition Update (0.000231)[0m   [0;1mUPDATE `editions` SET `newsletter_id` = 1, `updated_at` = '2009-07-02 13:11:47' WHERE `id` = 1[0m
+  [4;35;1mEdition Load (0.000176)[0m   [0mSELECT * FROM `editions` WHERE (`editions`.newsletter_id = 1) [0m
+  [4;36;1mJoin Table Columns (0.001576)[0m   [0;1mSHOW FIELDS FROM `lists_newsletters`[0m
+  [4;35;1mList Load (0.000880)[0m   [0mSELECT * FROM `lists` INNER JOIN `lists_newsletters` ON `lists`.id = `lists_newsletters`.list_id WHERE (`lists_newsletters`.newsletter_id = 1 ) [0m
+  [4;36;1mNewsletter Destroy (0.030014)[0m   [0;1m DELETE FROM `newsletters`
+ WHERE `id` = 1
+[0m
+  [4;35;1mArticle Load (0.000281)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.edition_id = 1) ORDER BY position[0m
+  [4;36;1mEdition Destroy (0.000138)[0m   [0;1m DELETE FROM `editions`
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.033601)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000083)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000081)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Create (0.000231)[0m   [0mINSERT INTO `authors` (`updated_at`, `inactive`, `first_name`, `last_name`, `created_at`) VALUES('2009-07-02 13:11:47', NULL, NULL, NULL, '2009-07-02 13:11:47')[0m
+  [4;36;1mArticle Load (0.000230)[0m   [0;1mSELECT * FROM `articles` WHERE (edition_id) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mArticle Create (0.000146)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `highlight`, `edition_id`, `content`, `author_id`, `position`, `created_at`) VALUES('2009-07-02 13:11:47', NULL, NULL, NULL, NULL, NULL, 1, '2009-07-02 13:11:47')[0m
+  [4;36;1mAuthor Load (0.000196)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mArticle Update (0.000199)[0m   [0mUPDATE `articles` SET `author_id` = 1, `updated_at` = '2009-07-02 13:11:47' WHERE `id` = 1[0m
+  [4;36;1mArticle Load (0.000170)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.author_id = 1) [0m
+  [4;35;1mAuthor Destroy (0.000136)[0m   [0m DELETE FROM `authors`
+ WHERE `id` = 1
+[0m
+  [4;36;1mArticle Update (0.000127)[0m   [0;1mUPDATE `articles` SET position = (position - 1) WHERE (edition_id AND position > 1) [0m
+  [4;35;1mArticle Update (0.000149)[0m   [0mUPDATE `articles` SET `position` = NULL, `updated_at` = '2009-07-02 13:11:47' WHERE `id` = 1[0m
+  [4;36;1mArticle Destroy (0.000118)[0m   [0;1m DELETE FROM `articles`
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000732)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000089)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000092)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000087)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000076)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000206)[0m   [0mSELECT `name` FROM `lists` WHERE (`lists`.name = 'my friends list') [0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mSELECT `name` FROM `lists` WHERE (`lists`.name IS NULL) [0m
+  [4;35;1mSQL (0.000125)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000100)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000085)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000083)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000090)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mEdition Create (0.000202)[0m   [0mINSERT INTO `editions` (`updated_at`, `newsletter_id`, `parent_edition_id`, `published_on`, `state`, `created_at`) VALUES('2009-07-02 13:11:47', NULL, NULL, NULL, 'open', '2009-07-02 13:11:47')[0m
+  [4;36;1mArticle Load (0.000218)[0m   [0;1mSELECT * FROM `articles` WHERE (edition_id) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mArticle Create (0.000133)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `highlight`, `edition_id`, `content`, `author_id`, `position`, `created_at`) VALUES('2009-07-02 13:11:47', NULL, NULL, NULL, NULL, NULL, 1, '2009-07-02 13:11:47')[0m
+  [4;36;1mArticle Update (0.000210)[0m   [0;1mUPDATE `articles` SET `edition_id` = 2, `updated_at` = '2009-07-02 13:11:47' WHERE `id` = 2[0m
+  [4;35;1mArticle Load (0.000235)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.edition_id = 2) ORDER BY position[0m
+  [4;36;1mEdition Destroy (0.000160)[0m   [0;1m DELETE FROM `editions`
+ WHERE `id` = 2
+[0m
+  [4;35;1mArticle Update (0.000145)[0m   [0mUPDATE `articles` SET position = (position - 1) WHERE (edition_id AND position > 1) [0m
+  [4;36;1mArticle Update (0.000160)[0m   [0;1mUPDATE `articles` SET `position` = NULL, `updated_at` = '2009-07-02 13:11:47' WHERE `id` = 2[0m
+  [4;35;1mArticle Destroy (0.000121)[0m   [0m DELETE FROM `articles`
+ WHERE `id` = 2
+[0m
+  [4;36;1mSQL (0.001020)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000078)[0m   [0mBEGIN[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mEdition Create (0.000167)[0m   [0;1mINSERT INTO `editions` (`updated_at`, `newsletter_id`, `parent_edition_id`, `published_on`, `state`, `created_at`) VALUES('2009-07-02 13:11:47', NULL, NULL, NULL, 'open', '2009-07-02 13:11:47')[0m
+  [4;35;1mNewsletter Create (0.000141)[0m   [0mINSERT INTO `newsletters` (`from_email`, `from_name`, `confirmation_email`, `updated_at`, `title`, `assets`, `template`, `url`, `send_automatically`, `reply_to_email`, `short_name`, `email_subject`, `created_at`) VALUES(NULL, NULL, NULL, '2009-07-02 13:11:47', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-07-02 13:11:47')[0m
+  [4;36;1mEdition Update (0.000186)[0m   [0;1mUPDATE `editions` SET `newsletter_id` = 2, `updated_at` = '2009-07-02 13:11:47' WHERE `id` = 3[0m
+  [4;35;1mEdition Load (0.000174)[0m   [0mSELECT * FROM `editions` WHERE (`editions`.newsletter_id = 2) [0m
+  [4;36;1mEdition Update (0.000151)[0m   [0;1mUPDATE `editions` SET `newsletter_id` = NULL, `updated_at` = '2009-07-02 13:11:47' WHERE `id` = 3[0m
+  [4;35;1mArticle Load (0.000181)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.edition_id = 3) ORDER BY position[0m
+  [4;36;1mEdition Destroy (0.000123)[0m   [0;1m DELETE FROM `editions`
+ WHERE `id` = 3
+[0m
+  [4;35;1mJoin Table Columns (0.001424)[0m   [0mSHOW FIELDS FROM `lists_newsletters`[0m
+  [4;36;1mList Load (0.000677)[0m   [0;1mSELECT * FROM `lists` INNER JOIN `lists_newsletters` ON `lists`.id = `lists_newsletters`.list_id WHERE (`lists_newsletters`.newsletter_id = 2 ) [0m
+  [4;35;1mNewsletter Destroy (0.000141)[0m   [0m DELETE FROM `newsletters`
+ WHERE `id` = 2
+[0m
+  [4;36;1mSQL (0.000681)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000119)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000125)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000067)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-07-02 14:11:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 0.00386 (258 reqs/sec) | Rendering: 0.00056 (14%) | DB: 0.09238 (2391%) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.000115)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+
+
+Processing PreviewController#close (for 0.0.0.0 at 2009-07-02 14:11:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"close", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00354 (282 reqs/sec) | Rendering: 0.00031 (8%) | DB: 0.00022 (6%) | 200 OK [http://test.host/preview/close/1]
+  [4;36;1mSQL (0.000106)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+
+
+Processing PreviewController#reopen (for 0.0.0.0 at 2009-07-02 14:11:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"reopen", "id"=>"1", "controller"=>"preview"}
+Completed in 0.00050 (1980 reqs/sec) | Rendering: 0.00012 (24%) | DB: 0.00021 (42%) | 200 OK [http://test.host/preview/reopen/1]
+  [4;36;1mSQL (0.000097)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+
+
+Processing SearchController#results (for 0.0.0.0 at 2009-07-02 14:11:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"results", "controller"=>"search", "query"=>"linux"}
+Rendering template within layouts/application
+Rendering search/results
+Completed in 0.00590 (169 reqs/sec) | Rendering: 0.00116 (19%) | DB: 0.00021 (3%) | 200 OK [http://test.host/search/results?query=linux]
+  [4;36;1mSQL (0.000180)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+
+
+Processing SearchController#index (for 0.0.0.0 at 2009-07-02 14:11:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 0.00162 (616 reqs/sec) | Rendering: 0.00102 (62%) | DB: 0.00030 (18%) | 200 OK [http://test.host/search]
+  [4;36;1mSQL (0.000119)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000126)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+
+
+Processing ArticlesController#source (for 0.0.0.0 at 2009-07-02 14:11:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"source", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/source
+Completed in 0.00552 (181 reqs/sec) | Rendering: 0.00054 (9%) | DB: 0.00052 (9%) | 200 OK [http://test.host/articles/source/1]
+  [4;36;1mSQL (0.000117)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+
+
+Processing ArticlesController#preview (for 0.0.0.0 at 2009-07-02 14:11:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"preview", "id"=>"1", "controller"=>"articles"}
+Rendering template within layouts/application
+Rendering articles/preview
+Completed in 0.00218 (458 reqs/sec) | Rendering: 0.00030 (13%) | DB: 0.00021 (9%) | 200 OK [http://test.host/articles/preview/1]
+  [4;36;1mSQL (0.000099)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mROLLBACK[0m
