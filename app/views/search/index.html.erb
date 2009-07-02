@@ -1,0 +1,12 @@
+<%= form_tag '/search/results' %>
+    <%= text_field_tag 'query' %>
+    <%= submit_tag 'Search'%>
+</form>
+<br /><br />
+<h4>Article Search Tips</h4>
+<p>The query string supports boolean operation, parentheses, phrases, and field-specific search. Query words are stemmed and joined by an implicit AND by default.</p>
+<ul>
+    <li>Search is not case sensitive. '<a href="/search/results?query=ryanair">ryanair</a>' and '<a href="/search/results?query=ryanair">Ryanair</a>' will return the same results.</li>
+    <li>You can limit search to article title, e.g. <a href="/search/results?query=title:ryanair">title:ryanair</a>.
+    <li>Valid boolean operators are AND, OR, and NOT.</li>
+</li>

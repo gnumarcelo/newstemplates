@@ -1,0 +1,29 @@
+@page { 
+  size: A4; 
+  margin: 30pt 20pt 20pt 10pt; 
+}
+
+body { 
+  padding-top: 0px; 
+}
+
+td.sidebar {
+  text-align: left;
+}
+
+.no-pdf {
+  display: none;
+}
+
+.market-data {
+  page-break-inside: avoid
+}
+
+li {
+  page-break-inside: avoid
+}
+
+
+td.header img {
+  vertical-align: bottom;
+}

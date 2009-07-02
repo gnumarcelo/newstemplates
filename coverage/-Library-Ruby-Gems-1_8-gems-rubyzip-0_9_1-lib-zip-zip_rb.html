@@ -1,0 +1,2457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/rubyzip-0.9.1/lib/zip/zip.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(255, 255, 240);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(255, 255, 240);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Fri Jun 12 17:28:01 +0100 2009 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-rubyzip-0_9_1-lib-zip-zip_rb.html'>/Library/Ruby/Gems/1.8/gems/rubyzip-0.9.1/lib/zip/zip.rb</a>
+        </td>
+      <td class='lines_total'><tt>1847</tt>
+        </td>
+      <td class='lines_code'><tt>1396</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>39.8%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='40'/>
+                  <td class='uncovered' width='60'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>23.9%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='24'/>
+                  <td class='uncovered' width='76'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="marked0"><a name="line1"></a>   1 require 'delegate'
+</span><span class="marked1"><a name="line2"></a>   2 require 'singleton'
+</span><span class="marked0"><a name="line3"></a>   3 require 'tempfile'
+</span><span class="marked1"><a name="line4"></a>   4 require 'ftools'
+</span><span class="marked0"><a name="line5"></a>   5 require 'stringio'
+</span><span class="marked1"><a name="line6"></a>   6 require 'zlib'
+</span><span class="marked0"><a name="line7"></a>   7 require 'zip/stdrubyext'
+</span><span class="marked1"><a name="line8"></a>   8 require 'zip/ioextras'
+</span><span class="inferred0"><a name="line9"></a>   9 
+</span><span class="marked1"><a name="line10"></a>  10 if Tempfile.superclass == SimpleDelegator
+</span><span class="inferred0"><a name="line11"></a>  11   require 'zip/tempfile_bugfixed'
+</span><span class="uncovered1"><a name="line12"></a>  12   Tempfile = BugFix::Tempfile
+</span><span class="uncovered0"><a name="line13"></a>  13 end
+</span><span class="inferred1"><a name="line14"></a>  14 
+</span><span class="marked0"><a name="line15"></a>  15 module Zlib  #:nodoc:all
+</span><span class="marked1"><a name="line16"></a>  16   if ! const_defined? :MAX_WBITS
+</span><span class="uncovered0"><a name="line17"></a>  17     MAX_WBITS = Zlib::Deflate.MAX_WBITS
+</span><span class="uncovered1"><a name="line18"></a>  18   end
+</span><span class="uncovered0"><a name="line19"></a>  19 end
+</span><span class="inferred1"><a name="line20"></a>  20 
+</span><span class="marked0"><a name="line21"></a>  21 module Zip
+</span><span class="inferred1"><a name="line22"></a>  22 
+</span><span class="marked0"><a name="line23"></a>  23   VERSION = '0.9.1'
+</span><span class="inferred1"><a name="line24"></a>  24 
+</span><span class="marked0"><a name="line25"></a>  25   RUBY_MINOR_VERSION = RUBY_VERSION.split(&quot;.&quot;)[1].to_i
+</span><span class="inferred1"><a name="line26"></a>  26 
+</span><span class="marked0"><a name="line27"></a>  27   RUNNING_ON_WINDOWS = /mswin32|cygwin|mingw|bccwin/ =~ RUBY_PLATFORM
+</span><span class="inferred1"><a name="line28"></a>  28 
+</span><span class="inferred0"><a name="line29"></a>  29   # Ruby 1.7.x compatibility
+</span><span class="inferred1"><a name="line30"></a>  30   # In ruby 1.6.x and 1.8.0 reading from an empty stream returns 
+</span><span class="inferred0"><a name="line31"></a>  31   # an empty string the first time and then nil.
+</span><span class="inferred1"><a name="line32"></a>  32   #  not so in 1.7.x
+</span><span class="marked0"><a name="line33"></a>  33   EMPTY_FILE_RETURNS_EMPTY_STRING_FIRST = RUBY_MINOR_VERSION != 7
+</span><span class="inferred1"><a name="line34"></a>  34 
+</span><span class="inferred0"><a name="line35"></a>  35   # ZipInputStream is the basic class for reading zip entries in a 
+</span><span class="inferred1"><a name="line36"></a>  36   # zip file. It is possible to create a ZipInputStream object directly, 
+</span><span class="inferred0"><a name="line37"></a>  37   # passing the zip file name to the constructor, but more often than not 
+</span><span class="inferred1"><a name="line38"></a>  38   # the ZipInputStream will be obtained from a ZipFile (perhaps using the 
+</span><span class="inferred0"><a name="line39"></a>  39   # ZipFileSystem interface) object for a particular entry in the zip 
+</span><span class="inferred1"><a name="line40"></a>  40   # archive.
+</span><span class="inferred0"><a name="line41"></a>  41   #
+</span><span class="inferred1"><a name="line42"></a>  42   # A ZipInputStream inherits IOExtras::AbstractInputStream in order
+</span><span class="inferred0"><a name="line43"></a>  43   # to provide an IO-like interface for reading from a single zip 
+</span><span class="inferred1"><a name="line44"></a>  44   # entry. Beyond methods for mimicking an IO-object it contains 
+</span><span class="inferred0"><a name="line45"></a>  45   # the method get_next_entry for iterating through the entries of 
+</span><span class="inferred1"><a name="line46"></a>  46   # an archive. get_next_entry returns a ZipEntry object that describes
+</span><span class="inferred0"><a name="line47"></a>  47   # the zip entry the ZipInputStream is currently reading from.
+</span><span class="inferred1"><a name="line48"></a>  48   #
+</span><span class="inferred0"><a name="line49"></a>  49   # Example that creates a zip archive with ZipOutputStream and reads it 
+</span><span class="inferred1"><a name="line50"></a>  50   # back again with a ZipInputStream.
+</span><span class="inferred0"><a name="line51"></a>  51   #
+</span><span class="inferred1"><a name="line52"></a>  52   #   require 'zip/zip'
+</span><span class="inferred0"><a name="line53"></a>  53   #   
+</span><span class="inferred1"><a name="line54"></a>  54   #   Zip::ZipOutputStream::open(&quot;my.zip&quot;) { 
+</span><span class="inferred0"><a name="line55"></a>  55   #     |io|
+</span><span class="inferred1"><a name="line56"></a>  56   #   
+</span><span class="inferred0"><a name="line57"></a>  57   #     io.put_next_entry(&quot;first_entry.txt&quot;)
+</span><span class="inferred1"><a name="line58"></a>  58   #     io.write &quot;Hello world!&quot;
+</span><span class="inferred0"><a name="line59"></a>  59   #   
+</span><span class="inferred1"><a name="line60"></a>  60   #     io.put_next_entry(&quot;adir/first_entry.txt&quot;)
+</span><span class="inferred0"><a name="line61"></a>  61   #     io.write &quot;Hello again!&quot;
+</span><span class="inferred1"><a name="line62"></a>  62   #   }
+</span><span class="inferred0"><a name="line63"></a>  63   #
+</span><span class="inferred1"><a name="line64"></a>  64   #   
+</span><span class="inferred0"><a name="line65"></a>  65   #   Zip::ZipInputStream::open(&quot;my.zip&quot;) {
+</span><span class="inferred1"><a name="line66"></a>  66   #     |io|
+</span><span class="inferred0"><a name="line67"></a>  67   #   
+</span><span class="inferred1"><a name="line68"></a>  68   #     while (entry = io.get_next_entry)
+</span><span class="inferred0"><a name="line69"></a>  69   #       puts &quot;Contents of #{entry.name}: '#{io.read}'&quot;
+</span><span class="inferred1"><a name="line70"></a>  70   #     end
+</span><span class="inferred0"><a name="line71"></a>  71   #   }
+</span><span class="inferred1"><a name="line72"></a>  72   #
+</span><span class="inferred0"><a name="line73"></a>  73   # java.util.zip.ZipInputStream is the original inspiration for this 
+</span><span class="inferred1"><a name="line74"></a>  74   # class.
+</span><span class="inferred0"><a name="line75"></a>  75 
+</span><span class="marked1"><a name="line76"></a>  76   class ZipInputStream 
+</span><span class="marked0"><a name="line77"></a>  77     include IOExtras::AbstractInputStream
+</span><span class="inferred1"><a name="line78"></a>  78 
+</span><span class="inferred0"><a name="line79"></a>  79     # Opens the indicated zip file. An exception is thrown
+</span><span class="inferred1"><a name="line80"></a>  80     # if the specified offset in the specified filename is
+</span><span class="inferred0"><a name="line81"></a>  81     # not a local zip entry header.
+</span><span class="marked1"><a name="line82"></a>  82     def initialize(filename, offset = 0)
+</span><span class="uncovered0"><a name="line83"></a>  83       super()
+</span><span class="uncovered1"><a name="line84"></a>  84       @archiveIO = File.open(filename, &quot;rb&quot;)
+</span><span class="uncovered0"><a name="line85"></a>  85       @archiveIO.seek(offset, IO::SEEK_SET)
+</span><span class="uncovered1"><a name="line86"></a>  86       @decompressor = NullDecompressor.instance
+</span><span class="uncovered0"><a name="line87"></a>  87       @currentEntry = nil
+</span><span class="uncovered1"><a name="line88"></a>  88     end
+</span><span class="inferred0"><a name="line89"></a>  89     
+</span><span class="marked1"><a name="line90"></a>  90     def close
+</span><span class="uncovered0"><a name="line91"></a>  91       @archiveIO.close
+</span><span class="uncovered1"><a name="line92"></a>  92     end
+</span><span class="inferred0"><a name="line93"></a>  93 
+</span><span class="inferred1"><a name="line94"></a>  94     # Same as #initialize but if a block is passed the opened
+</span><span class="inferred0"><a name="line95"></a>  95     # stream is passed to the block and closed when the block
+</span><span class="inferred1"><a name="line96"></a>  96     # returns.    
+</span><span class="marked0"><a name="line97"></a>  97     def ZipInputStream.open(filename)
+</span><span class="uncovered1"><a name="line98"></a>  98       return new(filename) unless block_given?
+</span><span class="uncovered0"><a name="line99"></a>  99       
+</span><span class="uncovered1"><a name="line100"></a> 100       zio = new(filename)
+</span><span class="uncovered0"><a name="line101"></a> 101       yield zio
+</span><span class="uncovered1"><a name="line102"></a> 102     ensure
+</span><span class="uncovered0"><a name="line103"></a> 103       zio.close if zio
+</span><span class="uncovered1"><a name="line104"></a> 104     end
+</span><span class="inferred0"><a name="line105"></a> 105 
+</span><span class="inferred1"><a name="line106"></a> 106     # Returns a ZipEntry object. It is necessary to call this
+</span><span class="inferred0"><a name="line107"></a> 107     # method on a newly created ZipInputStream before reading from 
+</span><span class="inferred1"><a name="line108"></a> 108     # the first entry in the archive. Returns nil when there are 
+</span><span class="inferred0"><a name="line109"></a> 109     # no more entries.
+</span><span class="inferred1"><a name="line110"></a> 110 
+</span><span class="marked0"><a name="line111"></a> 111     def get_next_entry
+</span><span class="uncovered1"><a name="line112"></a> 112       @archiveIO.seek(@currentEntry.next_header_offset, 
+</span><span class="uncovered0"><a name="line113"></a> 113                       IO::SEEK_SET) if @currentEntry
+</span><span class="uncovered1"><a name="line114"></a> 114       open_entry
+</span><span class="uncovered0"><a name="line115"></a> 115     end
+</span><span class="inferred1"><a name="line116"></a> 116 
+</span><span class="inferred0"><a name="line117"></a> 117     # Rewinds the stream to the beginning of the current entry
+</span><span class="marked1"><a name="line118"></a> 118     def rewind
+</span><span class="uncovered0"><a name="line119"></a> 119       return if @currentEntry.nil?
+</span><span class="uncovered1"><a name="line120"></a> 120       @lineno = 0
+</span><span class="uncovered0"><a name="line121"></a> 121       @archiveIO.seek(@currentEntry.localHeaderOffset, 
+</span><span class="uncovered1"><a name="line122"></a> 122 		      IO::SEEK_SET)
+</span><span class="uncovered0"><a name="line123"></a> 123       open_entry
+</span><span class="uncovered1"><a name="line124"></a> 124     end
+</span><span class="inferred0"><a name="line125"></a> 125 
+</span><span class="inferred1"><a name="line126"></a> 126     # Modeled after IO.sysread
+</span><span class="marked0"><a name="line127"></a> 127     def sysread(numberOfBytes = nil, buf = nil)
+</span><span class="uncovered1"><a name="line128"></a> 128       @decompressor.sysread(numberOfBytes, buf)
+</span><span class="uncovered0"><a name="line129"></a> 129     end
+</span><span class="inferred1"><a name="line130"></a> 130 
+</span><span class="marked0"><a name="line131"></a> 131     def eof
+</span><span class="uncovered1"><a name="line132"></a> 132       @outputBuffer.empty? &amp;&amp; @decompressor.eof
+</span><span class="uncovered0"><a name="line133"></a> 133     end
+</span><span class="marked1"><a name="line134"></a> 134     alias :eof? :eof
+</span><span class="inferred0"><a name="line135"></a> 135 
+</span><span class="marked1"><a name="line136"></a> 136     protected
+</span><span class="inferred0"><a name="line137"></a> 137 
+</span><span class="marked1"><a name="line138"></a> 138     def open_entry
+</span><span class="uncovered0"><a name="line139"></a> 139       @currentEntry = ZipEntry.read_local_entry(@archiveIO)
+</span><span class="uncovered1"><a name="line140"></a> 140       if (@currentEntry == nil) 
+</span><span class="uncovered0"><a name="line141"></a> 141 	@decompressor = NullDecompressor.instance
+</span><span class="uncovered1"><a name="line142"></a> 142       elsif @currentEntry.compression_method == ZipEntry::STORED
+</span><span class="uncovered0"><a name="line143"></a> 143 	@decompressor = PassThruDecompressor.new(@archiveIO, 
+</span><span class="uncovered1"><a name="line144"></a> 144 						 @currentEntry.size)
+</span><span class="uncovered0"><a name="line145"></a> 145       elsif @currentEntry.compression_method == ZipEntry::DEFLATED
+</span><span class="uncovered1"><a name="line146"></a> 146 	@decompressor = Inflater.new(@archiveIO)
+</span><span class="uncovered0"><a name="line147"></a> 147       else
+</span><span class="uncovered1"><a name="line148"></a> 148 	raise ZipCompressionMethodError,
+</span><span class="uncovered0"><a name="line149"></a> 149 	  &quot;Unsupported compression method #{@currentEntry.compression_method}&quot;
+</span><span class="uncovered1"><a name="line150"></a> 150       end
+</span><span class="uncovered0"><a name="line151"></a> 151       flush
+</span><span class="uncovered1"><a name="line152"></a> 152       return @currentEntry
+</span><span class="uncovered0"><a name="line153"></a> 153     end
+</span><span class="inferred1"><a name="line154"></a> 154 
+</span><span class="marked0"><a name="line155"></a> 155     def produce_input
+</span><span class="uncovered1"><a name="line156"></a> 156       @decompressor.produce_input
+</span><span class="uncovered0"><a name="line157"></a> 157     end
+</span><span class="inferred1"><a name="line158"></a> 158 
+</span><span class="marked0"><a name="line159"></a> 159     def input_finished?
+</span><span class="uncovered1"><a name="line160"></a> 160       @decompressor.input_finished?
+</span><span class="uncovered0"><a name="line161"></a> 161     end
+</span><span class="uncovered1"><a name="line162"></a> 162   end
+</span><span class="inferred0"><a name="line163"></a> 163   
+</span><span class="inferred1"><a name="line164"></a> 164   
+</span><span class="inferred0"><a name="line165"></a> 165   
+</span><span class="marked1"><a name="line166"></a> 166   class Decompressor  #:nodoc:all
+</span><span class="marked0"><a name="line167"></a> 167     CHUNK_SIZE=32768
+</span><span class="marked1"><a name="line168"></a> 168     def initialize(inputStream)
+</span><span class="uncovered0"><a name="line169"></a> 169       super()
+</span><span class="uncovered1"><a name="line170"></a> 170       @inputStream=inputStream
+</span><span class="uncovered0"><a name="line171"></a> 171     end
+</span><span class="uncovered1"><a name="line172"></a> 172   end
+</span><span class="inferred0"><a name="line173"></a> 173   
+</span><span class="marked1"><a name="line174"></a> 174   class Inflater &lt; Decompressor  #:nodoc:all
+</span><span class="marked0"><a name="line175"></a> 175     def initialize(inputStream)
+</span><span class="uncovered1"><a name="line176"></a> 176       super
+</span><span class="uncovered0"><a name="line177"></a> 177       @zlibInflater = Zlib::Inflate.new(-Zlib::MAX_WBITS)
+</span><span class="uncovered1"><a name="line178"></a> 178       @outputBuffer=&quot;&quot;
+</span><span class="uncovered0"><a name="line179"></a> 179       @hasReturnedEmptyString = ! EMPTY_FILE_RETURNS_EMPTY_STRING_FIRST
+</span><span class="uncovered1"><a name="line180"></a> 180     end
+</span><span class="inferred0"><a name="line181"></a> 181     
+</span><span class="marked1"><a name="line182"></a> 182     def sysread(numberOfBytes = nil, buf = nil)
+</span><span class="uncovered0"><a name="line183"></a> 183       readEverything = (numberOfBytes == nil)
+</span><span class="uncovered1"><a name="line184"></a> 184       while (readEverything || @outputBuffer.length &lt; numberOfBytes)
+</span><span class="uncovered0"><a name="line185"></a> 185 	break if internal_input_finished?
+</span><span class="uncovered1"><a name="line186"></a> 186 	@outputBuffer &lt;&lt; internal_produce_input(buf)
+</span><span class="uncovered0"><a name="line187"></a> 187       end
+</span><span class="uncovered1"><a name="line188"></a> 188       return value_when_finished if @outputBuffer.length==0 &amp;&amp; input_finished?
+</span><span class="uncovered0"><a name="line189"></a> 189       endIndex= numberOfBytes==nil ? @outputBuffer.length : numberOfBytes
+</span><span class="uncovered1"><a name="line190"></a> 190       return @outputBuffer.slice!(0...endIndex)
+</span><span class="uncovered0"><a name="line191"></a> 191     end
+</span><span class="inferred1"><a name="line192"></a> 192     
+</span><span class="marked0"><a name="line193"></a> 193     def produce_input
+</span><span class="uncovered1"><a name="line194"></a> 194       if (@outputBuffer.empty?)
+</span><span class="uncovered0"><a name="line195"></a> 195 	return internal_produce_input
+</span><span class="uncovered1"><a name="line196"></a> 196       else
+</span><span class="uncovered0"><a name="line197"></a> 197 	return @outputBuffer.slice!(0...(@outputBuffer.length))
+</span><span class="uncovered1"><a name="line198"></a> 198       end
+</span><span class="uncovered0"><a name="line199"></a> 199     end
+</span><span class="inferred1"><a name="line200"></a> 200 
+</span><span class="inferred0"><a name="line201"></a> 201     # to be used with produce_input, not read (as read may still have more data cached)
+</span><span class="inferred1"><a name="line202"></a> 202     # is data cached anywhere other than @outputBuffer?  the comment above may be wrong
+</span><span class="marked0"><a name="line203"></a> 203     def input_finished?
+</span><span class="uncovered1"><a name="line204"></a> 204       @outputBuffer.empty? &amp;&amp; internal_input_finished?
+</span><span class="uncovered0"><a name="line205"></a> 205     end
+</span><span class="marked1"><a name="line206"></a> 206     alias :eof :input_finished?
+</span><span class="marked0"><a name="line207"></a> 207     alias :eof? :input_finished?
+</span><span class="inferred1"><a name="line208"></a> 208 
+</span><span class="marked0"><a name="line209"></a> 209     private
+</span><span class="inferred1"><a name="line210"></a> 210 
+</span><span class="marked0"><a name="line211"></a> 211     def internal_produce_input(buf = nil)
+</span><span class="uncovered1"><a name="line212"></a> 212       retried = 0
+</span><span class="uncovered0"><a name="line213"></a> 213       begin
+</span><span class="uncovered1"><a name="line214"></a> 214         @zlibInflater.inflate(@inputStream.read(Decompressor::CHUNK_SIZE, buf))
+</span><span class="uncovered0"><a name="line215"></a> 215       rescue Zlib::BufError
+</span><span class="uncovered1"><a name="line216"></a> 216         raise if (retried &gt;= 5) # how many times should we retry?
+</span><span class="uncovered0"><a name="line217"></a> 217         retried += 1
+</span><span class="uncovered1"><a name="line218"></a> 218         retry
+</span><span class="uncovered0"><a name="line219"></a> 219       end
+</span><span class="uncovered1"><a name="line220"></a> 220     end
+</span><span class="inferred0"><a name="line221"></a> 221 
+</span><span class="marked1"><a name="line222"></a> 222     def internal_input_finished?
+</span><span class="uncovered0"><a name="line223"></a> 223       @zlibInflater.finished?
+</span><span class="uncovered1"><a name="line224"></a> 224     end
+</span><span class="inferred0"><a name="line225"></a> 225 
+</span><span class="inferred1"><a name="line226"></a> 226     # TODO: Specialize to handle different behaviour in ruby &gt; 1.7.0 ?
+</span><span class="marked0"><a name="line227"></a> 227     def value_when_finished   # mimic behaviour of ruby File object.
+</span><span class="inferred1"><a name="line228"></a> 228       return nil if @hasReturnedEmptyString
+</span><span class="uncovered0"><a name="line229"></a> 229       @hasReturnedEmptyString=true
+</span><span class="uncovered1"><a name="line230"></a> 230       return &quot;&quot;
+</span><span class="uncovered0"><a name="line231"></a> 231     end
+</span><span class="uncovered1"><a name="line232"></a> 232   end
+</span><span class="inferred0"><a name="line233"></a> 233   
+</span><span class="marked1"><a name="line234"></a> 234   class PassThruDecompressor &lt; Decompressor  #:nodoc:all
+</span><span class="marked0"><a name="line235"></a> 235     def initialize(inputStream, charsToRead)
+</span><span class="uncovered1"><a name="line236"></a> 236       super inputStream
+</span><span class="uncovered0"><a name="line237"></a> 237       @charsToRead = charsToRead
+</span><span class="uncovered1"><a name="line238"></a> 238       @readSoFar = 0
+</span><span class="uncovered0"><a name="line239"></a> 239       @hasReturnedEmptyString = ! EMPTY_FILE_RETURNS_EMPTY_STRING_FIRST
+</span><span class="uncovered1"><a name="line240"></a> 240     end
+</span><span class="inferred0"><a name="line241"></a> 241     
+</span><span class="inferred1"><a name="line242"></a> 242     # TODO: Specialize to handle different behaviour in ruby &gt; 1.7.0 ?
+</span><span class="marked0"><a name="line243"></a> 243     def sysread(numberOfBytes = nil, buf = nil)
+</span><span class="uncovered1"><a name="line244"></a> 244       if input_finished?
+</span><span class="uncovered0"><a name="line245"></a> 245 	hasReturnedEmptyStringVal=@hasReturnedEmptyString
+</span><span class="uncovered1"><a name="line246"></a> 246 	@hasReturnedEmptyString=true
+</span><span class="uncovered0"><a name="line247"></a> 247 	return &quot;&quot; unless hasReturnedEmptyStringVal
+</span><span class="uncovered1"><a name="line248"></a> 248 	return nil
+</span><span class="uncovered0"><a name="line249"></a> 249       end
+</span><span class="uncovered1"><a name="line250"></a> 250       
+</span><span class="uncovered0"><a name="line251"></a> 251       if (numberOfBytes == nil || @readSoFar+numberOfBytes &gt; @charsToRead)
+</span><span class="uncovered1"><a name="line252"></a> 252 	numberOfBytes = @charsToRead-@readSoFar
+</span><span class="uncovered0"><a name="line253"></a> 253       end
+</span><span class="uncovered1"><a name="line254"></a> 254       @readSoFar += numberOfBytes
+</span><span class="uncovered0"><a name="line255"></a> 255       @inputStream.read(numberOfBytes, buf)
+</span><span class="uncovered1"><a name="line256"></a> 256     end
+</span><span class="inferred0"><a name="line257"></a> 257     
+</span><span class="marked1"><a name="line258"></a> 258     def produce_input
+</span><span class="uncovered0"><a name="line259"></a> 259       sysread(Decompressor::CHUNK_SIZE)
+</span><span class="uncovered1"><a name="line260"></a> 260     end
+</span><span class="inferred0"><a name="line261"></a> 261     
+</span><span class="marked1"><a name="line262"></a> 262     def input_finished?
+</span><span class="uncovered0"><a name="line263"></a> 263       (@readSoFar &gt;= @charsToRead)
+</span><span class="uncovered1"><a name="line264"></a> 264     end
+</span><span class="marked0"><a name="line265"></a> 265     alias :eof :input_finished?
+</span><span class="marked1"><a name="line266"></a> 266     alias :eof? :input_finished?
+</span><span class="inferred0"><a name="line267"></a> 267   end
+</span><span class="inferred1"><a name="line268"></a> 268   
+</span><span class="marked0"><a name="line269"></a> 269   class NullDecompressor  #:nodoc:all
+</span><span class="marked1"><a name="line270"></a> 270     include Singleton
+</span><span class="marked0"><a name="line271"></a> 271     def sysread(numberOfBytes = nil, buf = nil)
+</span><span class="uncovered1"><a name="line272"></a> 272       nil
+</span><span class="uncovered0"><a name="line273"></a> 273     end
+</span><span class="inferred1"><a name="line274"></a> 274     
+</span><span class="marked0"><a name="line275"></a> 275     def produce_input
+</span><span class="uncovered1"><a name="line276"></a> 276       nil
+</span><span class="uncovered0"><a name="line277"></a> 277     end
+</span><span class="inferred1"><a name="line278"></a> 278     
+</span><span class="marked0"><a name="line279"></a> 279     def input_finished?
+</span><span class="uncovered1"><a name="line280"></a> 280       true
+</span><span class="uncovered0"><a name="line281"></a> 281     end
+</span><span class="inferred1"><a name="line282"></a> 282 
+</span><span class="marked0"><a name="line283"></a> 283     def eof
+</span><span class="uncovered1"><a name="line284"></a> 284       true
+</span><span class="uncovered0"><a name="line285"></a> 285     end
+</span><span class="marked1"><a name="line286"></a> 286     alias :eof? :eof
+</span><span class="inferred0"><a name="line287"></a> 287   end
+</span><span class="inferred1"><a name="line288"></a> 288   
+</span><span class="marked0"><a name="line289"></a> 289   class NullInputStream &lt; NullDecompressor  #:nodoc:all
+</span><span class="marked1"><a name="line290"></a> 290     include IOExtras::AbstractInputStream
+</span><span class="inferred0"><a name="line291"></a> 291   end
+</span><span class="inferred1"><a name="line292"></a> 292   
+</span><span class="marked0"><a name="line293"></a> 293   class ZipEntry
+</span><span class="marked1"><a name="line294"></a> 294     STORED = 0
+</span><span class="marked0"><a name="line295"></a> 295     DEFLATED = 8
+</span><span class="inferred1"><a name="line296"></a> 296 
+</span><span class="marked0"><a name="line297"></a> 297     FSTYPE_FAT = 0
+</span><span class="marked1"><a name="line298"></a> 298     FSTYPE_AMIGA = 1
+</span><span class="marked0"><a name="line299"></a> 299     FSTYPE_VMS = 2
+</span><span class="marked1"><a name="line300"></a> 300     FSTYPE_UNIX = 3
+</span><span class="marked0"><a name="line301"></a> 301     FSTYPE_VM_CMS = 4
+</span><span class="marked1"><a name="line302"></a> 302     FSTYPE_ATARI = 5
+</span><span class="marked0"><a name="line303"></a> 303     FSTYPE_HPFS = 6
+</span><span class="marked1"><a name="line304"></a> 304     FSTYPE_MAC = 7
+</span><span class="marked0"><a name="line305"></a> 305     FSTYPE_Z_SYSTEM = 8 
+</span><span class="marked1"><a name="line306"></a> 306     FSTYPE_CPM = 9
+</span><span class="marked0"><a name="line307"></a> 307     FSTYPE_TOPS20 = 10
+</span><span class="marked1"><a name="line308"></a> 308     FSTYPE_NTFS = 11
+</span><span class="marked0"><a name="line309"></a> 309     FSTYPE_QDOS = 12
+</span><span class="marked1"><a name="line310"></a> 310     FSTYPE_ACORN = 13
+</span><span class="marked0"><a name="line311"></a> 311     FSTYPE_VFAT = 14
+</span><span class="marked1"><a name="line312"></a> 312     FSTYPE_MVS = 15
+</span><span class="marked0"><a name="line313"></a> 313     FSTYPE_BEOS = 16
+</span><span class="marked1"><a name="line314"></a> 314     FSTYPE_TANDEM = 17
+</span><span class="marked0"><a name="line315"></a> 315     FSTYPE_THEOS = 18
+</span><span class="marked1"><a name="line316"></a> 316     FSTYPE_MAC_OSX = 19
+</span><span class="marked0"><a name="line317"></a> 317     FSTYPE_ATHEOS = 30
+</span><span class="inferred1"><a name="line318"></a> 318 
+</span><span class="marked0"><a name="line319"></a> 319     FSTYPES = {
+</span><span class="inferred1"><a name="line320"></a> 320       FSTYPE_FAT =&gt; 'FAT'.freeze,
+</span><span class="inferred0"><a name="line321"></a> 321       FSTYPE_AMIGA =&gt; 'Amiga'.freeze,
+</span><span class="inferred1"><a name="line322"></a> 322       FSTYPE_VMS =&gt; 'VMS (Vax or Alpha AXP)'.freeze,
+</span><span class="inferred0"><a name="line323"></a> 323       FSTYPE_UNIX =&gt; 'Unix'.freeze,
+</span><span class="inferred1"><a name="line324"></a> 324       FSTYPE_VM_CMS =&gt; 'VM/CMS'.freeze,
+</span><span class="inferred0"><a name="line325"></a> 325       FSTYPE_ATARI =&gt; 'Atari ST'.freeze,
+</span><span class="inferred1"><a name="line326"></a> 326       FSTYPE_HPFS =&gt; 'OS/2 or NT HPFS'.freeze,
+</span><span class="inferred0"><a name="line327"></a> 327       FSTYPE_MAC =&gt; 'Macintosh'.freeze,
+</span><span class="inferred1"><a name="line328"></a> 328       FSTYPE_Z_SYSTEM =&gt; 'Z-System'.freeze,
+</span><span class="inferred0"><a name="line329"></a> 329       FSTYPE_CPM =&gt; 'CP/M'.freeze,
+</span><span class="inferred1"><a name="line330"></a> 330       FSTYPE_TOPS20 =&gt; 'TOPS-20'.freeze,
+</span><span class="inferred0"><a name="line331"></a> 331       FSTYPE_NTFS =&gt; 'NTFS'.freeze,
+</span><span class="inferred1"><a name="line332"></a> 332       FSTYPE_QDOS =&gt; 'SMS/QDOS'.freeze,
+</span><span class="inferred0"><a name="line333"></a> 333       FSTYPE_ACORN =&gt; 'Acorn RISC OS'.freeze,
+</span><span class="inferred1"><a name="line334"></a> 334       FSTYPE_VFAT =&gt; 'Win32 VFAT'.freeze,
+</span><span class="inferred0"><a name="line335"></a> 335       FSTYPE_MVS =&gt; 'MVS'.freeze,
+</span><span class="inferred1"><a name="line336"></a> 336       FSTYPE_BEOS =&gt; 'BeOS'.freeze,
+</span><span class="inferred0"><a name="line337"></a> 337       FSTYPE_TANDEM =&gt; 'Tandem NSK'.freeze,
+</span><span class="inferred1"><a name="line338"></a> 338       FSTYPE_THEOS =&gt; 'Theos'.freeze,
+</span><span class="inferred0"><a name="line339"></a> 339       FSTYPE_MAC_OSX =&gt; 'Mac OS/X (Darwin)'.freeze,
+</span><span class="inferred1"><a name="line340"></a> 340       FSTYPE_ATHEOS =&gt; 'AtheOS'.freeze,
+</span><span class="inferred0"><a name="line341"></a> 341     }.freeze
+</span><span class="inferred1"><a name="line342"></a> 342     
+</span><span class="marked0"><a name="line343"></a> 343     attr_accessor  :comment, :compressed_size, :crc, :extra, :compression_method, 
+</span><span class="inferred1"><a name="line344"></a> 344       :name, :size, :localHeaderOffset, :zipfile, :fstype, :externalFileAttributes, :gp_flags, :header_signature
+</span><span class="inferred0"><a name="line345"></a> 345 
+</span><span class="marked1"><a name="line346"></a> 346     attr_accessor :follow_symlinks
+</span><span class="marked0"><a name="line347"></a> 347     attr_accessor :restore_times, :restore_permissions, :restore_ownership
+</span><span class="marked1"><a name="line348"></a> 348     attr_accessor :unix_uid, :unix_gid, :unix_perms
+</span><span class="inferred0"><a name="line349"></a> 349 
+</span><span class="marked1"><a name="line350"></a> 350     attr_reader :ftype, :filepath # :nodoc:
+</span><span class="inferred0"><a name="line351"></a> 351     
+</span><span class="inferred1"><a name="line352"></a> 352     def initialize(zipfile = &quot;&quot;, name = &quot;&quot;, comment = &quot;&quot;, extra = &quot;&quot;, 
+</span><span class="inferred0"><a name="line353"></a> 353                    compressed_size = 0, crc = 0, 
+</span><span class="inferred1"><a name="line354"></a> 354 		   compression_method = ZipEntry::DEFLATED, size = 0,
+</span><span class="marked0"><a name="line355"></a> 355 		   time  = Time.now)
+</span><span class="uncovered1"><a name="line356"></a> 356       super()
+</span><span class="uncovered0"><a name="line357"></a> 357       if name.starts_with(&quot;/&quot;)
+</span><span class="uncovered1"><a name="line358"></a> 358 	raise ZipEntryNameError, &quot;Illegal ZipEntry name '#{name}', name must not start with /&quot; 
+</span><span class="uncovered0"><a name="line359"></a> 359       end
+</span><span class="uncovered1"><a name="line360"></a> 360       @localHeaderOffset = 0
+</span><span class="uncovered0"><a name="line361"></a> 361       @internalFileAttributes = 1
+</span><span class="uncovered1"><a name="line362"></a> 362       @externalFileAttributes = 0
+</span><span class="uncovered0"><a name="line363"></a> 363       @version = 52 # this library's version
+</span><span class="uncovered1"><a name="line364"></a> 364       @ftype = nil # unspecified or unknown
+</span><span class="uncovered0"><a name="line365"></a> 365       @filepath = nil
+</span><span class="uncovered1"><a name="line366"></a> 366       if Zip::RUNNING_ON_WINDOWS
+</span><span class="uncovered0"><a name="line367"></a> 367         @fstype = FSTYPE_FAT
+</span><span class="uncovered1"><a name="line368"></a> 368       else
+</span><span class="uncovered0"><a name="line369"></a> 369         @fstype = FSTYPE_UNIX
+</span><span class="uncovered1"><a name="line370"></a> 370       end
+</span><span class="uncovered0"><a name="line371"></a> 371       @zipfile, @comment, @compressed_size, @crc, @extra, @compression_method, 
+</span><span class="uncovered1"><a name="line372"></a> 372 	@name, @size = zipfile, comment, compressed_size, crc, 
+</span><span class="uncovered0"><a name="line373"></a> 373 	extra, compression_method, name, size
+</span><span class="uncovered1"><a name="line374"></a> 374       @time = time
+</span><span class="uncovered0"><a name="line375"></a> 375 
+</span><span class="uncovered1"><a name="line376"></a> 376       @follow_symlinks = false
+</span><span class="uncovered0"><a name="line377"></a> 377 
+</span><span class="uncovered1"><a name="line378"></a> 378       @restore_times = true
+</span><span class="uncovered0"><a name="line379"></a> 379       @restore_permissions = false
+</span><span class="uncovered1"><a name="line380"></a> 380       @restore_ownership = false
+</span><span class="uncovered0"><a name="line381"></a> 381 
+</span><span class="uncovered1"><a name="line382"></a> 382 # BUG: need an extra field to support uid/gid's
+</span><span class="uncovered0"><a name="line383"></a> 383       @unix_uid = nil
+</span><span class="uncovered1"><a name="line384"></a> 384       @unix_gid = nil
+</span><span class="uncovered0"><a name="line385"></a> 385       @unix_perms = nil
+</span><span class="uncovered1"><a name="line386"></a> 386 #      @posix_acl = nil
+</span><span class="uncovered0"><a name="line387"></a> 387 #      @ntfs_acl = nil
+</span><span class="uncovered1"><a name="line388"></a> 388 
+</span><span class="uncovered0"><a name="line389"></a> 389       if name_is_directory?
+</span><span class="uncovered1"><a name="line390"></a> 390         @ftype = :directory
+</span><span class="uncovered0"><a name="line391"></a> 391       else
+</span><span class="uncovered1"><a name="line392"></a> 392         @ftype = :file
+</span><span class="uncovered0"><a name="line393"></a> 393       end
+</span><span class="uncovered1"><a name="line394"></a> 394 
+</span><span class="uncovered0"><a name="line395"></a> 395       unless ZipExtraField === @extra
+</span><span class="uncovered1"><a name="line396"></a> 396         @extra = ZipExtraField.new(@extra.to_s)
+</span><span class="uncovered0"><a name="line397"></a> 397       end
+</span><span class="uncovered1"><a name="line398"></a> 398     end
+</span><span class="inferred0"><a name="line399"></a> 399 
+</span><span class="marked1"><a name="line400"></a> 400     def time
+</span><span class="uncovered0"><a name="line401"></a> 401       if @extra[&quot;UniversalTime&quot;]
+</span><span class="uncovered1"><a name="line402"></a> 402         @extra[&quot;UniversalTime&quot;].mtime
+</span><span class="uncovered0"><a name="line403"></a> 403       else
+</span><span class="uncovered1"><a name="line404"></a> 404         # Atandard time field in central directory has local time
+</span><span class="uncovered0"><a name="line405"></a> 405         # under archive creator. Then, we can't get timezone.
+</span><span class="uncovered1"><a name="line406"></a> 406         @time
+</span><span class="uncovered0"><a name="line407"></a> 407       end
+</span><span class="uncovered1"><a name="line408"></a> 408     end
+</span><span class="marked0"><a name="line409"></a> 409     alias :mtime :time
+</span><span class="inferred1"><a name="line410"></a> 410     
+</span><span class="marked0"><a name="line411"></a> 411     def time=(aTime)
+</span><span class="uncovered1"><a name="line412"></a> 412       unless @extra.member?(&quot;UniversalTime&quot;)
+</span><span class="uncovered0"><a name="line413"></a> 413         @extra.create(&quot;UniversalTime&quot;)
+</span><span class="uncovered1"><a name="line414"></a> 414       end
+</span><span class="uncovered0"><a name="line415"></a> 415       @extra[&quot;UniversalTime&quot;].mtime = aTime
+</span><span class="uncovered1"><a name="line416"></a> 416       @time = aTime
+</span><span class="uncovered0"><a name="line417"></a> 417     end
+</span><span class="inferred1"><a name="line418"></a> 418 
+</span><span class="inferred0"><a name="line419"></a> 419     # Returns +true+ if the entry is a directory.
+</span><span class="marked1"><a name="line420"></a> 420     def directory?
+</span><span class="uncovered0"><a name="line421"></a> 421       raise ZipInternalError, &quot;current filetype is unknown: #{self.inspect}&quot; unless @ftype
+</span><span class="uncovered1"><a name="line422"></a> 422       @ftype == :directory
+</span><span class="uncovered0"><a name="line423"></a> 423     end
+</span><span class="marked1"><a name="line424"></a> 424     alias :is_directory :directory?
+</span><span class="inferred0"><a name="line425"></a> 425 
+</span><span class="inferred1"><a name="line426"></a> 426     # Returns +true+ if the entry is a file.
+</span><span class="marked0"><a name="line427"></a> 427     def file?
+</span><span class="uncovered1"><a name="line428"></a> 428       raise ZipInternalError, &quot;current filetype is unknown: #{self.inspect}&quot; unless @ftype
+</span><span class="uncovered0"><a name="line429"></a> 429       @ftype == :file
+</span><span class="uncovered1"><a name="line430"></a> 430     end
+</span><span class="inferred0"><a name="line431"></a> 431 
+</span><span class="inferred1"><a name="line432"></a> 432     # Returns +true+ if the entry is a symlink.
+</span><span class="marked0"><a name="line433"></a> 433     def symlink?
+</span><span class="uncovered1"><a name="line434"></a> 434       raise ZipInternalError, &quot;current filetype is unknown: #{self.inspect}&quot; unless @ftype
+</span><span class="uncovered0"><a name="line435"></a> 435       @ftype == :link
+</span><span class="uncovered1"><a name="line436"></a> 436     end
+</span><span class="inferred0"><a name="line437"></a> 437 
+</span><span class="marked1"><a name="line438"></a> 438     def name_is_directory?  #:nodoc:all
+</span><span class="inferred0"><a name="line439"></a> 439       (%r{\/$} =~ @name) != nil
+</span><span class="inferred1"><a name="line440"></a> 440     end
+</span><span class="inferred0"><a name="line441"></a> 441 
+</span><span class="marked1"><a name="line442"></a> 442     def local_entry_offset  #:nodoc:all
+</span><span class="uncovered0"><a name="line443"></a> 443       localHeaderOffset + local_header_size
+</span><span class="uncovered1"><a name="line444"></a> 444     end
+</span><span class="inferred0"><a name="line445"></a> 445     
+</span><span class="marked1"><a name="line446"></a> 446     def local_header_size  #:nodoc:all
+</span><span class="uncovered0"><a name="line447"></a> 447       LOCAL_ENTRY_STATIC_HEADER_LENGTH + (@name ?  @name.size : 0) + (@extra ? @extra.local_size : 0)
+</span><span class="uncovered1"><a name="line448"></a> 448     end
+</span><span class="inferred0"><a name="line449"></a> 449 
+</span><span class="marked1"><a name="line450"></a> 450     def cdir_header_size  #:nodoc:all
+</span><span class="uncovered0"><a name="line451"></a> 451       CDIR_ENTRY_STATIC_HEADER_LENGTH  + (@name ?  @name.size : 0) + 
+</span><span class="uncovered1"><a name="line452"></a> 452 	(@extra ? @extra.c_dir_size : 0) + (@comment ? @comment.size : 0)
+</span><span class="uncovered0"><a name="line453"></a> 453     end
+</span><span class="inferred1"><a name="line454"></a> 454     
+</span><span class="marked0"><a name="line455"></a> 455     def next_header_offset  #:nodoc:all
+</span><span class="uncovered1"><a name="line456"></a> 456       local_entry_offset + self.compressed_size
+</span><span class="uncovered0"><a name="line457"></a> 457     end
+</span><span class="inferred1"><a name="line458"></a> 458 
+</span><span class="inferred0"><a name="line459"></a> 459     # Extracts entry to file destPath (defaults to @name).
+</span><span class="marked1"><a name="line460"></a> 460     def extract(destPath = @name, &amp;onExistsProc)
+</span><span class="uncovered0"><a name="line461"></a> 461       onExistsProc ||= proc { false }
+</span><span class="uncovered1"><a name="line462"></a> 462 
+</span><span class="uncovered0"><a name="line463"></a> 463       if directory?
+</span><span class="uncovered1"><a name="line464"></a> 464 	create_directory(destPath, &amp;onExistsProc)
+</span><span class="uncovered0"><a name="line465"></a> 465       elsif file?
+</span><span class="uncovered1"><a name="line466"></a> 466 	write_file(destPath, &amp;onExistsProc) 
+</span><span class="uncovered0"><a name="line467"></a> 467       elsif symlink?
+</span><span class="uncovered1"><a name="line468"></a> 468         create_symlink(destPath, &amp;onExistsProc)
+</span><span class="uncovered0"><a name="line469"></a> 469       else
+</span><span class="uncovered1"><a name="line470"></a> 470         raise RuntimeError, &quot;unknown file type #{self.inspect}&quot;
+</span><span class="uncovered0"><a name="line471"></a> 471       end
+</span><span class="uncovered1"><a name="line472"></a> 472 
+</span><span class="uncovered0"><a name="line473"></a> 473       self
+</span><span class="uncovered1"><a name="line474"></a> 474     end
+</span><span class="inferred0"><a name="line475"></a> 475 
+</span><span class="marked1"><a name="line476"></a> 476     def to_s
+</span><span class="uncovered0"><a name="line477"></a> 477       @name
+</span><span class="uncovered1"><a name="line478"></a> 478     end
+</span><span class="inferred0"><a name="line479"></a> 479     
+</span><span class="marked1"><a name="line480"></a> 480     protected
+</span><span class="inferred0"><a name="line481"></a> 481     
+</span><span class="marked1"><a name="line482"></a> 482     def ZipEntry.read_zip_short(io) # :nodoc:
+</span><span class="uncovered0"><a name="line483"></a> 483       io.read(2).unpack('v')[0]
+</span><span class="uncovered1"><a name="line484"></a> 484     end
+</span><span class="inferred0"><a name="line485"></a> 485     
+</span><span class="marked1"><a name="line486"></a> 486     def ZipEntry.read_zip_long(io) # :nodoc:
+</span><span class="uncovered0"><a name="line487"></a> 487       io.read(4).unpack('V')[0]
+</span><span class="uncovered1"><a name="line488"></a> 488     end
+</span><span class="marked0"><a name="line489"></a> 489     public
+</span><span class="inferred1"><a name="line490"></a> 490     
+</span><span class="marked0"><a name="line491"></a> 491     LOCAL_ENTRY_SIGNATURE = 0x04034b50
+</span><span class="marked1"><a name="line492"></a> 492     LOCAL_ENTRY_STATIC_HEADER_LENGTH = 30
+</span><span class="marked0"><a name="line493"></a> 493     LOCAL_ENTRY_TRAILING_DESCRIPTOR_LENGTH = 4+4+4
+</span><span class="inferred1"><a name="line494"></a> 494     
+</span><span class="marked0"><a name="line495"></a> 495     def read_local_entry(io)  #:nodoc:all
+</span><span class="uncovered1"><a name="line496"></a> 496       @localHeaderOffset = io.tell
+</span><span class="uncovered0"><a name="line497"></a> 497       staticSizedFieldsBuf = io.read(LOCAL_ENTRY_STATIC_HEADER_LENGTH)
+</span><span class="uncovered1"><a name="line498"></a> 498       unless (staticSizedFieldsBuf.size==LOCAL_ENTRY_STATIC_HEADER_LENGTH)
+</span><span class="uncovered0"><a name="line499"></a> 499 	raise ZipError, &quot;Premature end of file. Not enough data for zip entry local header&quot;
+</span><span class="uncovered1"><a name="line500"></a> 500       end
+</span><span class="uncovered0"><a name="line501"></a> 501       
+</span><span class="uncovered1"><a name="line502"></a> 502       @header_signature       ,
+</span><span class="uncovered0"><a name="line503"></a> 503         @version          ,
+</span><span class="uncovered1"><a name="line504"></a> 504 	@fstype           ,
+</span><span class="uncovered0"><a name="line505"></a> 505 	@gp_flags          ,
+</span><span class="uncovered1"><a name="line506"></a> 506 	@compression_method,
+</span><span class="uncovered0"><a name="line507"></a> 507 	lastModTime       ,
+</span><span class="uncovered1"><a name="line508"></a> 508 	lastModDate       ,
+</span><span class="uncovered0"><a name="line509"></a> 509 	@crc              ,
+</span><span class="uncovered1"><a name="line510"></a> 510 	@compressed_size   ,
+</span><span class="uncovered0"><a name="line511"></a> 511 	@size             ,
+</span><span class="uncovered1"><a name="line512"></a> 512 	nameLength        ,
+</span><span class="uncovered0"><a name="line513"></a> 513 	extraLength       = staticSizedFieldsBuf.unpack('VCCvvvvVVVvv') 
+</span><span class="uncovered1"><a name="line514"></a> 514 
+</span><span class="uncovered0"><a name="line515"></a> 515       unless (@header_signature == LOCAL_ENTRY_SIGNATURE)
+</span><span class="uncovered1"><a name="line516"></a> 516 	raise ZipError, &quot;Zip local header magic not found at location '#{localHeaderOffset}'&quot;
+</span><span class="uncovered0"><a name="line517"></a> 517       end
+</span><span class="uncovered1"><a name="line518"></a> 518       set_time(lastModDate, lastModTime)
+</span><span class="uncovered0"><a name="line519"></a> 519       
+</span><span class="uncovered1"><a name="line520"></a> 520       @name              = io.read(nameLength)
+</span><span class="uncovered0"><a name="line521"></a> 521       extra              = io.read(extraLength)
+</span><span class="uncovered1"><a name="line522"></a> 522 
+</span><span class="uncovered0"><a name="line523"></a> 523       if (extra &amp;&amp; extra.length != extraLength)
+</span><span class="uncovered1"><a name="line524"></a> 524 	raise ZipError, &quot;Truncated local zip entry header&quot;
+</span><span class="uncovered0"><a name="line525"></a> 525       else
+</span><span class="uncovered1"><a name="line526"></a> 526         if ZipExtraField === @extra
+</span><span class="uncovered0"><a name="line527"></a> 527           @extra.merge(extra)
+</span><span class="uncovered1"><a name="line528"></a> 528         else
+</span><span class="uncovered0"><a name="line529"></a> 529           @extra = ZipExtraField.new(extra)
+</span><span class="uncovered1"><a name="line530"></a> 530         end
+</span><span class="uncovered0"><a name="line531"></a> 531       end
+</span><span class="uncovered1"><a name="line532"></a> 532     end
+</span><span class="inferred0"><a name="line533"></a> 533     
+</span><span class="marked1"><a name="line534"></a> 534     def ZipEntry.read_local_entry(io)
+</span><span class="uncovered0"><a name="line535"></a> 535       entry = new(io.path)
+</span><span class="uncovered1"><a name="line536"></a> 536       entry.read_local_entry(io)
+</span><span class="uncovered0"><a name="line537"></a> 537       return entry
+</span><span class="uncovered1"><a name="line538"></a> 538     rescue ZipError
+</span><span class="uncovered0"><a name="line539"></a> 539       return nil
+</span><span class="uncovered1"><a name="line540"></a> 540     end
+</span><span class="inferred0"><a name="line541"></a> 541   
+</span><span class="marked1"><a name="line542"></a> 542     def write_local_entry(io)   #:nodoc:all
+</span><span class="uncovered0"><a name="line543"></a> 543       @localHeaderOffset = io.tell
+</span><span class="uncovered1"><a name="line544"></a> 544       
+</span><span class="uncovered0"><a name="line545"></a> 545       io &lt;&lt; 
+</span><span class="uncovered1"><a name="line546"></a> 546 	[LOCAL_ENTRY_SIGNATURE    ,
+</span><span class="uncovered0"><a name="line547"></a> 547 	0                  ,
+</span><span class="uncovered1"><a name="line548"></a> 548 	0                         , # @gp_flags                  ,
+</span><span class="uncovered0"><a name="line549"></a> 549 	@compression_method        ,
+</span><span class="uncovered1"><a name="line550"></a> 550 	@time.to_binary_dos_time     , # @lastModTime              ,
+</span><span class="uncovered0"><a name="line551"></a> 551 	@time.to_binary_dos_date     , # @lastModDate              ,
+</span><span class="uncovered1"><a name="line552"></a> 552 	@crc                      ,
+</span><span class="uncovered0"><a name="line553"></a> 553 	@compressed_size           ,
+</span><span class="uncovered1"><a name="line554"></a> 554 	@size                     ,
+</span><span class="uncovered0"><a name="line555"></a> 555 	@name ? @name.length   : 0,
+</span><span class="uncovered1"><a name="line556"></a> 556 	@extra? @extra.local_length : 0 ].pack('VvvvvvVVVvv')
+</span><span class="uncovered0"><a name="line557"></a> 557       io &lt;&lt; @name
+</span><span class="uncovered1"><a name="line558"></a> 558       io &lt;&lt; (@extra ? @extra.to_local_bin : &quot;&quot;)
+</span><span class="uncovered0"><a name="line559"></a> 559     end
+</span><span class="inferred1"><a name="line560"></a> 560     
+</span><span class="marked0"><a name="line561"></a> 561     CENTRAL_DIRECTORY_ENTRY_SIGNATURE = 0x02014b50
+</span><span class="marked1"><a name="line562"></a> 562     CDIR_ENTRY_STATIC_HEADER_LENGTH = 46
+</span><span class="inferred0"><a name="line563"></a> 563     
+</span><span class="marked1"><a name="line564"></a> 564     def read_c_dir_entry(io)  #:nodoc:all
+</span><span class="uncovered0"><a name="line565"></a> 565       staticSizedFieldsBuf = io.read(CDIR_ENTRY_STATIC_HEADER_LENGTH)
+</span><span class="uncovered1"><a name="line566"></a> 566       unless (staticSizedFieldsBuf.size == CDIR_ENTRY_STATIC_HEADER_LENGTH)
+</span><span class="uncovered0"><a name="line567"></a> 567 	raise ZipError, &quot;Premature end of file. Not enough data for zip cdir entry header&quot;
+</span><span class="uncovered1"><a name="line568"></a> 568       end
+</span><span class="uncovered0"><a name="line569"></a> 569 
+</span><span class="uncovered1"><a name="line570"></a> 570       @header_signature          ,
+</span><span class="uncovered0"><a name="line571"></a> 571 	@version               , # version of encoding software
+</span><span class="uncovered1"><a name="line572"></a> 572         @fstype                , # filesystem type
+</span><span class="uncovered0"><a name="line573"></a> 573 	@versionNeededToExtract,
+</span><span class="uncovered1"><a name="line574"></a> 574 	@gp_flags               ,
+</span><span class="uncovered0"><a name="line575"></a> 575 	@compression_method     ,
+</span><span class="uncovered1"><a name="line576"></a> 576 	lastModTime            ,
+</span><span class="uncovered0"><a name="line577"></a> 577 	lastModDate            ,
+</span><span class="uncovered1"><a name="line578"></a> 578 	@crc                   ,
+</span><span class="uncovered0"><a name="line579"></a> 579 	@compressed_size        ,
+</span><span class="uncovered1"><a name="line580"></a> 580 	@size                  ,
+</span><span class="uncovered0"><a name="line581"></a> 581 	nameLength             ,
+</span><span class="uncovered1"><a name="line582"></a> 582 	extraLength            ,
+</span><span class="uncovered0"><a name="line583"></a> 583 	commentLength          ,
+</span><span class="uncovered1"><a name="line584"></a> 584 	diskNumberStart        ,
+</span><span class="uncovered0"><a name="line585"></a> 585 	@internalFileAttributes,
+</span><span class="uncovered1"><a name="line586"></a> 586 	@externalFileAttributes,
+</span><span class="uncovered0"><a name="line587"></a> 587 	@localHeaderOffset     ,
+</span><span class="uncovered1"><a name="line588"></a> 588 	@name                  ,
+</span><span class="uncovered0"><a name="line589"></a> 589 	@extra                 ,
+</span><span class="uncovered1"><a name="line590"></a> 590 	@comment               = staticSizedFieldsBuf.unpack('VCCvvvvvVVVvvvvvVV')
+</span><span class="uncovered0"><a name="line591"></a> 591 
+</span><span class="uncovered1"><a name="line592"></a> 592       unless (@header_signature == CENTRAL_DIRECTORY_ENTRY_SIGNATURE)
+</span><span class="uncovered0"><a name="line593"></a> 593 	raise ZipError, &quot;Zip local header magic not found at location '#{localHeaderOffset}'&quot;
+</span><span class="uncovered1"><a name="line594"></a> 594       end
+</span><span class="uncovered0"><a name="line595"></a> 595       set_time(lastModDate, lastModTime)
+</span><span class="uncovered1"><a name="line596"></a> 596       
+</span><span class="uncovered0"><a name="line597"></a> 597       @name                  = io.read(nameLength)
+</span><span class="uncovered1"><a name="line598"></a> 598       if ZipExtraField === @extra
+</span><span class="uncovered0"><a name="line599"></a> 599         @extra.merge(io.read(extraLength))
+</span><span class="uncovered1"><a name="line600"></a> 600       else
+</span><span class="uncovered0"><a name="line601"></a> 601         @extra = ZipExtraField.new(io.read(extraLength))
+</span><span class="uncovered1"><a name="line602"></a> 602       end
+</span><span class="uncovered0"><a name="line603"></a> 603       @comment               = io.read(commentLength)
+</span><span class="uncovered1"><a name="line604"></a> 604       unless (@comment &amp;&amp; @comment.length == commentLength)
+</span><span class="uncovered0"><a name="line605"></a> 605 	raise ZipError, &quot;Truncated cdir zip entry header&quot;
+</span><span class="uncovered1"><a name="line606"></a> 606       end
+</span><span class="uncovered0"><a name="line607"></a> 607 
+</span><span class="uncovered1"><a name="line608"></a> 608       case @fstype
+</span><span class="uncovered0"><a name="line609"></a> 609       when FSTYPE_UNIX
+</span><span class="uncovered1"><a name="line610"></a> 610         @unix_perms = (@externalFileAttributes &gt;&gt; 16) &amp; 07777
+</span><span class="uncovered0"><a name="line611"></a> 611 
+</span><span class="uncovered1"><a name="line612"></a> 612         case (@externalFileAttributes &gt;&gt; 28)
+</span><span class="uncovered0"><a name="line613"></a> 613         when 04
+</span><span class="uncovered1"><a name="line614"></a> 614           @ftype = :directory
+</span><span class="uncovered0"><a name="line615"></a> 615         when 010
+</span><span class="uncovered1"><a name="line616"></a> 616           @ftype = :file
+</span><span class="uncovered0"><a name="line617"></a> 617         when 012
+</span><span class="uncovered1"><a name="line618"></a> 618           @ftype = :link
+</span><span class="uncovered0"><a name="line619"></a> 619         else
+</span><span class="uncovered1"><a name="line620"></a> 620           raise ZipInternalError, &quot;unknown file type #{'0%o' % (@externalFileAttributes &gt;&gt; 28)}&quot;
+</span><span class="uncovered0"><a name="line621"></a> 621         end
+</span><span class="uncovered1"><a name="line622"></a> 622       else
+</span><span class="uncovered0"><a name="line623"></a> 623         if name_is_directory?
+</span><span class="uncovered1"><a name="line624"></a> 624           @ftype = :directory
+</span><span class="uncovered0"><a name="line625"></a> 625         else
+</span><span class="uncovered1"><a name="line626"></a> 626           @ftype = :file
+</span><span class="uncovered0"><a name="line627"></a> 627         end
+</span><span class="uncovered1"><a name="line628"></a> 628       end
+</span><span class="uncovered0"><a name="line629"></a> 629     end
+</span><span class="inferred1"><a name="line630"></a> 630     
+</span><span class="marked0"><a name="line631"></a> 631     def ZipEntry.read_c_dir_entry(io)  #:nodoc:all
+</span><span class="uncovered1"><a name="line632"></a> 632       entry = new(io.path)
+</span><span class="uncovered0"><a name="line633"></a> 633       entry.read_c_dir_entry(io)
+</span><span class="uncovered1"><a name="line634"></a> 634       return entry
+</span><span class="uncovered0"><a name="line635"></a> 635     rescue ZipError
+</span><span class="uncovered1"><a name="line636"></a> 636       return nil
+</span><span class="uncovered0"><a name="line637"></a> 637     end
+</span><span class="inferred1"><a name="line638"></a> 638 
+</span><span class="marked0"><a name="line639"></a> 639     def file_stat(path)	# :nodoc:
+</span><span class="uncovered1"><a name="line640"></a> 640       if @follow_symlinks
+</span><span class="uncovered0"><a name="line641"></a> 641         return File::stat(path)
+</span><span class="uncovered1"><a name="line642"></a> 642       else
+</span><span class="uncovered0"><a name="line643"></a> 643         return File::lstat(path)
+</span><span class="uncovered1"><a name="line644"></a> 644       end
+</span><span class="uncovered0"><a name="line645"></a> 645     end
+</span><span class="inferred1"><a name="line646"></a> 646 
+</span><span class="marked0"><a name="line647"></a> 647     def get_extra_attributes_from_path(path)	# :nodoc:
+</span><span class="uncovered1"><a name="line648"></a> 648       unless Zip::RUNNING_ON_WINDOWS
+</span><span class="uncovered0"><a name="line649"></a> 649         stat = file_stat(path)
+</span><span class="uncovered1"><a name="line650"></a> 650         @unix_uid = stat.uid
+</span><span class="uncovered0"><a name="line651"></a> 651         @unix_gid = stat.gid
+</span><span class="uncovered1"><a name="line652"></a> 652         @unix_perms = stat.mode &amp; 07777
+</span><span class="uncovered0"><a name="line653"></a> 653       end
+</span><span class="uncovered1"><a name="line654"></a> 654     end
+</span><span class="inferred0"><a name="line655"></a> 655 
+</span><span class="marked1"><a name="line656"></a> 656     def set_extra_attributes_on_path(destPath)	# :nodoc:
+</span><span class="uncovered0"><a name="line657"></a> 657       return unless (file? or directory?)
+</span><span class="uncovered1"><a name="line658"></a> 658 
+</span><span class="uncovered0"><a name="line659"></a> 659       case @fstype
+</span><span class="uncovered1"><a name="line660"></a> 660       when FSTYPE_UNIX
+</span><span class="uncovered0"><a name="line661"></a> 661         # BUG: does not update timestamps into account
+</span><span class="uncovered1"><a name="line662"></a> 662         # ignore setuid/setgid bits by default.  honor if @restore_ownership
+</span><span class="uncovered0"><a name="line663"></a> 663         unix_perms_mask = 01777
+</span><span class="uncovered1"><a name="line664"></a> 664         unix_perms_mask = 07777 if (@restore_ownership)
+</span><span class="uncovered0"><a name="line665"></a> 665       	File::chmod(@unix_perms &amp; unix_perms_mask, destPath) if (@restore_permissions &amp;&amp; @unix_perms)
+</span><span class="uncovered1"><a name="line666"></a> 666         File::chown(@unix_uid, @unix_gid, destPath) if (@restore_ownership &amp;&amp; @unix_uid &amp;&amp; @unix_gid &amp;&amp; Process::egid == 0)
+</span><span class="uncovered0"><a name="line667"></a> 667         # File::utimes()
+</span><span class="uncovered1"><a name="line668"></a> 668       end
+</span><span class="uncovered0"><a name="line669"></a> 669     end
+</span><span class="inferred1"><a name="line670"></a> 670 
+</span><span class="marked0"><a name="line671"></a> 671     def write_c_dir_entry(io)  #:nodoc:all
+</span><span class="uncovered1"><a name="line672"></a> 672       case @fstype
+</span><span class="uncovered0"><a name="line673"></a> 673       when FSTYPE_UNIX
+</span><span class="uncovered1"><a name="line674"></a> 674         ft = nil
+</span><span class="uncovered0"><a name="line675"></a> 675         case @ftype
+</span><span class="uncovered1"><a name="line676"></a> 676         when :file
+</span><span class="uncovered0"><a name="line677"></a> 677           ft = 010
+</span><span class="uncovered1"><a name="line678"></a> 678           @unix_perms ||= 0644
+</span><span class="uncovered0"><a name="line679"></a> 679         when :directory
+</span><span class="uncovered1"><a name="line680"></a> 680           ft = 004
+</span><span class="uncovered0"><a name="line681"></a> 681           @unix_perms ||= 0755
+</span><span class="uncovered1"><a name="line682"></a> 682         when :symlink
+</span><span class="uncovered0"><a name="line683"></a> 683           ft = 012
+</span><span class="uncovered1"><a name="line684"></a> 684           @unix_perms ||= 0755
+</span><span class="uncovered0"><a name="line685"></a> 685         else
+</span><span class="uncovered1"><a name="line686"></a> 686           raise ZipInternalError, &quot;unknown file type #{self.inspect}&quot;
+</span><span class="uncovered0"><a name="line687"></a> 687         end
+</span><span class="uncovered1"><a name="line688"></a> 688 
+</span><span class="uncovered0"><a name="line689"></a> 689         @externalFileAttributes = (ft &lt;&lt; 12 | (@unix_perms &amp; 07777)) &lt;&lt; 16
+</span><span class="uncovered1"><a name="line690"></a> 690       end
+</span><span class="uncovered0"><a name="line691"></a> 691 
+</span><span class="uncovered1"><a name="line692"></a> 692       io &lt;&lt; 
+</span><span class="uncovered0"><a name="line693"></a> 693 	[CENTRAL_DIRECTORY_ENTRY_SIGNATURE,
+</span><span class="uncovered1"><a name="line694"></a> 694         @version                          , # version of encoding software
+</span><span class="uncovered0"><a name="line695"></a> 695 	@fstype                           , # filesystem type
+</span><span class="uncovered1"><a name="line696"></a> 696 	0                                 , # @versionNeededToExtract           ,
+</span><span class="uncovered0"><a name="line697"></a> 697 	0                                 , # @gp_flags                          ,
+</span><span class="uncovered1"><a name="line698"></a> 698 	@compression_method                ,
+</span><span class="uncovered0"><a name="line699"></a> 699         @time.to_binary_dos_time             , # @lastModTime                      ,
+</span><span class="uncovered1"><a name="line700"></a> 700 	@time.to_binary_dos_date             , # @lastModDate                      ,
+</span><span class="uncovered0"><a name="line701"></a> 701 	@crc                              ,
+</span><span class="uncovered1"><a name="line702"></a> 702 	@compressed_size                   ,
+</span><span class="uncovered0"><a name="line703"></a> 703 	@size                             ,
+</span><span class="uncovered1"><a name="line704"></a> 704 	@name  ?  @name.length  : 0       ,
+</span><span class="uncovered0"><a name="line705"></a> 705 	@extra ? @extra.c_dir_length : 0  ,
+</span><span class="uncovered1"><a name="line706"></a> 706 	@comment ? comment.length : 0     ,
+</span><span class="uncovered0"><a name="line707"></a> 707 	0                                 , # disk number start
+</span><span class="uncovered1"><a name="line708"></a> 708 	@internalFileAttributes           , # file type (binary=0, text=1)
+</span><span class="uncovered0"><a name="line709"></a> 709 	@externalFileAttributes           , # native filesystem attributes
+</span><span class="uncovered1"><a name="line710"></a> 710 	@localHeaderOffset                ,
+</span><span class="uncovered0"><a name="line711"></a> 711 	@name                             ,
+</span><span class="uncovered1"><a name="line712"></a> 712 	@extra                            ,
+</span><span class="uncovered0"><a name="line713"></a> 713 	@comment                          ].pack('VCCvvvvvVVVvvvvvVV')
+</span><span class="uncovered1"><a name="line714"></a> 714 
+</span><span class="uncovered0"><a name="line715"></a> 715       io &lt;&lt; @name
+</span><span class="uncovered1"><a name="line716"></a> 716       io &lt;&lt; (@extra ? @extra.to_c_dir_bin : &quot;&quot;)
+</span><span class="uncovered0"><a name="line717"></a> 717       io &lt;&lt; @comment
+</span><span class="uncovered1"><a name="line718"></a> 718     end
+</span><span class="inferred0"><a name="line719"></a> 719     
+</span><span class="marked1"><a name="line720"></a> 720     def == (other)
+</span><span class="uncovered0"><a name="line721"></a> 721       return false unless other.class == self.class
+</span><span class="uncovered1"><a name="line722"></a> 722       # Compares contents of local entry and exposed fields
+</span><span class="uncovered0"><a name="line723"></a> 723       (@compression_method == other.compression_method &amp;&amp;
+</span><span class="uncovered1"><a name="line724"></a> 724        @crc               == other.crc		     &amp;&amp;
+</span><span class="uncovered0"><a name="line725"></a> 725        @compressed_size   == other.compressed_size   &amp;&amp;
+</span><span class="uncovered1"><a name="line726"></a> 726        @size              == other.size	             &amp;&amp;
+</span><span class="uncovered0"><a name="line727"></a> 727        @name              == other.name	             &amp;&amp;
+</span><span class="uncovered1"><a name="line728"></a> 728        @extra             == other.extra             &amp;&amp;
+</span><span class="uncovered0"><a name="line729"></a> 729        @filepath          == other.filepath          &amp;&amp;
+</span><span class="uncovered1"><a name="line730"></a> 730        self.time.dos_equals(other.time))
+</span><span class="uncovered0"><a name="line731"></a> 731     end
+</span><span class="inferred1"><a name="line732"></a> 732 
+</span><span class="marked0"><a name="line733"></a> 733     def &lt;=&gt; (other)
+</span><span class="uncovered1"><a name="line734"></a> 734       return to_s &lt;=&gt; other.to_s
+</span><span class="uncovered0"><a name="line735"></a> 735     end
+</span><span class="inferred1"><a name="line736"></a> 736 
+</span><span class="inferred0"><a name="line737"></a> 737     # Returns an IO like object for the given ZipEntry.
+</span><span class="inferred1"><a name="line738"></a> 738     # Warning: may behave weird with symlinks.
+</span><span class="marked0"><a name="line739"></a> 739     def get_input_stream(&amp;aProc)
+</span><span class="uncovered1"><a name="line740"></a> 740       if @ftype == :directory
+</span><span class="uncovered0"><a name="line741"></a> 741           return yield(NullInputStream.instance) if block_given?
+</span><span class="uncovered1"><a name="line742"></a> 742           return NullInputStream.instance
+</span><span class="uncovered0"><a name="line743"></a> 743       elsif @filepath
+</span><span class="uncovered1"><a name="line744"></a> 744         case @ftype
+</span><span class="uncovered0"><a name="line745"></a> 745         when :file
+</span><span class="uncovered1"><a name="line746"></a> 746           return File.open(@filepath, &quot;rb&quot;, &amp;aProc)
+</span><span class="uncovered0"><a name="line747"></a> 747 
+</span><span class="uncovered1"><a name="line748"></a> 748         when :symlink
+</span><span class="uncovered0"><a name="line749"></a> 749           linkpath = File::readlink(@filepath)
+</span><span class="uncovered1"><a name="line750"></a> 750           stringio = StringIO.new(linkpath)
+</span><span class="uncovered0"><a name="line751"></a> 751           return yield(stringio) if block_given?
+</span><span class="uncovered1"><a name="line752"></a> 752           return stringio
+</span><span class="uncovered0"><a name="line753"></a> 753         else
+</span><span class="uncovered1"><a name="line754"></a> 754           raise &quot;unknown @ftype #{@ftype}&quot;
+</span><span class="uncovered0"><a name="line755"></a> 755         end
+</span><span class="uncovered1"><a name="line756"></a> 756       else
+</span><span class="uncovered0"><a name="line757"></a> 757         zis = ZipInputStream.new(@zipfile, localHeaderOffset)
+</span><span class="uncovered1"><a name="line758"></a> 758         zis.get_next_entry
+</span><span class="uncovered0"><a name="line759"></a> 759         if block_given?
+</span><span class="uncovered1"><a name="line760"></a> 760           begin
+</span><span class="uncovered0"><a name="line761"></a> 761 	    return yield(zis)
+</span><span class="uncovered1"><a name="line762"></a> 762 	  ensure
+</span><span class="uncovered0"><a name="line763"></a> 763 	    zis.close
+</span><span class="uncovered1"><a name="line764"></a> 764 	  end
+</span><span class="uncovered0"><a name="line765"></a> 765         else
+</span><span class="uncovered1"><a name="line766"></a> 766 	  return zis
+</span><span class="uncovered0"><a name="line767"></a> 767         end
+</span><span class="uncovered1"><a name="line768"></a> 768       end
+</span><span class="uncovered0"><a name="line769"></a> 769     end
+</span><span class="inferred1"><a name="line770"></a> 770 
+</span><span class="marked0"><a name="line771"></a> 771     def gather_fileinfo_from_srcpath(srcPath) # :nodoc:
+</span><span class="uncovered1"><a name="line772"></a> 772       stat = file_stat(srcPath)
+</span><span class="uncovered0"><a name="line773"></a> 773       case stat.ftype
+</span><span class="uncovered1"><a name="line774"></a> 774       when 'file'
+</span><span class="uncovered0"><a name="line775"></a> 775         if name_is_directory?
+</span><span class="uncovered1"><a name="line776"></a> 776           raise ArgumentError,
+</span><span class="uncovered0"><a name="line777"></a> 777 	    &quot;entry name '#{newEntry}' indicates directory entry, but &quot;+
+</span><span class="uncovered1"><a name="line778"></a> 778 	    &quot;'#{srcPath}' is not a directory&quot;
+</span><span class="uncovered0"><a name="line779"></a> 779         end
+</span><span class="uncovered1"><a name="line780"></a> 780         @ftype = :file
+</span><span class="uncovered0"><a name="line781"></a> 781       when 'directory'
+</span><span class="uncovered1"><a name="line782"></a> 782         if ! name_is_directory?
+</span><span class="uncovered0"><a name="line783"></a> 783           @name += &quot;/&quot;
+</span><span class="uncovered1"><a name="line784"></a> 784         end
+</span><span class="uncovered0"><a name="line785"></a> 785         @ftype = :directory
+</span><span class="uncovered1"><a name="line786"></a> 786       when 'link'
+</span><span class="uncovered0"><a name="line787"></a> 787         if name_is_directory?
+</span><span class="uncovered1"><a name="line788"></a> 788           raise ArgumentError,
+</span><span class="uncovered0"><a name="line789"></a> 789 	    &quot;entry name '#{newEntry}' indicates directory entry, but &quot;+
+</span><span class="uncovered1"><a name="line790"></a> 790 	    &quot;'#{srcPath}' is not a directory&quot;
+</span><span class="uncovered0"><a name="line791"></a> 791         end
+</span><span class="uncovered1"><a name="line792"></a> 792         @ftype = :symlink
+</span><span class="uncovered0"><a name="line793"></a> 793       else
+</span><span class="uncovered1"><a name="line794"></a> 794       	raise RuntimeError, &quot;unknown file type: #{srcPath.inspect} #{stat.inspect}&quot;
+</span><span class="uncovered0"><a name="line795"></a> 795       end
+</span><span class="uncovered1"><a name="line796"></a> 796 
+</span><span class="uncovered0"><a name="line797"></a> 797       @filepath = srcPath
+</span><span class="uncovered1"><a name="line798"></a> 798       get_extra_attributes_from_path(@filepath)
+</span><span class="uncovered0"><a name="line799"></a> 799     end
+</span><span class="inferred1"><a name="line800"></a> 800 
+</span><span class="marked0"><a name="line801"></a> 801     def write_to_zip_output_stream(aZipOutputStream)  #:nodoc:all
+</span><span class="uncovered1"><a name="line802"></a> 802       if @ftype == :directory
+</span><span class="uncovered0"><a name="line803"></a> 803         aZipOutputStream.put_next_entry(self)
+</span><span class="uncovered1"><a name="line804"></a> 804       elsif @filepath
+</span><span class="uncovered0"><a name="line805"></a> 805         aZipOutputStream.put_next_entry(self)
+</span><span class="uncovered1"><a name="line806"></a> 806         get_input_stream { |is| IOExtras.copy_stream(aZipOutputStream, is) } 
+</span><span class="uncovered0"><a name="line807"></a> 807       else
+</span><span class="uncovered1"><a name="line808"></a> 808         aZipOutputStream.copy_raw_entry(self)
+</span><span class="uncovered0"><a name="line809"></a> 809       end
+</span><span class="uncovered1"><a name="line810"></a> 810     end
+</span><span class="inferred0"><a name="line811"></a> 811 
+</span><span class="marked1"><a name="line812"></a> 812     def parent_as_string
+</span><span class="uncovered0"><a name="line813"></a> 813       entry_name = name.chomp(&quot;/&quot;)
+</span><span class="uncovered1"><a name="line814"></a> 814       slash_index = entry_name.rindex(&quot;/&quot;)
+</span><span class="uncovered0"><a name="line815"></a> 815       slash_index ? entry_name.slice(0, slash_index+1) : nil
+</span><span class="uncovered1"><a name="line816"></a> 816     end
+</span><span class="inferred0"><a name="line817"></a> 817 
+</span><span class="marked1"><a name="line818"></a> 818     def get_raw_input_stream(&amp;aProc)
+</span><span class="uncovered0"><a name="line819"></a> 819       File.open(@zipfile, &quot;rb&quot;, &amp;aProc)
+</span><span class="uncovered1"><a name="line820"></a> 820     end
+</span><span class="inferred0"><a name="line821"></a> 821 
+</span><span class="marked1"><a name="line822"></a> 822     private
+</span><span class="inferred0"><a name="line823"></a> 823 
+</span><span class="marked1"><a name="line824"></a> 824     def set_time(binaryDosDate, binaryDosTime)
+</span><span class="uncovered0"><a name="line825"></a> 825       @time = Time.parse_binary_dos_format(binaryDosDate, binaryDosTime)
+</span><span class="uncovered1"><a name="line826"></a> 826     rescue ArgumentError
+</span><span class="uncovered0"><a name="line827"></a> 827       puts &quot;Invalid date/time in zip entry&quot;
+</span><span class="uncovered1"><a name="line828"></a> 828     end
+</span><span class="inferred0"><a name="line829"></a> 829 
+</span><span class="marked1"><a name="line830"></a> 830     def write_file(destPath, continueOnExistsProc = proc { false })
+</span><span class="uncovered0"><a name="line831"></a> 831       if File.exists?(destPath) &amp;&amp; ! yield(self, destPath)
+</span><span class="uncovered1"><a name="line832"></a> 832 	raise ZipDestinationFileExistsError,
+</span><span class="uncovered0"><a name="line833"></a> 833 	  &quot;Destination '#{destPath}' already exists&quot;
+</span><span class="uncovered1"><a name="line834"></a> 834       end
+</span><span class="uncovered0"><a name="line835"></a> 835       File.open(destPath, &quot;wb&quot;) do |os|
+</span><span class="uncovered1"><a name="line836"></a> 836         get_input_stream do |is|
+</span><span class="uncovered0"><a name="line837"></a> 837           set_extra_attributes_on_path(destPath)
+</span><span class="uncovered1"><a name="line838"></a> 838 
+</span><span class="uncovered0"><a name="line839"></a> 839           buf = ''
+</span><span class="uncovered1"><a name="line840"></a> 840           while buf = is.sysread(Decompressor::CHUNK_SIZE, buf)
+</span><span class="uncovered0"><a name="line841"></a> 841             os &lt;&lt; buf
+</span><span class="uncovered1"><a name="line842"></a> 842           end
+</span><span class="uncovered0"><a name="line843"></a> 843         end
+</span><span class="uncovered1"><a name="line844"></a> 844       end
+</span><span class="uncovered0"><a name="line845"></a> 845     end
+</span><span class="inferred1"><a name="line846"></a> 846     
+</span><span class="marked0"><a name="line847"></a> 847     def create_directory(destPath)
+</span><span class="uncovered1"><a name="line848"></a> 848       if File.directory? destPath
+</span><span class="uncovered0"><a name="line849"></a> 849 	return
+</span><span class="uncovered1"><a name="line850"></a> 850       elsif File.exists? destPath
+</span><span class="uncovered0"><a name="line851"></a> 851 	if block_given? &amp;&amp; yield(self, destPath)
+</span><span class="uncovered1"><a name="line852"></a> 852 	  File.rm_f destPath
+</span><span class="uncovered0"><a name="line853"></a> 853 	else
+</span><span class="uncovered1"><a name="line854"></a> 854 	  raise ZipDestinationFileExistsError,
+</span><span class="uncovered0"><a name="line855"></a> 855 	    &quot;Cannot create directory '#{destPath}'. &quot;+
+</span><span class="uncovered1"><a name="line856"></a> 856 	    &quot;A file already exists with that name&quot;
+</span><span class="uncovered0"><a name="line857"></a> 857 	end
+</span><span class="uncovered1"><a name="line858"></a> 858       end
+</span><span class="uncovered0"><a name="line859"></a> 859       Dir.mkdir destPath
+</span><span class="uncovered1"><a name="line860"></a> 860       set_extra_attributes_on_path(destPath)
+</span><span class="uncovered0"><a name="line861"></a> 861     end
+</span><span class="inferred1"><a name="line862"></a> 862 
+</span><span class="inferred0"><a name="line863"></a> 863 # BUG: create_symlink() does not use &amp;onExistsProc
+</span><span class="marked1"><a name="line864"></a> 864     def create_symlink(destPath)
+</span><span class="uncovered0"><a name="line865"></a> 865       stat = nil
+</span><span class="uncovered1"><a name="line866"></a> 866       begin
+</span><span class="uncovered0"><a name="line867"></a> 867         stat = File::lstat(destPath)
+</span><span class="uncovered1"><a name="line868"></a> 868       rescue Errno::ENOENT
+</span><span class="uncovered0"><a name="line869"></a> 869       end
+</span><span class="uncovered1"><a name="line870"></a> 870 
+</span><span class="uncovered0"><a name="line871"></a> 871       io = get_input_stream
+</span><span class="uncovered1"><a name="line872"></a> 872       linkto = io.read
+</span><span class="uncovered0"><a name="line873"></a> 873 
+</span><span class="uncovered1"><a name="line874"></a> 874       if stat
+</span><span class="uncovered0"><a name="line875"></a> 875         if stat.symlink?
+</span><span class="uncovered1"><a name="line876"></a> 876           if File::readlink(destPath) == linkto
+</span><span class="uncovered0"><a name="line877"></a> 877             return
+</span><span class="uncovered1"><a name="line878"></a> 878           else
+</span><span class="uncovered0"><a name="line879"></a> 879             raise ZipDestinationFileExistsError,
+</span><span class="uncovered1"><a name="line880"></a> 880               &quot;Cannot create symlink '#{destPath}'. &quot;+
+</span><span class="uncovered0"><a name="line881"></a> 881               &quot;A symlink already exists with that name&quot;
+</span><span class="uncovered1"><a name="line882"></a> 882           end
+</span><span class="uncovered0"><a name="line883"></a> 883         else
+</span><span class="uncovered1"><a name="line884"></a> 884 	  raise ZipDestinationFileExistsError,
+</span><span class="uncovered0"><a name="line885"></a> 885 	    &quot;Cannot create symlink '#{destPath}'. &quot;+
+</span><span class="uncovered1"><a name="line886"></a> 886 	    &quot;A file already exists with that name&quot;
+</span><span class="uncovered0"><a name="line887"></a> 887         end
+</span><span class="uncovered1"><a name="line888"></a> 888       end
+</span><span class="uncovered0"><a name="line889"></a> 889 
+</span><span class="uncovered1"><a name="line890"></a> 890       File::symlink(linkto, destPath)
+</span><span class="uncovered0"><a name="line891"></a> 891     end
+</span><span class="uncovered1"><a name="line892"></a> 892   end
+</span><span class="inferred0"><a name="line893"></a> 893 
+</span><span class="inferred1"><a name="line894"></a> 894 
+</span><span class="inferred0"><a name="line895"></a> 895   # ZipOutputStream is the basic class for writing zip files. It is 
+</span><span class="inferred1"><a name="line896"></a> 896   # possible to create a ZipOutputStream object directly, passing 
+</span><span class="inferred0"><a name="line897"></a> 897   # the zip file name to the constructor, but more often than not 
+</span><span class="inferred1"><a name="line898"></a> 898   # the ZipOutputStream will be obtained from a ZipFile (perhaps using the 
+</span><span class="inferred0"><a name="line899"></a> 899   # ZipFileSystem interface) object for a particular entry in the zip 
+</span><span class="inferred1"><a name="line900"></a> 900   # archive.
+</span><span class="inferred0"><a name="line901"></a> 901   #
+</span><span class="inferred1"><a name="line902"></a> 902   # A ZipOutputStream inherits IOExtras::AbstractOutputStream in order 
+</span><span class="inferred0"><a name="line903"></a> 903   # to provide an IO-like interface for writing to a single zip 
+</span><span class="inferred1"><a name="line904"></a> 904   # entry. Beyond methods for mimicking an IO-object it contains 
+</span><span class="inferred0"><a name="line905"></a> 905   # the method put_next_entry that closes the current entry 
+</span><span class="inferred1"><a name="line906"></a> 906   # and creates a new.
+</span><span class="inferred0"><a name="line907"></a> 907   #
+</span><span class="inferred1"><a name="line908"></a> 908   # Please refer to ZipInputStream for example code.
+</span><span class="inferred0"><a name="line909"></a> 909   #
+</span><span class="inferred1"><a name="line910"></a> 910   # java.util.zip.ZipOutputStream is the original inspiration for this 
+</span><span class="inferred0"><a name="line911"></a> 911   # class.
+</span><span class="inferred1"><a name="line912"></a> 912 
+</span><span class="marked0"><a name="line913"></a> 913   class ZipOutputStream
+</span><span class="marked1"><a name="line914"></a> 914     include IOExtras::AbstractOutputStream
+</span><span class="inferred0"><a name="line915"></a> 915 
+</span><span class="marked1"><a name="line916"></a> 916     attr_accessor :comment
+</span><span class="inferred0"><a name="line917"></a> 917 
+</span><span class="inferred1"><a name="line918"></a> 918     # Opens the indicated zip file. If a file with that name already
+</span><span class="inferred0"><a name="line919"></a> 919     # exists it will be overwritten.
+</span><span class="marked1"><a name="line920"></a> 920     def initialize(fileName)
+</span><span class="uncovered0"><a name="line921"></a> 921       super()
+</span><span class="uncovered1"><a name="line922"></a> 922       @fileName = fileName
+</span><span class="uncovered0"><a name="line923"></a> 923       @outputStream = File.new(@fileName, &quot;wb&quot;)
+</span><span class="uncovered1"><a name="line924"></a> 924       @entrySet = ZipEntrySet.new
+</span><span class="uncovered0"><a name="line925"></a> 925       @compressor = NullCompressor.instance
+</span><span class="uncovered1"><a name="line926"></a> 926       @closed = false
+</span><span class="uncovered0"><a name="line927"></a> 927       @currentEntry = nil
+</span><span class="uncovered1"><a name="line928"></a> 928       @comment = nil
+</span><span class="uncovered0"><a name="line929"></a> 929     end
+</span><span class="inferred1"><a name="line930"></a> 930 
+</span><span class="inferred0"><a name="line931"></a> 931     # Same as #initialize but if a block is passed the opened
+</span><span class="inferred1"><a name="line932"></a> 932     # stream is passed to the block and closed when the block
+</span><span class="inferred0"><a name="line933"></a> 933     # returns.    
+</span><span class="marked1"><a name="line934"></a> 934     def ZipOutputStream.open(fileName)
+</span><span class="uncovered0"><a name="line935"></a> 935       return new(fileName) unless block_given?
+</span><span class="uncovered1"><a name="line936"></a> 936       zos = new(fileName)
+</span><span class="uncovered0"><a name="line937"></a> 937       yield zos
+</span><span class="uncovered1"><a name="line938"></a> 938     ensure
+</span><span class="uncovered0"><a name="line939"></a> 939       zos.close if zos
+</span><span class="uncovered1"><a name="line940"></a> 940     end
+</span><span class="inferred0"><a name="line941"></a> 941 
+</span><span class="inferred1"><a name="line942"></a> 942     # Closes the stream and writes the central directory to the zip file
+</span><span class="marked0"><a name="line943"></a> 943     def close
+</span><span class="uncovered1"><a name="line944"></a> 944       return if @closed
+</span><span class="uncovered0"><a name="line945"></a> 945       finalize_current_entry
+</span><span class="uncovered1"><a name="line946"></a> 946       update_local_headers
+</span><span class="uncovered0"><a name="line947"></a> 947       write_central_directory
+</span><span class="uncovered1"><a name="line948"></a> 948       @outputStream.close
+</span><span class="uncovered0"><a name="line949"></a> 949       @closed = true
+</span><span class="uncovered1"><a name="line950"></a> 950     end
+</span><span class="inferred0"><a name="line951"></a> 951 
+</span><span class="inferred1"><a name="line952"></a> 952     # Closes the current entry and opens a new for writing.
+</span><span class="inferred0"><a name="line953"></a> 953     # +entry+ can be a ZipEntry object or a string.
+</span><span class="marked1"><a name="line954"></a> 954     def put_next_entry(entry, level = Zlib::DEFAULT_COMPRESSION)
+</span><span class="uncovered0"><a name="line955"></a> 955       raise ZipError, &quot;zip stream is closed&quot; if @closed
+</span><span class="uncovered1"><a name="line956"></a> 956       newEntry = entry.kind_of?(ZipEntry) ? entry : ZipEntry.new(@fileName, entry.to_s)
+</span><span class="uncovered0"><a name="line957"></a> 957       init_next_entry(newEntry, level)
+</span><span class="uncovered1"><a name="line958"></a> 958       @currentEntry=newEntry
+</span><span class="uncovered0"><a name="line959"></a> 959     end
+</span><span class="inferred1"><a name="line960"></a> 960 
+</span><span class="marked0"><a name="line961"></a> 961     def copy_raw_entry(entry)
+</span><span class="uncovered1"><a name="line962"></a> 962       entry = entry.dup
+</span><span class="uncovered0"><a name="line963"></a> 963       raise ZipError, &quot;zip stream is closed&quot; if @closed
+</span><span class="uncovered1"><a name="line964"></a> 964       raise ZipError, &quot;entry is not a ZipEntry&quot; if !entry.kind_of?(ZipEntry)
+</span><span class="uncovered0"><a name="line965"></a> 965       finalize_current_entry
+</span><span class="uncovered1"><a name="line966"></a> 966       @entrySet &lt;&lt; entry
+</span><span class="uncovered0"><a name="line967"></a> 967       src_pos = entry.local_entry_offset
+</span><span class="uncovered1"><a name="line968"></a> 968       entry.write_local_entry(@outputStream)
+</span><span class="uncovered0"><a name="line969"></a> 969       @compressor = NullCompressor.instance
+</span><span class="uncovered1"><a name="line970"></a> 970       @outputStream &lt;&lt; entry.get_raw_input_stream { 
+</span><span class="uncovered0"><a name="line971"></a> 971 	|is| 
+</span><span class="uncovered1"><a name="line972"></a> 972 	is.seek(src_pos, IO::SEEK_SET)
+</span><span class="uncovered0"><a name="line973"></a> 973 	is.read(entry.compressed_size)
+</span><span class="uncovered1"><a name="line974"></a> 974       }
+</span><span class="uncovered0"><a name="line975"></a> 975       @compressor = NullCompressor.instance
+</span><span class="uncovered1"><a name="line976"></a> 976       @currentEntry = nil
+</span><span class="uncovered0"><a name="line977"></a> 977     end
+</span><span class="inferred1"><a name="line978"></a> 978 
+</span><span class="marked0"><a name="line979"></a> 979     private
+</span><span class="marked1"><a name="line980"></a> 980     def finalize_current_entry
+</span><span class="uncovered0"><a name="line981"></a> 981       return unless @currentEntry
+</span><span class="uncovered1"><a name="line982"></a> 982       finish
+</span><span class="uncovered0"><a name="line983"></a> 983       @currentEntry.compressed_size = @outputStream.tell - @currentEntry.localHeaderOffset - 
+</span><span class="uncovered1"><a name="line984"></a> 984 	@currentEntry.local_header_size
+</span><span class="uncovered0"><a name="line985"></a> 985       @currentEntry.size = @compressor.size
+</span><span class="uncovered1"><a name="line986"></a> 986       @currentEntry.crc = @compressor.crc
+</span><span class="uncovered0"><a name="line987"></a> 987       @currentEntry = nil
+</span><span class="uncovered1"><a name="line988"></a> 988       @compressor = NullCompressor.instance
+</span><span class="uncovered0"><a name="line989"></a> 989     end
+</span><span class="inferred1"><a name="line990"></a> 990     
+</span><span class="marked0"><a name="line991"></a> 991     def init_next_entry(entry, level = Zlib::DEFAULT_COMPRESSION)
+</span><span class="uncovered1"><a name="line992"></a> 992       finalize_current_entry
+</span><span class="uncovered0"><a name="line993"></a> 993       @entrySet &lt;&lt; entry
+</span><span class="uncovered1"><a name="line994"></a> 994       entry.write_local_entry(@outputStream)
+</span><span class="uncovered0"><a name="line995"></a> 995       @compressor = get_compressor(entry, level)
+</span><span class="uncovered1"><a name="line996"></a> 996     end
+</span><span class="inferred0"><a name="line997"></a> 997 
+</span><span class="marked1"><a name="line998"></a> 998     def get_compressor(entry, level)
+</span><span class="uncovered0"><a name="line999"></a> 999       case entry.compression_method
+</span><span class="uncovered1"><a name="line1000"></a>1000 	when ZipEntry::DEFLATED then Deflater.new(@outputStream, level)
+</span><span class="uncovered0"><a name="line1001"></a>1001 	when ZipEntry::STORED   then PassThruCompressor.new(@outputStream)
+</span><span class="uncovered1"><a name="line1002"></a>1002       else raise ZipCompressionMethodError, 
+</span><span class="uncovered0"><a name="line1003"></a>1003 	  &quot;Invalid compression method: '#{entry.compression_method}'&quot;
+</span><span class="uncovered1"><a name="line1004"></a>1004       end
+</span><span class="uncovered0"><a name="line1005"></a>1005     end
+</span><span class="inferred1"><a name="line1006"></a>1006 
+</span><span class="marked0"><a name="line1007"></a>1007     def update_local_headers
+</span><span class="uncovered1"><a name="line1008"></a>1008       pos = @outputStream.tell
+</span><span class="uncovered0"><a name="line1009"></a>1009       @entrySet.each {
+</span><span class="uncovered1"><a name="line1010"></a>1010 	|entry|
+</span><span class="uncovered0"><a name="line1011"></a>1011 	@outputStream.pos = entry.localHeaderOffset
+</span><span class="uncovered1"><a name="line1012"></a>1012 	entry.write_local_entry(@outputStream)
+</span><span class="uncovered0"><a name="line1013"></a>1013       }
+</span><span class="uncovered1"><a name="line1014"></a>1014       @outputStream.pos = pos
+</span><span class="uncovered0"><a name="line1015"></a>1015     end
+</span><span class="inferred1"><a name="line1016"></a>1016 
+</span><span class="marked0"><a name="line1017"></a>1017     def write_central_directory
+</span><span class="uncovered1"><a name="line1018"></a>1018       cdir = ZipCentralDirectory.new(@entrySet, @comment)
+</span><span class="uncovered0"><a name="line1019"></a>1019       cdir.write_to_stream(@outputStream)
+</span><span class="uncovered1"><a name="line1020"></a>1020     end
+</span><span class="inferred0"><a name="line1021"></a>1021 
+</span><span class="marked1"><a name="line1022"></a>1022     protected
+</span><span class="inferred0"><a name="line1023"></a>1023 
+</span><span class="marked1"><a name="line1024"></a>1024     def finish
+</span><span class="uncovered0"><a name="line1025"></a>1025       @compressor.finish
+</span><span class="uncovered1"><a name="line1026"></a>1026     end
+</span><span class="inferred0"><a name="line1027"></a>1027 
+</span><span class="marked1"><a name="line1028"></a>1028     public
+</span><span class="inferred0"><a name="line1029"></a>1029     # Modeled after IO.&lt;&lt;
+</span><span class="marked1"><a name="line1030"></a>1030     def &lt;&lt; (data)
+</span><span class="uncovered0"><a name="line1031"></a>1031       @compressor &lt;&lt; data
+</span><span class="uncovered1"><a name="line1032"></a>1032     end
+</span><span class="uncovered0"><a name="line1033"></a>1033   end
+</span><span class="inferred1"><a name="line1034"></a>1034   
+</span><span class="inferred0"><a name="line1035"></a>1035   
+</span><span class="marked1"><a name="line1036"></a>1036   class Compressor #:nodoc:all
+</span><span class="marked0"><a name="line1037"></a>1037     def finish
+</span><span class="inferred1"><a name="line1038"></a>1038     end
+</span><span class="inferred0"><a name="line1039"></a>1039   end
+</span><span class="inferred1"><a name="line1040"></a>1040   
+</span><span class="marked0"><a name="line1041"></a>1041   class PassThruCompressor &lt; Compressor #:nodoc:all
+</span><span class="marked1"><a name="line1042"></a>1042     def initialize(outputStream)
+</span><span class="uncovered0"><a name="line1043"></a>1043       super()
+</span><span class="uncovered1"><a name="line1044"></a>1044       @outputStream = outputStream
+</span><span class="uncovered0"><a name="line1045"></a>1045       @crc = Zlib::crc32
+</span><span class="uncovered1"><a name="line1046"></a>1046       @size = 0
+</span><span class="uncovered0"><a name="line1047"></a>1047     end
+</span><span class="inferred1"><a name="line1048"></a>1048     
+</span><span class="marked0"><a name="line1049"></a>1049     def &lt;&lt; (data)
+</span><span class="uncovered1"><a name="line1050"></a>1050       val = data.to_s
+</span><span class="uncovered0"><a name="line1051"></a>1051       @crc = Zlib::crc32(val, @crc)
+</span><span class="uncovered1"><a name="line1052"></a>1052       @size += val.size
+</span><span class="uncovered0"><a name="line1053"></a>1053       @outputStream &lt;&lt; val
+</span><span class="uncovered1"><a name="line1054"></a>1054     end
+</span><span class="inferred0"><a name="line1055"></a>1055 
+</span><span class="marked1"><a name="line1056"></a>1056     attr_reader :size, :crc
+</span><span class="inferred0"><a name="line1057"></a>1057   end
+</span><span class="inferred1"><a name="line1058"></a>1058 
+</span><span class="marked0"><a name="line1059"></a>1059   class NullCompressor &lt; Compressor #:nodoc:all
+</span><span class="marked1"><a name="line1060"></a>1060     include Singleton
+</span><span class="inferred0"><a name="line1061"></a>1061 
+</span><span class="marked1"><a name="line1062"></a>1062     def &lt;&lt; (data)
+</span><span class="uncovered0"><a name="line1063"></a>1063       raise IOError, &quot;closed stream&quot;
+</span><span class="uncovered1"><a name="line1064"></a>1064     end
+</span><span class="inferred0"><a name="line1065"></a>1065 
+</span><span class="marked1"><a name="line1066"></a>1066     attr_reader :size, :compressed_size
+</span><span class="inferred0"><a name="line1067"></a>1067   end
+</span><span class="inferred1"><a name="line1068"></a>1068 
+</span><span class="marked0"><a name="line1069"></a>1069   class Deflater &lt; Compressor #:nodoc:all
+</span><span class="marked1"><a name="line1070"></a>1070     def initialize(outputStream, level = Zlib::DEFAULT_COMPRESSION)
+</span><span class="uncovered0"><a name="line1071"></a>1071       super()
+</span><span class="uncovered1"><a name="line1072"></a>1072       @outputStream = outputStream
+</span><span class="uncovered0"><a name="line1073"></a>1073       @zlibDeflater = Zlib::Deflate.new(level, -Zlib::MAX_WBITS)
+</span><span class="uncovered1"><a name="line1074"></a>1074       @size = 0
+</span><span class="uncovered0"><a name="line1075"></a>1075       @crc = Zlib::crc32
+</span><span class="uncovered1"><a name="line1076"></a>1076     end
+</span><span class="inferred0"><a name="line1077"></a>1077     
+</span><span class="marked1"><a name="line1078"></a>1078     def &lt;&lt; (data)
+</span><span class="uncovered0"><a name="line1079"></a>1079       val = data.to_s
+</span><span class="uncovered1"><a name="line1080"></a>1080       @crc = Zlib::crc32(val, @crc)
+</span><span class="uncovered0"><a name="line1081"></a>1081       @size += val.size
+</span><span class="uncovered1"><a name="line1082"></a>1082       @outputStream &lt;&lt; @zlibDeflater.deflate(data)
+</span><span class="uncovered0"><a name="line1083"></a>1083     end
+</span><span class="inferred1"><a name="line1084"></a>1084 
+</span><span class="marked0"><a name="line1085"></a>1085     def finish
+</span><span class="uncovered1"><a name="line1086"></a>1086       until @zlibDeflater.finished?
+</span><span class="uncovered0"><a name="line1087"></a>1087 	@outputStream &lt;&lt; @zlibDeflater.finish
+</span><span class="uncovered1"><a name="line1088"></a>1088       end
+</span><span class="uncovered0"><a name="line1089"></a>1089     end
+</span><span class="inferred1"><a name="line1090"></a>1090 
+</span><span class="marked0"><a name="line1091"></a>1091     attr_reader :size, :crc
+</span><span class="inferred1"><a name="line1092"></a>1092   end
+</span><span class="inferred0"><a name="line1093"></a>1093   
+</span><span class="inferred1"><a name="line1094"></a>1094 
+</span><span class="marked0"><a name="line1095"></a>1095   class ZipEntrySet #:nodoc:all
+</span><span class="marked1"><a name="line1096"></a>1096     include Enumerable
+</span><span class="inferred0"><a name="line1097"></a>1097     
+</span><span class="marked1"><a name="line1098"></a>1098     def initialize(anEnumerable = [])
+</span><span class="uncovered0"><a name="line1099"></a>1099       super()
+</span><span class="uncovered1"><a name="line1100"></a>1100       @entrySet = {}
+</span><span class="uncovered0"><a name="line1101"></a>1101       anEnumerable.each { |o| push(o) }
+</span><span class="uncovered1"><a name="line1102"></a>1102     end
+</span><span class="inferred0"><a name="line1103"></a>1103 
+</span><span class="marked1"><a name="line1104"></a>1104     def include?(entry)
+</span><span class="uncovered0"><a name="line1105"></a>1105       @entrySet.include?(entry.to_s)
+</span><span class="uncovered1"><a name="line1106"></a>1106     end
+</span><span class="inferred0"><a name="line1107"></a>1107 
+</span><span class="marked1"><a name="line1108"></a>1108     def &lt;&lt;(entry)
+</span><span class="uncovered0"><a name="line1109"></a>1109       @entrySet[entry.to_s] = entry
+</span><span class="uncovered1"><a name="line1110"></a>1110     end
+</span><span class="marked0"><a name="line1111"></a>1111     alias :push :&lt;&lt;
+</span><span class="inferred1"><a name="line1112"></a>1112 
+</span><span class="marked0"><a name="line1113"></a>1113     def size
+</span><span class="uncovered1"><a name="line1114"></a>1114       @entrySet.size
+</span><span class="uncovered0"><a name="line1115"></a>1115     end
+</span><span class="marked1"><a name="line1116"></a>1116     alias :length :size
+</span><span class="inferred0"><a name="line1117"></a>1117 
+</span><span class="marked1"><a name="line1118"></a>1118     def delete(entry)
+</span><span class="uncovered0"><a name="line1119"></a>1119       @entrySet.delete(entry.to_s) ? entry : nil
+</span><span class="uncovered1"><a name="line1120"></a>1120     end
+</span><span class="inferred0"><a name="line1121"></a>1121 
+</span><span class="marked1"><a name="line1122"></a>1122     def each(&amp;aProc)
+</span><span class="uncovered0"><a name="line1123"></a>1123       @entrySet.values.each(&amp;aProc)
+</span><span class="uncovered1"><a name="line1124"></a>1124     end
+</span><span class="inferred0"><a name="line1125"></a>1125 
+</span><span class="marked1"><a name="line1126"></a>1126     def entries
+</span><span class="uncovered0"><a name="line1127"></a>1127       @entrySet.values
+</span><span class="uncovered1"><a name="line1128"></a>1128     end
+</span><span class="inferred0"><a name="line1129"></a>1129 
+</span><span class="inferred1"><a name="line1130"></a>1130     # deep clone
+</span><span class="marked0"><a name="line1131"></a>1131     def dup
+</span><span class="uncovered1"><a name="line1132"></a>1132       newZipEntrySet = ZipEntrySet.new(@entrySet.values.map { |e| e.dup })
+</span><span class="uncovered0"><a name="line1133"></a>1133     end
+</span><span class="inferred1"><a name="line1134"></a>1134 
+</span><span class="marked0"><a name="line1135"></a>1135     def == (other)
+</span><span class="uncovered1"><a name="line1136"></a>1136       return false unless other.kind_of?(ZipEntrySet)
+</span><span class="uncovered0"><a name="line1137"></a>1137       return @entrySet == other.entrySet      
+</span><span class="uncovered1"><a name="line1138"></a>1138     end
+</span><span class="inferred0"><a name="line1139"></a>1139 
+</span><span class="marked1"><a name="line1140"></a>1140     def parent(entry)
+</span><span class="uncovered0"><a name="line1141"></a>1141       @entrySet[entry.parent_as_string]
+</span><span class="uncovered1"><a name="line1142"></a>1142     end
+</span><span class="inferred0"><a name="line1143"></a>1143 
+</span><span class="marked1"><a name="line1144"></a>1144     def glob(pattern, flags = File::FNM_PATHNAME|File::FNM_DOTMATCH)
+</span><span class="uncovered0"><a name="line1145"></a>1145       entries.select { 
+</span><span class="uncovered1"><a name="line1146"></a>1146 	|entry| 
+</span><span class="uncovered0"><a name="line1147"></a>1147 	File.fnmatch(pattern, entry.name.chomp('/'), flags) 
+</span><span class="uncovered1"><a name="line1148"></a>1148       } 
+</span><span class="uncovered0"><a name="line1149"></a>1149     end	
+</span><span class="inferred1"><a name="line1150"></a>1150 
+</span><span class="inferred0"><a name="line1151"></a>1151 #TODO    attr_accessor :auto_create_directories
+</span><span class="marked1"><a name="line1152"></a>1152     protected
+</span><span class="marked0"><a name="line1153"></a>1153     attr_accessor :entrySet
+</span><span class="inferred1"><a name="line1154"></a>1154   end
+</span><span class="inferred0"><a name="line1155"></a>1155 
+</span><span class="inferred1"><a name="line1156"></a>1156 
+</span><span class="marked0"><a name="line1157"></a>1157   class ZipCentralDirectory
+</span><span class="marked1"><a name="line1158"></a>1158     include Enumerable
+</span><span class="inferred0"><a name="line1159"></a>1159     
+</span><span class="marked1"><a name="line1160"></a>1160     END_OF_CENTRAL_DIRECTORY_SIGNATURE = 0x06054b50
+</span><span class="marked0"><a name="line1161"></a>1161     MAX_END_OF_CENTRAL_DIRECTORY_STRUCTURE_SIZE = 65536 + 18
+</span><span class="marked1"><a name="line1162"></a>1162     STATIC_EOCD_SIZE = 22
+</span><span class="inferred0"><a name="line1163"></a>1163 
+</span><span class="marked1"><a name="line1164"></a>1164     attr_reader :comment
+</span><span class="inferred0"><a name="line1165"></a>1165 
+</span><span class="inferred1"><a name="line1166"></a>1166     # Returns an Enumerable containing the entries.
+</span><span class="marked0"><a name="line1167"></a>1167     def entries
+</span><span class="uncovered1"><a name="line1168"></a>1168       @entrySet.entries
+</span><span class="uncovered0"><a name="line1169"></a>1169     end
+</span><span class="inferred1"><a name="line1170"></a>1170 
+</span><span class="marked0"><a name="line1171"></a>1171     def initialize(entries = ZipEntrySet.new, comment = &quot;&quot;)  #:nodoc:
+</span><span class="uncovered1"><a name="line1172"></a>1172       super()
+</span><span class="uncovered0"><a name="line1173"></a>1173       @entrySet = entries.kind_of?(ZipEntrySet) ? entries : ZipEntrySet.new(entries)
+</span><span class="uncovered1"><a name="line1174"></a>1174       @comment = comment
+</span><span class="uncovered0"><a name="line1175"></a>1175     end
+</span><span class="inferred1"><a name="line1176"></a>1176 
+</span><span class="marked0"><a name="line1177"></a>1177     def write_to_stream(io)  #:nodoc:
+</span><span class="uncovered1"><a name="line1178"></a>1178       offset = io.tell
+</span><span class="uncovered0"><a name="line1179"></a>1179       @entrySet.each { |entry| entry.write_c_dir_entry(io) }
+</span><span class="uncovered1"><a name="line1180"></a>1180       write_e_o_c_d(io, offset)
+</span><span class="uncovered0"><a name="line1181"></a>1181     end
+</span><span class="inferred1"><a name="line1182"></a>1182 
+</span><span class="marked0"><a name="line1183"></a>1183     def write_e_o_c_d(io, offset)  #:nodoc:
+</span><span class="uncovered1"><a name="line1184"></a>1184       io &lt;&lt;
+</span><span class="uncovered0"><a name="line1185"></a>1185 	[END_OF_CENTRAL_DIRECTORY_SIGNATURE,
+</span><span class="uncovered1"><a name="line1186"></a>1186         0                                  , # @numberOfThisDisk
+</span><span class="uncovered0"><a name="line1187"></a>1187 	0                                  , # @numberOfDiskWithStartOfCDir
+</span><span class="uncovered1"><a name="line1188"></a>1188 	@entrySet? @entrySet.size : 0        ,
+</span><span class="uncovered0"><a name="line1189"></a>1189 	@entrySet? @entrySet.size : 0        ,
+</span><span class="uncovered1"><a name="line1190"></a>1190 	cdir_size                           ,
+</span><span class="uncovered0"><a name="line1191"></a>1191 	offset                             ,
+</span><span class="uncovered1"><a name="line1192"></a>1192 	@comment ? @comment.length : 0     ].pack('VvvvvVVv')
+</span><span class="uncovered0"><a name="line1193"></a>1193       io &lt;&lt; @comment
+</span><span class="uncovered1"><a name="line1194"></a>1194     end
+</span><span class="marked0"><a name="line1195"></a>1195     private :write_e_o_c_d
+</span><span class="inferred1"><a name="line1196"></a>1196 
+</span><span class="marked0"><a name="line1197"></a>1197     def cdir_size  #:nodoc:
+</span><span class="uncovered1"><a name="line1198"></a>1198       # does not include eocd
+</span><span class="uncovered0"><a name="line1199"></a>1199       @entrySet.inject(0) { |value, entry| entry.cdir_header_size + value }
+</span><span class="uncovered1"><a name="line1200"></a>1200     end
+</span><span class="marked0"><a name="line1201"></a>1201     private :cdir_size
+</span><span class="inferred1"><a name="line1202"></a>1202 
+</span><span class="marked0"><a name="line1203"></a>1203     def read_e_o_c_d(io) #:nodoc:
+</span><span class="uncovered1"><a name="line1204"></a>1204       buf = get_e_o_c_d(io)
+</span><span class="uncovered0"><a name="line1205"></a>1205       @numberOfThisDisk                     = ZipEntry::read_zip_short(buf)
+</span><span class="uncovered1"><a name="line1206"></a>1206       @numberOfDiskWithStartOfCDir          = ZipEntry::read_zip_short(buf)
+</span><span class="uncovered0"><a name="line1207"></a>1207       @totalNumberOfEntriesInCDirOnThisDisk = ZipEntry::read_zip_short(buf)
+</span><span class="uncovered1"><a name="line1208"></a>1208       @size                                 = ZipEntry::read_zip_short(buf)
+</span><span class="uncovered0"><a name="line1209"></a>1209       @sizeInBytes                          = ZipEntry::read_zip_long(buf)
+</span><span class="uncovered1"><a name="line1210"></a>1210       @cdirOffset                           = ZipEntry::read_zip_long(buf)
+</span><span class="uncovered0"><a name="line1211"></a>1211       commentLength                         = ZipEntry::read_zip_short(buf)
+</span><span class="uncovered1"><a name="line1212"></a>1212       @comment                              = buf.read(commentLength)
+</span><span class="uncovered0"><a name="line1213"></a>1213       raise ZipError, &quot;Zip consistency problem while reading eocd structure&quot; unless buf.size == 0
+</span><span class="uncovered1"><a name="line1214"></a>1214     end
+</span><span class="inferred0"><a name="line1215"></a>1215     
+</span><span class="marked1"><a name="line1216"></a>1216     def read_central_directory_entries(io)  #:nodoc:
+</span><span class="uncovered0"><a name="line1217"></a>1217       begin
+</span><span class="uncovered1"><a name="line1218"></a>1218 	io.seek(@cdirOffset, IO::SEEK_SET)
+</span><span class="uncovered0"><a name="line1219"></a>1219       rescue Errno::EINVAL
+</span><span class="uncovered1"><a name="line1220"></a>1220 	raise ZipError, &quot;Zip consistency problem while reading central directory entry&quot;
+</span><span class="uncovered0"><a name="line1221"></a>1221       end
+</span><span class="uncovered1"><a name="line1222"></a>1222       @entrySet = ZipEntrySet.new
+</span><span class="uncovered0"><a name="line1223"></a>1223       @size.times {
+</span><span class="uncovered1"><a name="line1224"></a>1224 	@entrySet &lt;&lt; ZipEntry.read_c_dir_entry(io)
+</span><span class="uncovered0"><a name="line1225"></a>1225       }
+</span><span class="uncovered1"><a name="line1226"></a>1226     end
+</span><span class="inferred0"><a name="line1227"></a>1227     
+</span><span class="marked1"><a name="line1228"></a>1228     def read_from_stream(io)  #:nodoc:
+</span><span class="uncovered0"><a name="line1229"></a>1229       read_e_o_c_d(io)
+</span><span class="uncovered1"><a name="line1230"></a>1230       read_central_directory_entries(io)
+</span><span class="uncovered0"><a name="line1231"></a>1231     end
+</span><span class="inferred1"><a name="line1232"></a>1232     
+</span><span class="marked0"><a name="line1233"></a>1233     def get_e_o_c_d(io)  #:nodoc:
+</span><span class="uncovered1"><a name="line1234"></a>1234       begin
+</span><span class="uncovered0"><a name="line1235"></a>1235 	io.seek(-MAX_END_OF_CENTRAL_DIRECTORY_STRUCTURE_SIZE, IO::SEEK_END)
+</span><span class="uncovered1"><a name="line1236"></a>1236       rescue Errno::EINVAL
+</span><span class="uncovered0"><a name="line1237"></a>1237 	io.seek(0, IO::SEEK_SET)
+</span><span class="uncovered1"><a name="line1238"></a>1238       rescue Errno::EFBIG # FreeBSD 4.9 raise Errno::EFBIG instead of Errno::EINVAL
+</span><span class="uncovered0"><a name="line1239"></a>1239 	io.seek(0, IO::SEEK_SET)
+</span><span class="uncovered1"><a name="line1240"></a>1240       end
+</span><span class="uncovered0"><a name="line1241"></a>1241       
+</span><span class="uncovered1"><a name="line1242"></a>1242       # 'buf = io.read' substituted with lump of code to work around FreeBSD 4.5 issue
+</span><span class="uncovered0"><a name="line1243"></a>1243       retried = false
+</span><span class="uncovered1"><a name="line1244"></a>1244       buf = nil
+</span><span class="uncovered0"><a name="line1245"></a>1245       begin
+</span><span class="uncovered1"><a name="line1246"></a>1246         buf = io.read
+</span><span class="uncovered0"><a name="line1247"></a>1247       rescue Errno::EFBIG # FreeBSD 4.5 may raise Errno::EFBIG
+</span><span class="uncovered1"><a name="line1248"></a>1248         raise if (retried)
+</span><span class="uncovered0"><a name="line1249"></a>1249         retried = true
+</span><span class="uncovered1"><a name="line1250"></a>1250 	
+</span><span class="uncovered0"><a name="line1251"></a>1251         io.seek(0, IO::SEEK_SET)
+</span><span class="uncovered1"><a name="line1252"></a>1252         retry
+</span><span class="uncovered0"><a name="line1253"></a>1253       end
+</span><span class="uncovered1"><a name="line1254"></a>1254 
+</span><span class="uncovered0"><a name="line1255"></a>1255       sigIndex = buf.rindex([END_OF_CENTRAL_DIRECTORY_SIGNATURE].pack('V'))
+</span><span class="uncovered1"><a name="line1256"></a>1256       raise ZipError, &quot;Zip end of central directory signature not found&quot; unless sigIndex
+</span><span class="uncovered0"><a name="line1257"></a>1257       buf=buf.slice!((sigIndex+4)...(buf.size))
+</span><span class="uncovered1"><a name="line1258"></a>1258       def buf.read(count)
+</span><span class="uncovered0"><a name="line1259"></a>1259 	slice!(0, count)
+</span><span class="uncovered1"><a name="line1260"></a>1260       end
+</span><span class="uncovered0"><a name="line1261"></a>1261       return buf
+</span><span class="uncovered1"><a name="line1262"></a>1262     end
+</span><span class="inferred0"><a name="line1263"></a>1263 
+</span><span class="inferred1"><a name="line1264"></a>1264     # For iterating over the entries.
+</span><span class="marked0"><a name="line1265"></a>1265     def each(&amp;proc)
+</span><span class="uncovered1"><a name="line1266"></a>1266       @entrySet.each(&amp;proc)
+</span><span class="uncovered0"><a name="line1267"></a>1267     end
+</span><span class="inferred1"><a name="line1268"></a>1268 
+</span><span class="inferred0"><a name="line1269"></a>1269     # Returns the number of entries in the central directory (and 
+</span><span class="inferred1"><a name="line1270"></a>1270     # consequently in the zip archive).
+</span><span class="marked0"><a name="line1271"></a>1271     def size
+</span><span class="uncovered1"><a name="line1272"></a>1272       @entrySet.size
+</span><span class="uncovered0"><a name="line1273"></a>1273     end
+</span><span class="inferred1"><a name="line1274"></a>1274 
+</span><span class="marked0"><a name="line1275"></a>1275     def ZipCentralDirectory.read_from_stream(io)  #:nodoc:
+</span><span class="uncovered1"><a name="line1276"></a>1276       cdir  = new
+</span><span class="uncovered0"><a name="line1277"></a>1277       cdir.read_from_stream(io)
+</span><span class="uncovered1"><a name="line1278"></a>1278       return cdir
+</span><span class="uncovered0"><a name="line1279"></a>1279     rescue ZipError
+</span><span class="uncovered1"><a name="line1280"></a>1280       return nil
+</span><span class="uncovered0"><a name="line1281"></a>1281     end
+</span><span class="inferred1"><a name="line1282"></a>1282 
+</span><span class="marked0"><a name="line1283"></a>1283     def == (other) #:nodoc:
+</span><span class="uncovered1"><a name="line1284"></a>1284       return false unless other.kind_of?(ZipCentralDirectory)
+</span><span class="uncovered0"><a name="line1285"></a>1285       @entrySet.entries.sort == other.entries.sort &amp;&amp; comment == other.comment
+</span><span class="uncovered1"><a name="line1286"></a>1286     end
+</span><span class="uncovered0"><a name="line1287"></a>1287   end
+</span><span class="inferred1"><a name="line1288"></a>1288   
+</span><span class="inferred0"><a name="line1289"></a>1289   
+</span><span class="marked1"><a name="line1290"></a>1290   class ZipError &lt; StandardError ; end
+</span><span class="inferred0"><a name="line1291"></a>1291 
+</span><span class="marked1"><a name="line1292"></a>1292   class ZipEntryExistsError            &lt; ZipError; end
+</span><span class="marked0"><a name="line1293"></a>1293   class ZipDestinationFileExistsError  &lt; ZipError; end
+</span><span class="marked1"><a name="line1294"></a>1294   class ZipCompressionMethodError      &lt; ZipError; end
+</span><span class="marked0"><a name="line1295"></a>1295   class ZipEntryNameError              &lt; ZipError; end
+</span><span class="marked1"><a name="line1296"></a>1296   class ZipInternalError               &lt; ZipError; end
+</span><span class="inferred0"><a name="line1297"></a>1297 
+</span><span class="inferred1"><a name="line1298"></a>1298   # ZipFile is modeled after java.util.zip.ZipFile from the Java SDK.
+</span><span class="inferred0"><a name="line1299"></a>1299   # The most important methods are those inherited from
+</span><span class="inferred1"><a name="line1300"></a>1300   # ZipCentralDirectory for accessing information about the entries in
+</span><span class="inferred0"><a name="line1301"></a>1301   # the archive and methods such as get_input_stream and
+</span><span class="inferred1"><a name="line1302"></a>1302   # get_output_stream for reading from and writing entries to the
+</span><span class="inferred0"><a name="line1303"></a>1303   # archive. The class includes a few convenience methods such as
+</span><span class="inferred1"><a name="line1304"></a>1304   # #extract for extracting entries to the filesystem, and #remove,
+</span><span class="inferred0"><a name="line1305"></a>1305   # #replace, #rename and #mkdir for making simple modifications to
+</span><span class="inferred1"><a name="line1306"></a>1306   # the archive.
+</span><span class="inferred0"><a name="line1307"></a>1307   #
+</span><span class="inferred1"><a name="line1308"></a>1308   # Modifications to a zip archive are not committed until #commit or
+</span><span class="inferred0"><a name="line1309"></a>1309   # #close is called. The method #open accepts a block following 
+</span><span class="inferred1"><a name="line1310"></a>1310   # the pattern from File.open offering a simple way to 
+</span><span class="inferred0"><a name="line1311"></a>1311   # automatically close the archive when the block returns. 
+</span><span class="inferred1"><a name="line1312"></a>1312   #
+</span><span class="inferred0"><a name="line1313"></a>1313   # The following example opens zip archive &lt;code&gt;my.zip&lt;/code&gt; 
+</span><span class="inferred1"><a name="line1314"></a>1314   # (creating it if it doesn't exist) and adds an entry 
+</span><span class="inferred0"><a name="line1315"></a>1315   # &lt;code&gt;first.txt&lt;/code&gt; and a directory entry &lt;code&gt;a_dir&lt;/code&gt; 
+</span><span class="inferred1"><a name="line1316"></a>1316   # to it.
+</span><span class="inferred0"><a name="line1317"></a>1317   #
+</span><span class="inferred1"><a name="line1318"></a>1318   #   require 'zip/zip'
+</span><span class="inferred0"><a name="line1319"></a>1319   #   
+</span><span class="inferred1"><a name="line1320"></a>1320   #   Zip::ZipFile.open(&quot;my.zip&quot;, Zip::ZipFile::CREATE) {
+</span><span class="inferred0"><a name="line1321"></a>1321   #    |zipfile|
+</span><span class="inferred1"><a name="line1322"></a>1322   #     zipfile.get_output_stream(&quot;first.txt&quot;) { |f| f.puts &quot;Hello from ZipFile&quot; }
+</span><span class="inferred0"><a name="line1323"></a>1323   #     zipfile.mkdir(&quot;a_dir&quot;)
+</span><span class="inferred1"><a name="line1324"></a>1324   #   }
+</span><span class="inferred0"><a name="line1325"></a>1325   #
+</span><span class="inferred1"><a name="line1326"></a>1326   # The next example reopens &lt;code&gt;my.zip&lt;/code&gt; writes the contents of
+</span><span class="inferred0"><a name="line1327"></a>1327   # &lt;code&gt;first.txt&lt;/code&gt; to standard out and deletes the entry from 
+</span><span class="inferred1"><a name="line1328"></a>1328   # the archive.
+</span><span class="inferred0"><a name="line1329"></a>1329   #
+</span><span class="inferred1"><a name="line1330"></a>1330   #   require 'zip/zip'
+</span><span class="inferred0"><a name="line1331"></a>1331   #   
+</span><span class="inferred1"><a name="line1332"></a>1332   #   Zip::ZipFile.open(&quot;my.zip&quot;, Zip::ZipFile::CREATE) {
+</span><span class="inferred0"><a name="line1333"></a>1333   #     |zipfile|
+</span><span class="inferred1"><a name="line1334"></a>1334   #     puts zipfile.read(&quot;first.txt&quot;)
+</span><span class="inferred0"><a name="line1335"></a>1335   #     zipfile.remove(&quot;first.txt&quot;)
+</span><span class="inferred1"><a name="line1336"></a>1336   #   }
+</span><span class="inferred0"><a name="line1337"></a>1337   #
+</span><span class="inferred1"><a name="line1338"></a>1338   # ZipFileSystem offers an alternative API that emulates ruby's 
+</span><span class="inferred0"><a name="line1339"></a>1339   # interface for accessing the filesystem, ie. the File and Dir classes.
+</span><span class="inferred1"><a name="line1340"></a>1340   
+</span><span class="marked0"><a name="line1341"></a>1341   class ZipFile &lt; ZipCentralDirectory
+</span><span class="inferred1"><a name="line1342"></a>1342 
+</span><span class="marked0"><a name="line1343"></a>1343     CREATE = 1
+</span><span class="inferred1"><a name="line1344"></a>1344 
+</span><span class="marked0"><a name="line1345"></a>1345     attr_reader :name
+</span><span class="inferred1"><a name="line1346"></a>1346 
+</span><span class="inferred0"><a name="line1347"></a>1347     # default -&gt; false
+</span><span class="marked1"><a name="line1348"></a>1348     attr_accessor :restore_ownership
+</span><span class="inferred0"><a name="line1349"></a>1349     # default -&gt; false
+</span><span class="marked1"><a name="line1350"></a>1350     attr_accessor :restore_permissions
+</span><span class="inferred0"><a name="line1351"></a>1351     # default -&gt; true
+</span><span class="marked1"><a name="line1352"></a>1352     attr_accessor :restore_times
+</span><span class="inferred0"><a name="line1353"></a>1353 
+</span><span class="inferred1"><a name="line1354"></a>1354     # Opens a zip archive. Pass true as the second parameter to create
+</span><span class="inferred0"><a name="line1355"></a>1355     # a new archive if it doesn't exist already.
+</span><span class="marked1"><a name="line1356"></a>1356     def initialize(fileName, create = nil)
+</span><span class="uncovered0"><a name="line1357"></a>1357       super()
+</span><span class="uncovered1"><a name="line1358"></a>1358       @name = fileName
+</span><span class="uncovered0"><a name="line1359"></a>1359       @comment = &quot;&quot;
+</span><span class="uncovered1"><a name="line1360"></a>1360       if (File.exists?(fileName))
+</span><span class="uncovered0"><a name="line1361"></a>1361 	File.open(name, &quot;rb&quot;) { |f| read_from_stream(f) }
+</span><span class="uncovered1"><a name="line1362"></a>1362       elsif (create)
+</span><span class="uncovered0"><a name="line1363"></a>1363 	@entrySet = ZipEntrySet.new
+</span><span class="uncovered1"><a name="line1364"></a>1364       else
+</span><span class="uncovered0"><a name="line1365"></a>1365 	raise ZipError, &quot;File #{fileName} not found&quot;
+</span><span class="uncovered1"><a name="line1366"></a>1366       end
+</span><span class="uncovered0"><a name="line1367"></a>1367       @create = create
+</span><span class="uncovered1"><a name="line1368"></a>1368       @storedEntries = @entrySet.dup
+</span><span class="uncovered0"><a name="line1369"></a>1369 
+</span><span class="uncovered1"><a name="line1370"></a>1370       @restore_ownership = false
+</span><span class="uncovered0"><a name="line1371"></a>1371       @restore_permissions = false
+</span><span class="uncovered1"><a name="line1372"></a>1372       @restore_times = true
+</span><span class="uncovered0"><a name="line1373"></a>1373     end
+</span><span class="inferred1"><a name="line1374"></a>1374 
+</span><span class="inferred0"><a name="line1375"></a>1375     # Same as #new. If a block is passed the ZipFile object is passed
+</span><span class="inferred1"><a name="line1376"></a>1376     # to the block and is automatically closed afterwards just as with
+</span><span class="inferred0"><a name="line1377"></a>1377     # ruby's builtin File.open method.
+</span><span class="marked1"><a name="line1378"></a>1378     def ZipFile.open(fileName, create = nil)
+</span><span class="uncovered0"><a name="line1379"></a>1379       zf = ZipFile.new(fileName, create)
+</span><span class="uncovered1"><a name="line1380"></a>1380       if block_given?
+</span><span class="uncovered0"><a name="line1381"></a>1381 	begin
+</span><span class="uncovered1"><a name="line1382"></a>1382 	  yield zf
+</span><span class="uncovered0"><a name="line1383"></a>1383 	ensure
+</span><span class="uncovered1"><a name="line1384"></a>1384 	  zf.close
+</span><span class="uncovered0"><a name="line1385"></a>1385 	end
+</span><span class="uncovered1"><a name="line1386"></a>1386       else
+</span><span class="uncovered0"><a name="line1387"></a>1387 	zf
+</span><span class="uncovered1"><a name="line1388"></a>1388       end
+</span><span class="uncovered0"><a name="line1389"></a>1389     end
+</span><span class="inferred1"><a name="line1390"></a>1390 
+</span><span class="inferred0"><a name="line1391"></a>1391     # Returns the zip files comment, if it has one
+</span><span class="marked1"><a name="line1392"></a>1392     attr_accessor :comment
+</span><span class="inferred0"><a name="line1393"></a>1393 
+</span><span class="inferred1"><a name="line1394"></a>1394     # Iterates over the contents of the ZipFile. This is more efficient
+</span><span class="inferred0"><a name="line1395"></a>1395     # than using a ZipInputStream since this methods simply iterates
+</span><span class="inferred1"><a name="line1396"></a>1396     # through the entries in the central directory structure in the archive
+</span><span class="inferred0"><a name="line1397"></a>1397     # whereas ZipInputStream jumps through the entire archive accessing the
+</span><span class="inferred1"><a name="line1398"></a>1398     # local entry headers (which contain the same information as the 
+</span><span class="inferred0"><a name="line1399"></a>1399     # central directory).
+</span><span class="marked1"><a name="line1400"></a>1400     def ZipFile.foreach(aZipFileName, &amp;block)
+</span><span class="uncovered0"><a name="line1401"></a>1401       ZipFile.open(aZipFileName) {
+</span><span class="uncovered1"><a name="line1402"></a>1402 	|zipFile|
+</span><span class="uncovered0"><a name="line1403"></a>1403 	zipFile.each(&amp;block)
+</span><span class="uncovered1"><a name="line1404"></a>1404       }
+</span><span class="uncovered0"><a name="line1405"></a>1405     end
+</span><span class="inferred1"><a name="line1406"></a>1406     
+</span><span class="inferred0"><a name="line1407"></a>1407     # Returns an input stream to the specified entry. If a block is passed
+</span><span class="inferred1"><a name="line1408"></a>1408     # the stream object is passed to the block and the stream is automatically
+</span><span class="inferred0"><a name="line1409"></a>1409     # closed afterwards just as with ruby's builtin File.open method.
+</span><span class="marked1"><a name="line1410"></a>1410     def get_input_stream(entry, &amp;aProc)
+</span><span class="uncovered0"><a name="line1411"></a>1411       get_entry(entry).get_input_stream(&amp;aProc)
+</span><span class="uncovered1"><a name="line1412"></a>1412     end
+</span><span class="inferred0"><a name="line1413"></a>1413 
+</span><span class="inferred1"><a name="line1414"></a>1414     # Returns an output stream to the specified entry. If a block is passed
+</span><span class="inferred0"><a name="line1415"></a>1415     # the stream object is passed to the block and the stream is automatically
+</span><span class="inferred1"><a name="line1416"></a>1416     # closed afterwards just as with ruby's builtin File.open method.
+</span><span class="marked0"><a name="line1417"></a>1417     def get_output_stream(entry, &amp;aProc)
+</span><span class="uncovered1"><a name="line1418"></a>1418       newEntry = entry.kind_of?(ZipEntry) ? entry : ZipEntry.new(@name, entry.to_s)
+</span><span class="uncovered0"><a name="line1419"></a>1419       if newEntry.directory?
+</span><span class="uncovered1"><a name="line1420"></a>1420 	raise ArgumentError,
+</span><span class="uncovered0"><a name="line1421"></a>1421 	  &quot;cannot open stream to directory entry - '#{newEntry}'&quot;
+</span><span class="uncovered1"><a name="line1422"></a>1422       end
+</span><span class="uncovered0"><a name="line1423"></a>1423       zipStreamableEntry = ZipStreamableStream.new(newEntry)
+</span><span class="uncovered1"><a name="line1424"></a>1424       @entrySet &lt;&lt; zipStreamableEntry
+</span><span class="uncovered0"><a name="line1425"></a>1425       zipStreamableEntry.get_output_stream(&amp;aProc)      
+</span><span class="uncovered1"><a name="line1426"></a>1426     end
+</span><span class="inferred0"><a name="line1427"></a>1427 
+</span><span class="inferred1"><a name="line1428"></a>1428     # Returns the name of the zip archive
+</span><span class="marked0"><a name="line1429"></a>1429     def to_s
+</span><span class="uncovered1"><a name="line1430"></a>1430       @name
+</span><span class="uncovered0"><a name="line1431"></a>1431     end
+</span><span class="inferred1"><a name="line1432"></a>1432 
+</span><span class="inferred0"><a name="line1433"></a>1433     # Returns a string containing the contents of the specified entry
+</span><span class="marked1"><a name="line1434"></a>1434     def read(entry)
+</span><span class="uncovered0"><a name="line1435"></a>1435       get_input_stream(entry) { |is| is.read } 
+</span><span class="uncovered1"><a name="line1436"></a>1436     end
+</span><span class="inferred0"><a name="line1437"></a>1437 
+</span><span class="inferred1"><a name="line1438"></a>1438     # Convenience method for adding the contents of a file to the archive
+</span><span class="marked0"><a name="line1439"></a>1439     def add(entry, srcPath, &amp;continueOnExistsProc)
+</span><span class="uncovered1"><a name="line1440"></a>1440       continueOnExistsProc ||= proc { false }
+</span><span class="uncovered0"><a name="line1441"></a>1441       check_entry_exists(entry, continueOnExistsProc, &quot;add&quot;)
+</span><span class="uncovered1"><a name="line1442"></a>1442       newEntry = entry.kind_of?(ZipEntry) ? entry : ZipEntry.new(@name, entry.to_s)
+</span><span class="uncovered0"><a name="line1443"></a>1443       newEntry.gather_fileinfo_from_srcpath(srcPath)
+</span><span class="uncovered1"><a name="line1444"></a>1444       @entrySet &lt;&lt; newEntry
+</span><span class="uncovered0"><a name="line1445"></a>1445     end
+</span><span class="inferred1"><a name="line1446"></a>1446     
+</span><span class="inferred0"><a name="line1447"></a>1447     # Removes the specified entry.
+</span><span class="marked1"><a name="line1448"></a>1448     def remove(entry)
+</span><span class="uncovered0"><a name="line1449"></a>1449       @entrySet.delete(get_entry(entry))
+</span><span class="uncovered1"><a name="line1450"></a>1450     end
+</span><span class="inferred0"><a name="line1451"></a>1451     
+</span><span class="inferred1"><a name="line1452"></a>1452     # Renames the specified entry.
+</span><span class="marked0"><a name="line1453"></a>1453     def rename(entry, newName, &amp;continueOnExistsProc)
+</span><span class="uncovered1"><a name="line1454"></a>1454       foundEntry = get_entry(entry)
+</span><span class="uncovered0"><a name="line1455"></a>1455       check_entry_exists(newName, continueOnExistsProc, &quot;rename&quot;)
+</span><span class="uncovered1"><a name="line1456"></a>1456       foundEntry.name=newName
+</span><span class="uncovered0"><a name="line1457"></a>1457     end
+</span><span class="inferred1"><a name="line1458"></a>1458 
+</span><span class="inferred0"><a name="line1459"></a>1459     # Replaces the specified entry with the contents of srcPath (from 
+</span><span class="inferred1"><a name="line1460"></a>1460     # the file system).
+</span><span class="marked0"><a name="line1461"></a>1461     def replace(entry, srcPath)
+</span><span class="uncovered1"><a name="line1462"></a>1462       check_file(srcPath)
+</span><span class="uncovered0"><a name="line1463"></a>1463       add(remove(entry), srcPath)
+</span><span class="uncovered1"><a name="line1464"></a>1464     end
+</span><span class="inferred0"><a name="line1465"></a>1465 
+</span><span class="inferred1"><a name="line1466"></a>1466     # Extracts entry to file destPath.
+</span><span class="marked0"><a name="line1467"></a>1467     def extract(entry, destPath, &amp;onExistsProc)
+</span><span class="uncovered1"><a name="line1468"></a>1468       onExistsProc ||= proc { false }
+</span><span class="uncovered0"><a name="line1469"></a>1469       foundEntry = get_entry(entry)
+</span><span class="uncovered1"><a name="line1470"></a>1470       foundEntry.extract(destPath, &amp;onExistsProc)
+</span><span class="uncovered0"><a name="line1471"></a>1471     end
+</span><span class="inferred1"><a name="line1472"></a>1472 
+</span><span class="inferred0"><a name="line1473"></a>1473     # Commits changes that has been made since the previous commit to 
+</span><span class="inferred1"><a name="line1474"></a>1474     # the zip archive.
+</span><span class="marked0"><a name="line1475"></a>1475     def commit
+</span><span class="uncovered1"><a name="line1476"></a>1476      return if ! commit_required?
+</span><span class="uncovered0"><a name="line1477"></a>1477       on_success_replace(name) {
+</span><span class="uncovered1"><a name="line1478"></a>1478 	|tmpFile|
+</span><span class="uncovered0"><a name="line1479"></a>1479 	ZipOutputStream.open(tmpFile) {
+</span><span class="uncovered1"><a name="line1480"></a>1480 	  |zos|
+</span><span class="uncovered0"><a name="line1481"></a>1481 
+</span><span class="uncovered1"><a name="line1482"></a>1482 	  @entrySet.each { |e| e.write_to_zip_output_stream(zos) }
+</span><span class="uncovered0"><a name="line1483"></a>1483 	  zos.comment = comment
+</span><span class="uncovered1"><a name="line1484"></a>1484 	}
+</span><span class="uncovered0"><a name="line1485"></a>1485 	true
+</span><span class="uncovered1"><a name="line1486"></a>1486       }
+</span><span class="uncovered0"><a name="line1487"></a>1487       initialize(name)
+</span><span class="uncovered1"><a name="line1488"></a>1488     end
+</span><span class="inferred0"><a name="line1489"></a>1489 
+</span><span class="inferred1"><a name="line1490"></a>1490     # Closes the zip file committing any changes that has been made.
+</span><span class="marked0"><a name="line1491"></a>1491     def close
+</span><span class="uncovered1"><a name="line1492"></a>1492       commit
+</span><span class="uncovered0"><a name="line1493"></a>1493     end
+</span><span class="inferred1"><a name="line1494"></a>1494 
+</span><span class="inferred0"><a name="line1495"></a>1495     # Returns true if any changes has been made to this archive since
+</span><span class="inferred1"><a name="line1496"></a>1496     # the previous commit
+</span><span class="marked0"><a name="line1497"></a>1497     def commit_required?
+</span><span class="uncovered1"><a name="line1498"></a>1498       return @entrySet != @storedEntries || @create == ZipFile::CREATE
+</span><span class="uncovered0"><a name="line1499"></a>1499     end
+</span><span class="inferred1"><a name="line1500"></a>1500 
+</span><span class="inferred0"><a name="line1501"></a>1501     # Searches for entry with the specified name. Returns nil if 
+</span><span class="inferred1"><a name="line1502"></a>1502     # no entry is found. See also get_entry
+</span><span class="marked0"><a name="line1503"></a>1503     def find_entry(entry)
+</span><span class="uncovered1"><a name="line1504"></a>1504       @entrySet.detect { 
+</span><span class="uncovered0"><a name="line1505"></a>1505 	|e| 
+</span><span class="uncovered1"><a name="line1506"></a>1506 	e.name.sub(/\/$/, &quot;&quot;) == entry.to_s.sub(/\/$/, &quot;&quot;)
+</span><span class="uncovered0"><a name="line1507"></a>1507       }
+</span><span class="uncovered1"><a name="line1508"></a>1508     end
+</span><span class="inferred0"><a name="line1509"></a>1509 
+</span><span class="inferred1"><a name="line1510"></a>1510     # Searches for an entry just as find_entry, but throws Errno::ENOENT
+</span><span class="inferred0"><a name="line1511"></a>1511     # if no entry is found.
+</span><span class="marked1"><a name="line1512"></a>1512     def get_entry(entry)
+</span><span class="uncovered0"><a name="line1513"></a>1513       selectedEntry = find_entry(entry)
+</span><span class="uncovered1"><a name="line1514"></a>1514       unless selectedEntry
+</span><span class="uncovered0"><a name="line1515"></a>1515 	raise Errno::ENOENT, entry
+</span><span class="uncovered1"><a name="line1516"></a>1516       end
+</span><span class="uncovered0"><a name="line1517"></a>1517       selectedEntry.restore_ownership = @restore_ownership
+</span><span class="uncovered1"><a name="line1518"></a>1518       selectedEntry.restore_permissions = @restore_permissions
+</span><span class="uncovered0"><a name="line1519"></a>1519       selectedEntry.restore_times = @restore_times
+</span><span class="uncovered1"><a name="line1520"></a>1520 
+</span><span class="uncovered0"><a name="line1521"></a>1521       return selectedEntry
+</span><span class="uncovered1"><a name="line1522"></a>1522     end
+</span><span class="inferred0"><a name="line1523"></a>1523 
+</span><span class="inferred1"><a name="line1524"></a>1524     # Creates a directory
+</span><span class="marked0"><a name="line1525"></a>1525     def mkdir(entryName, permissionInt = 0755)
+</span><span class="uncovered1"><a name="line1526"></a>1526       if find_entry(entryName)
+</span><span class="uncovered0"><a name="line1527"></a>1527         raise Errno::EEXIST, &quot;File exists - #{entryName}&quot;
+</span><span class="uncovered1"><a name="line1528"></a>1528       end
+</span><span class="uncovered0"><a name="line1529"></a>1529       @entrySet &lt;&lt; ZipStreamableDirectory.new(@name, entryName.to_s.ensure_end(&quot;/&quot;), nil, permissionInt)
+</span><span class="uncovered1"><a name="line1530"></a>1530     end
+</span><span class="inferred0"><a name="line1531"></a>1531 
+</span><span class="marked1"><a name="line1532"></a>1532     private
+</span><span class="inferred0"><a name="line1533"></a>1533 
+</span><span class="marked1"><a name="line1534"></a>1534     def is_directory(newEntry, srcPath)
+</span><span class="uncovered0"><a name="line1535"></a>1535       srcPathIsDirectory = File.directory?(srcPath)
+</span><span class="uncovered1"><a name="line1536"></a>1536       if newEntry.is_directory &amp;&amp; ! srcPathIsDirectory
+</span><span class="uncovered0"><a name="line1537"></a>1537 	raise ArgumentError,
+</span><span class="uncovered1"><a name="line1538"></a>1538 	  &quot;entry name '#{newEntry}' indicates directory entry, but &quot;+
+</span><span class="uncovered0"><a name="line1539"></a>1539 	  &quot;'#{srcPath}' is not a directory&quot;
+</span><span class="uncovered1"><a name="line1540"></a>1540       elsif ! newEntry.is_directory &amp;&amp; srcPathIsDirectory
+</span><span class="uncovered0"><a name="line1541"></a>1541 	newEntry.name += &quot;/&quot;
+</span><span class="uncovered1"><a name="line1542"></a>1542       end
+</span><span class="uncovered0"><a name="line1543"></a>1543       return newEntry.is_directory &amp;&amp; srcPathIsDirectory
+</span><span class="uncovered1"><a name="line1544"></a>1544     end
+</span><span class="inferred0"><a name="line1545"></a>1545 
+</span><span class="marked1"><a name="line1546"></a>1546     def check_entry_exists(entryName, continueOnExistsProc, procedureName)
+</span><span class="uncovered0"><a name="line1547"></a>1547       continueOnExistsProc ||= proc { false }
+</span><span class="uncovered1"><a name="line1548"></a>1548       if @entrySet.detect { |e| e.name == entryName }
+</span><span class="uncovered0"><a name="line1549"></a>1549 	if continueOnExistsProc.call
+</span><span class="uncovered1"><a name="line1550"></a>1550 	  remove get_entry(entryName)
+</span><span class="uncovered0"><a name="line1551"></a>1551 	else
+</span><span class="uncovered1"><a name="line1552"></a>1552 	  raise ZipEntryExistsError, 
+</span><span class="uncovered0"><a name="line1553"></a>1553 	    procedureName+&quot; failed. Entry #{entryName} already exists&quot;
+</span><span class="uncovered1"><a name="line1554"></a>1554 	end
+</span><span class="uncovered0"><a name="line1555"></a>1555       end
+</span><span class="uncovered1"><a name="line1556"></a>1556     end
+</span><span class="inferred0"><a name="line1557"></a>1557 
+</span><span class="marked1"><a name="line1558"></a>1558     def check_file(path)
+</span><span class="uncovered0"><a name="line1559"></a>1559       unless File.readable? path
+</span><span class="uncovered1"><a name="line1560"></a>1560 	raise Errno::ENOENT, path
+</span><span class="uncovered0"><a name="line1561"></a>1561       end
+</span><span class="uncovered1"><a name="line1562"></a>1562     end
+</span><span class="inferred0"><a name="line1563"></a>1563     
+</span><span class="marked1"><a name="line1564"></a>1564     def on_success_replace(aFilename)
+</span><span class="uncovered0"><a name="line1565"></a>1565       tmpfile = get_tempfile
+</span><span class="uncovered1"><a name="line1566"></a>1566       tmpFilename = tmpfile.path
+</span><span class="uncovered0"><a name="line1567"></a>1567       tmpfile.close
+</span><span class="uncovered1"><a name="line1568"></a>1568       if yield tmpFilename
+</span><span class="uncovered0"><a name="line1569"></a>1569 	File.move(tmpFilename, name)
+</span><span class="uncovered1"><a name="line1570"></a>1570       end
+</span><span class="uncovered0"><a name="line1571"></a>1571     end
+</span><span class="inferred1"><a name="line1572"></a>1572     
+</span><span class="marked0"><a name="line1573"></a>1573     def get_tempfile
+</span><span class="uncovered1"><a name="line1574"></a>1574       tempFile = Tempfile.new(File.basename(name), File.dirname(name))
+</span><span class="uncovered0"><a name="line1575"></a>1575       tempFile.binmode
+</span><span class="uncovered1"><a name="line1576"></a>1576       tempFile
+</span><span class="uncovered0"><a name="line1577"></a>1577     end
+</span><span class="uncovered1"><a name="line1578"></a>1578     
+</span><span class="uncovered0"><a name="line1579"></a>1579   end
+</span><span class="inferred1"><a name="line1580"></a>1580 
+</span><span class="marked0"><a name="line1581"></a>1581   class ZipStreamableDirectory &lt; ZipEntry
+</span><span class="marked1"><a name="line1582"></a>1582     def initialize(zipfile, entry, srcPath = nil, permissionInt = nil)
+</span><span class="uncovered0"><a name="line1583"></a>1583       super(zipfile, entry)
+</span><span class="uncovered1"><a name="line1584"></a>1584 
+</span><span class="uncovered0"><a name="line1585"></a>1585       @ftype = :directory
+</span><span class="uncovered1"><a name="line1586"></a>1586       entry.get_extra_attributes_from_path(srcPath) if (srcPath)
+</span><span class="uncovered0"><a name="line1587"></a>1587       @unix_perms = permissionInt if (permissionInt)
+</span><span class="uncovered1"><a name="line1588"></a>1588     end
+</span><span class="uncovered0"><a name="line1589"></a>1589   end
+</span><span class="inferred1"><a name="line1590"></a>1590 
+</span><span class="marked0"><a name="line1591"></a>1591   class ZipStreamableStream &lt; DelegateClass(ZipEntry) #nodoc:all
+</span><span class="marked1"><a name="line1592"></a>1592     def initialize(entry)
+</span><span class="uncovered0"><a name="line1593"></a>1593       super(entry)
+</span><span class="uncovered1"><a name="line1594"></a>1594       @tempFile = Tempfile.new(File.basename(name), File.dirname(zipfile))
+</span><span class="uncovered0"><a name="line1595"></a>1595       @tempFile.binmode
+</span><span class="uncovered1"><a name="line1596"></a>1596     end
+</span><span class="inferred0"><a name="line1597"></a>1597 
+</span><span class="marked1"><a name="line1598"></a>1598     def get_output_stream
+</span><span class="uncovered0"><a name="line1599"></a>1599       if block_given?
+</span><span class="uncovered1"><a name="line1600"></a>1600         begin
+</span><span class="uncovered0"><a name="line1601"></a>1601           yield(@tempFile)
+</span><span class="uncovered1"><a name="line1602"></a>1602         ensure
+</span><span class="uncovered0"><a name="line1603"></a>1603           @tempFile.close
+</span><span class="uncovered1"><a name="line1604"></a>1604         end
+</span><span class="uncovered0"><a name="line1605"></a>1605       else
+</span><span class="uncovered1"><a name="line1606"></a>1606         @tempFile
+</span><span class="uncovered0"><a name="line1607"></a>1607       end
+</span><span class="uncovered1"><a name="line1608"></a>1608     end
+</span><span class="inferred0"><a name="line1609"></a>1609 
+</span><span class="marked1"><a name="line1610"></a>1610     def get_input_stream
+</span><span class="uncovered0"><a name="line1611"></a>1611       if ! @tempFile.closed?
+</span><span class="uncovered1"><a name="line1612"></a>1612         raise StandardError, &quot;cannot open entry for reading while its open for writing - #{name}&quot;
+</span><span class="uncovered0"><a name="line1613"></a>1613       end
+</span><span class="uncovered1"><a name="line1614"></a>1614       @tempFile.open # reopens tempfile from top
+</span><span class="uncovered0"><a name="line1615"></a>1615       @tempFile.binmode
+</span><span class="uncovered1"><a name="line1616"></a>1616       if block_given?
+</span><span class="uncovered0"><a name="line1617"></a>1617         begin
+</span><span class="uncovered1"><a name="line1618"></a>1618           yield(@tempFile)
+</span><span class="uncovered0"><a name="line1619"></a>1619         ensure
+</span><span class="uncovered1"><a name="line1620"></a>1620           @tempFile.close
+</span><span class="uncovered0"><a name="line1621"></a>1621         end
+</span><span class="uncovered1"><a name="line1622"></a>1622       else
+</span><span class="uncovered0"><a name="line1623"></a>1623         @tempFile
+</span><span class="uncovered1"><a name="line1624"></a>1624       end
+</span><span class="uncovered0"><a name="line1625"></a>1625     end
+</span><span class="inferred1"><a name="line1626"></a>1626     
+</span><span class="marked0"><a name="line1627"></a>1627     def write_to_zip_output_stream(aZipOutputStream)
+</span><span class="uncovered1"><a name="line1628"></a>1628       aZipOutputStream.put_next_entry(self)
+</span><span class="uncovered0"><a name="line1629"></a>1629       get_input_stream { |is| IOExtras.copy_stream(aZipOutputStream, is) } 
+</span><span class="uncovered1"><a name="line1630"></a>1630     end
+</span><span class="uncovered0"><a name="line1631"></a>1631   end
+</span><span class="inferred1"><a name="line1632"></a>1632 
+</span><span class="marked0"><a name="line1633"></a>1633   class ZipExtraField &lt; Hash
+</span><span class="marked1"><a name="line1634"></a>1634     ID_MAP = {}
+</span><span class="inferred0"><a name="line1635"></a>1635 
+</span><span class="inferred1"><a name="line1636"></a>1636     # Meta class for extra fields
+</span><span class="marked0"><a name="line1637"></a>1637     class Generic
+</span><span class="marked1"><a name="line1638"></a>1638       def self.register_map
+</span><span class="marked0"><a name="line1639"></a>1639         if self.const_defined?(:HEADER_ID)
+</span><span class="marked1"><a name="line1640"></a>1640           ID_MAP[self.const_get(:HEADER_ID)] = self
+</span><span class="inferred0"><a name="line1641"></a>1641         end
+</span><span class="marked1"><a name="line1642"></a>1642       end
+</span><span class="inferred0"><a name="line1643"></a>1643 
+</span><span class="marked1"><a name="line1644"></a>1644       def self.name
+</span><span class="uncovered0"><a name="line1645"></a>1645         self.to_s.split(&quot;::&quot;)[-1]
+</span><span class="uncovered1"><a name="line1646"></a>1646       end
+</span><span class="inferred0"><a name="line1647"></a>1647 
+</span><span class="inferred1"><a name="line1648"></a>1648       # return field [size, content] or false
+</span><span class="marked0"><a name="line1649"></a>1649       def initial_parse(binstr)
+</span><span class="uncovered1"><a name="line1650"></a>1650         if ! binstr
+</span><span class="uncovered0"><a name="line1651"></a>1651           # If nil, start with empty.
+</span><span class="uncovered1"><a name="line1652"></a>1652           return false
+</span><span class="uncovered0"><a name="line1653"></a>1653         elsif binstr[0,2] != self.class.const_get(:HEADER_ID)
+</span><span class="uncovered1"><a name="line1654"></a>1654           $stderr.puts &quot;Warning: weired extra feild header ID. skip parsing&quot;
+</span><span class="uncovered0"><a name="line1655"></a>1655           return false
+</span><span class="uncovered1"><a name="line1656"></a>1656         end
+</span><span class="uncovered0"><a name="line1657"></a>1657         [binstr[2,2].unpack(&quot;v&quot;)[0], binstr[4..-1]]
+</span><span class="uncovered1"><a name="line1658"></a>1658       end
+</span><span class="inferred0"><a name="line1659"></a>1659 
+</span><span class="marked1"><a name="line1660"></a>1660       def ==(other)
+</span><span class="uncovered0"><a name="line1661"></a>1661         self.class != other.class and return false
+</span><span class="uncovered1"><a name="line1662"></a>1662         each { |k, v|
+</span><span class="uncovered0"><a name="line1663"></a>1663           v != other[k] and return false
+</span><span class="uncovered1"><a name="line1664"></a>1664         }
+</span><span class="uncovered0"><a name="line1665"></a>1665         true
+</span><span class="uncovered1"><a name="line1666"></a>1666       end
+</span><span class="inferred0"><a name="line1667"></a>1667 
+</span><span class="marked1"><a name="line1668"></a>1668       def to_local_bin
+</span><span class="uncovered0"><a name="line1669"></a>1669         s = pack_for_local
+</span><span class="uncovered1"><a name="line1670"></a>1670         self.class.const_get(:HEADER_ID) + [s.length].pack(&quot;v&quot;) + s
+</span><span class="uncovered0"><a name="line1671"></a>1671       end
+</span><span class="inferred1"><a name="line1672"></a>1672 
+</span><span class="marked0"><a name="line1673"></a>1673       def to_c_dir_bin
+</span><span class="uncovered1"><a name="line1674"></a>1674         s = pack_for_c_dir
+</span><span class="uncovered0"><a name="line1675"></a>1675         self.class.const_get(:HEADER_ID) + [s.length].pack(&quot;v&quot;) + s
+</span><span class="uncovered1"><a name="line1676"></a>1676       end
+</span><span class="uncovered0"><a name="line1677"></a>1677     end
+</span><span class="inferred1"><a name="line1678"></a>1678 
+</span><span class="inferred0"><a name="line1679"></a>1679     # Info-ZIP Additional timestamp field
+</span><span class="marked1"><a name="line1680"></a>1680     class UniversalTime &lt; Generic
+</span><span class="marked0"><a name="line1681"></a>1681       HEADER_ID = &quot;UT&quot;
+</span><span class="marked1"><a name="line1682"></a>1682       register_map
+</span><span class="inferred0"><a name="line1683"></a>1683 
+</span><span class="marked1"><a name="line1684"></a>1684       def initialize(binstr = nil)
+</span><span class="uncovered0"><a name="line1685"></a>1685         @ctime = nil
+</span><span class="uncovered1"><a name="line1686"></a>1686         @mtime = nil
+</span><span class="uncovered0"><a name="line1687"></a>1687         @atime = nil
+</span><span class="uncovered1"><a name="line1688"></a>1688         @flag  = nil
+</span><span class="uncovered0"><a name="line1689"></a>1689         binstr and merge(binstr)
+</span><span class="uncovered1"><a name="line1690"></a>1690       end
+</span><span class="marked0"><a name="line1691"></a>1691       attr_accessor :atime, :ctime, :mtime, :flag
+</span><span class="inferred1"><a name="line1692"></a>1692 
+</span><span class="marked0"><a name="line1693"></a>1693       def merge(binstr)
+</span><span class="uncovered1"><a name="line1694"></a>1694         binstr == &quot;&quot; and return
+</span><span class="uncovered0"><a name="line1695"></a>1695         size, content = initial_parse(binstr)
+</span><span class="uncovered1"><a name="line1696"></a>1696         size or return
+</span><span class="uncovered0"><a name="line1697"></a>1697         @flag, mtime, atime, ctime = content.unpack(&quot;CVVV&quot;)
+</span><span class="uncovered1"><a name="line1698"></a>1698         mtime and @mtime ||= Time.at(mtime)
+</span><span class="uncovered0"><a name="line1699"></a>1699         atime and @atime ||= Time.at(atime)
+</span><span class="uncovered1"><a name="line1700"></a>1700         ctime and @ctime ||= Time.at(ctime)
+</span><span class="uncovered0"><a name="line1701"></a>1701       end
+</span><span class="inferred1"><a name="line1702"></a>1702 
+</span><span class="marked0"><a name="line1703"></a>1703       def ==(other)
+</span><span class="uncovered1"><a name="line1704"></a>1704         @mtime == other.mtime &amp;&amp;
+</span><span class="uncovered0"><a name="line1705"></a>1705         @atime == other.atime &amp;&amp;
+</span><span class="uncovered1"><a name="line1706"></a>1706         @ctime == other.ctime
+</span><span class="uncovered0"><a name="line1707"></a>1707       end
+</span><span class="inferred1"><a name="line1708"></a>1708 
+</span><span class="marked0"><a name="line1709"></a>1709       def pack_for_local
+</span><span class="uncovered1"><a name="line1710"></a>1710         s = [@flag].pack(&quot;C&quot;)
+</span><span class="uncovered0"><a name="line1711"></a>1711         @flag &amp; 1 != 0 and s &lt;&lt; [@mtime.to_i].pack(&quot;V&quot;)
+</span><span class="uncovered1"><a name="line1712"></a>1712         @flag &amp; 2 != 0 and s &lt;&lt; [@atime.to_i].pack(&quot;V&quot;)
+</span><span class="uncovered0"><a name="line1713"></a>1713         @flag &amp; 4 != 0 and s &lt;&lt; [@ctime.to_i].pack(&quot;V&quot;)
+</span><span class="uncovered1"><a name="line1714"></a>1714         s
+</span><span class="uncovered0"><a name="line1715"></a>1715       end
+</span><span class="inferred1"><a name="line1716"></a>1716 
+</span><span class="marked0"><a name="line1717"></a>1717       def pack_for_c_dir
+</span><span class="uncovered1"><a name="line1718"></a>1718         s = [@flag].pack(&quot;C&quot;)
+</span><span class="uncovered0"><a name="line1719"></a>1719         @flag &amp; 1 == 1 and s &lt;&lt; [@mtime.to_i].pack(&quot;V&quot;)
+</span><span class="uncovered1"><a name="line1720"></a>1720         s
+</span><span class="uncovered0"><a name="line1721"></a>1721       end
+</span><span class="uncovered1"><a name="line1722"></a>1722     end
+</span><span class="inferred0"><a name="line1723"></a>1723 
+</span><span class="inferred1"><a name="line1724"></a>1724     # Info-ZIP Extra for UNIX uid/gid
+</span><span class="marked0"><a name="line1725"></a>1725     class IUnix &lt; Generic
+</span><span class="marked1"><a name="line1726"></a>1726       HEADER_ID = &quot;Ux&quot;
+</span><span class="marked0"><a name="line1727"></a>1727       register_map
+</span><span class="inferred1"><a name="line1728"></a>1728 
+</span><span class="marked0"><a name="line1729"></a>1729       def initialize(binstr = nil)
+</span><span class="uncovered1"><a name="line1730"></a>1730         @uid = 0
+</span><span class="uncovered0"><a name="line1731"></a>1731         @gid = 0
+</span><span class="uncovered1"><a name="line1732"></a>1732         binstr and merge(binstr)
+</span><span class="uncovered0"><a name="line1733"></a>1733       end
+</span><span class="marked1"><a name="line1734"></a>1734       attr_accessor :uid, :gid
+</span><span class="inferred0"><a name="line1735"></a>1735 
+</span><span class="marked1"><a name="line1736"></a>1736       def merge(binstr)
+</span><span class="uncovered0"><a name="line1737"></a>1737         binstr == &quot;&quot; and return
+</span><span class="uncovered1"><a name="line1738"></a>1738         size, content = initial_parse(binstr)
+</span><span class="uncovered0"><a name="line1739"></a>1739         # size: 0 for central direcotry. 4 for local header
+</span><span class="uncovered1"><a name="line1740"></a>1740         return if(! size || size == 0)
+</span><span class="uncovered0"><a name="line1741"></a>1741         uid, gid = content.unpack(&quot;vv&quot;)
+</span><span class="uncovered1"><a name="line1742"></a>1742         @uid ||= uid
+</span><span class="uncovered0"><a name="line1743"></a>1743         @gid ||= gid
+</span><span class="uncovered1"><a name="line1744"></a>1744       end
+</span><span class="inferred0"><a name="line1745"></a>1745 
+</span><span class="marked1"><a name="line1746"></a>1746       def ==(other)
+</span><span class="uncovered0"><a name="line1747"></a>1747         @uid == other.uid &amp;&amp;
+</span><span class="uncovered1"><a name="line1748"></a>1748         @gid == other.gid
+</span><span class="uncovered0"><a name="line1749"></a>1749       end
+</span><span class="inferred1"><a name="line1750"></a>1750 
+</span><span class="marked0"><a name="line1751"></a>1751       def pack_for_local
+</span><span class="uncovered1"><a name="line1752"></a>1752         [@uid, @gid].pack(&quot;vv&quot;)
+</span><span class="uncovered0"><a name="line1753"></a>1753       end
+</span><span class="inferred1"><a name="line1754"></a>1754 
+</span><span class="marked0"><a name="line1755"></a>1755       def pack_for_c_dir
+</span><span class="uncovered1"><a name="line1756"></a>1756         &quot;&quot;
+</span><span class="uncovered0"><a name="line1757"></a>1757       end
+</span><span class="uncovered1"><a name="line1758"></a>1758     end
+</span><span class="inferred0"><a name="line1759"></a>1759 
+</span><span class="inferred1"><a name="line1760"></a>1760     ## start main of ZipExtraField &lt; Hash
+</span><span class="marked0"><a name="line1761"></a>1761     def initialize(binstr = nil)
+</span><span class="uncovered1"><a name="line1762"></a>1762       binstr and merge(binstr)
+</span><span class="uncovered0"><a name="line1763"></a>1763     end
+</span><span class="inferred1"><a name="line1764"></a>1764 
+</span><span class="marked0"><a name="line1765"></a>1765     def merge(binstr)
+</span><span class="uncovered1"><a name="line1766"></a>1766       binstr == &quot;&quot; and return
+</span><span class="uncovered0"><a name="line1767"></a>1767       i = 0 
+</span><span class="uncovered1"><a name="line1768"></a>1768       while i &lt; binstr.length
+</span><span class="uncovered0"><a name="line1769"></a>1769         id = binstr[i,2]
+</span><span class="uncovered1"><a name="line1770"></a>1770         len = binstr[i+2,2].to_s.unpack(&quot;v&quot;)[0] 
+</span><span class="uncovered0"><a name="line1771"></a>1771         if id &amp;&amp; ID_MAP.member?(id)
+</span><span class="uncovered1"><a name="line1772"></a>1772           field_name = ID_MAP[id].name
+</span><span class="uncovered0"><a name="line1773"></a>1773           if self.member?(field_name)
+</span><span class="uncovered1"><a name="line1774"></a>1774             self[field_name].mergea(binstr[i, len+4])
+</span><span class="uncovered0"><a name="line1775"></a>1775           else
+</span><span class="uncovered1"><a name="line1776"></a>1776             field_obj = ID_MAP[id].new(binstr[i, len+4])
+</span><span class="uncovered0"><a name="line1777"></a>1777             self[field_name] = field_obj
+</span><span class="uncovered1"><a name="line1778"></a>1778           end
+</span><span class="uncovered0"><a name="line1779"></a>1779         elsif id
+</span><span class="uncovered1"><a name="line1780"></a>1780           unless self[&quot;Unknown&quot;]
+</span><span class="uncovered0"><a name="line1781"></a>1781             s = &quot;&quot;
+</span><span class="uncovered1"><a name="line1782"></a>1782             class &lt;&lt; s
+</span><span class="uncovered0"><a name="line1783"></a>1783               alias_method :to_c_dir_bin, :to_s
+</span><span class="uncovered1"><a name="line1784"></a>1784               alias_method :to_local_bin, :to_s
+</span><span class="uncovered0"><a name="line1785"></a>1785             end
+</span><span class="uncovered1"><a name="line1786"></a>1786             self[&quot;Unknown&quot;] = s
+</span><span class="uncovered0"><a name="line1787"></a>1787           end
+</span><span class="uncovered1"><a name="line1788"></a>1788           if ! len || len+4 &gt; binstr[i..-1].length
+</span><span class="uncovered0"><a name="line1789"></a>1789             self[&quot;Unknown&quot;] &lt;&lt; binstr[i..-1]
+</span><span class="uncovered1"><a name="line1790"></a>1790             break;
+</span><span class="uncovered0"><a name="line1791"></a>1791           end
+</span><span class="uncovered1"><a name="line1792"></a>1792           self[&quot;Unknown&quot;] &lt;&lt; binstr[i, len+4]
+</span><span class="uncovered0"><a name="line1793"></a>1793         end
+</span><span class="uncovered1"><a name="line1794"></a>1794         i += len+4
+</span><span class="uncovered0"><a name="line1795"></a>1795       end
+</span><span class="uncovered1"><a name="line1796"></a>1796     end
+</span><span class="inferred0"><a name="line1797"></a>1797 
+</span><span class="marked1"><a name="line1798"></a>1798     def create(name)
+</span><span class="uncovered0"><a name="line1799"></a>1799       field_class = nil
+</span><span class="uncovered1"><a name="line1800"></a>1800       ID_MAP.each { |id, klass|
+</span><span class="uncovered0"><a name="line1801"></a>1801         if klass.name == name
+</span><span class="uncovered1"><a name="line1802"></a>1802           field_class = klass
+</span><span class="uncovered0"><a name="line1803"></a>1803           break
+</span><span class="uncovered1"><a name="line1804"></a>1804         end
+</span><span class="uncovered0"><a name="line1805"></a>1805       }
+</span><span class="uncovered1"><a name="line1806"></a>1806       if ! field_class
+</span><span class="uncovered0"><a name="line1807"></a>1807 	raise ZipError, &quot;Unknown extra field '#{name}'&quot;
+</span><span class="uncovered1"><a name="line1808"></a>1808       end
+</span><span class="uncovered0"><a name="line1809"></a>1809       self[name] = field_class.new()
+</span><span class="uncovered1"><a name="line1810"></a>1810     end
+</span><span class="inferred0"><a name="line1811"></a>1811 
+</span><span class="marked1"><a name="line1812"></a>1812     def to_local_bin
+</span><span class="uncovered0"><a name="line1813"></a>1813       s = &quot;&quot;
+</span><span class="uncovered1"><a name="line1814"></a>1814       each { |k, v|
+</span><span class="uncovered0"><a name="line1815"></a>1815         s &lt;&lt; v.to_local_bin
+</span><span class="uncovered1"><a name="line1816"></a>1816       }
+</span><span class="uncovered0"><a name="line1817"></a>1817       s
+</span><span class="uncovered1"><a name="line1818"></a>1818     end
+</span><span class="marked0"><a name="line1819"></a>1819     alias :to_s :to_local_bin
+</span><span class="inferred1"><a name="line1820"></a>1820 
+</span><span class="marked0"><a name="line1821"></a>1821     def to_c_dir_bin
+</span><span class="uncovered1"><a name="line1822"></a>1822       s = &quot;&quot;
+</span><span class="uncovered0"><a name="line1823"></a>1823       each { |k, v|
+</span><span class="uncovered1"><a name="line1824"></a>1824         s &lt;&lt; v.to_c_dir_bin
+</span><span class="uncovered0"><a name="line1825"></a>1825       }
+</span><span class="uncovered1"><a name="line1826"></a>1826       s
+</span><span class="uncovered0"><a name="line1827"></a>1827     end
+</span><span class="inferred1"><a name="line1828"></a>1828 
+</span><span class="marked0"><a name="line1829"></a>1829     def c_dir_length
+</span><span class="uncovered1"><a name="line1830"></a>1830       to_c_dir_bin.length
+</span><span class="uncovered0"><a name="line1831"></a>1831     end
+</span><span class="marked1"><a name="line1832"></a>1832     def local_length
+</span><span class="uncovered0"><a name="line1833"></a>1833       to_local_bin.length
+</span><span class="uncovered1"><a name="line1834"></a>1834     end
+</span><span class="marked0"><a name="line1835"></a>1835     alias :c_dir_size :c_dir_length
+</span><span class="marked1"><a name="line1836"></a>1836     alias :local_size :local_length
+</span><span class="marked0"><a name="line1837"></a>1837     alias :length     :local_length
+</span><span class="marked1"><a name="line1838"></a>1838     alias :size       :local_length
+</span><span class="inferred0"><a name="line1839"></a>1839   end # end ZipExtraField
+</span><span class="inferred1"><a name="line1840"></a>1840 
+</span><span class="inferred0"><a name="line1841"></a>1841 end # Zip namespace module
+</span><span class="inferred1"><a name="line1842"></a>1842 
+</span><span class="inferred0"><a name="line1843"></a>1843 
+</span><span class="inferred1"><a name="line1844"></a>1844 
+</span><span class="inferred0"><a name="line1845"></a>1845 # Copyright (C) 2002, 2003 Thomas Sondergaard
+</span><span class="inferred1"><a name="line1846"></a>1846 # rubyzip is free software; you can redistribute it and/or
+</span><span class="inferred0"><a name="line1847"></a>1847 # modify it under the terms of the ruby license.
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.2.1.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

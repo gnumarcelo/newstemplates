@@ -1,0 +1,81 @@
+
+ArticlesController
+- should have been using ActiveScaffold
+- should generate an article preview
+- should generate a source of article
+
+AuthorsController
+- should have been using ActiveScaffold
+
+EditionsController
+- should have been using ActiveScaffold
+
+ListsController
+- should have been using ActiveScaffold
+
+NewslettersController
+- should have been using ActiveScaffold
+
+PreviewController
+- should use PreviewController
+
+SearchController
+- should use SearchController
+
+WelcomeController index
+- should return the initial home page
+
+AuthorsHelper
+- should be included in the object returned by #helper
+
+EditionsHelper
+- should be included in the object returned by #helper
+
+ListsHelper
+- should be included in the object returned by #helper
+
+NewslettersHelper
+- should be included in the object returned by #helper
+
+PreviewHelper
+- should be included in the object returned by #helper
+
+SearchHelper
+- should be included in the object returned by #helper
+
+Article
+- should convert article title to url format
+- should create a link with the article title
+- should get the first sentence from a given text
+- should convert euro symbol to html attribute
+- should convert the content to html
+
+Article object validation
+- should be valid with valid attributes
+- should be invalid without an author
+- should be invalid with title shorter than 1 and longer than 100
+
+Author
+- should == 0
+- should show the full the author name
+
+Edition
+- should === 1
+- should == 0
+- should not be valid without a newsletter
+- should return a label for itself
+- should generate a pdf file name
+- should generate a link to a pdf version
+- should generate a html url
+- should generate a link to web version
+- should generate a campaign name
+
+List
+- should not be invalid when without name
+
+Newsletter
+- should == 0
+
+Finished in 0.700227 seconds
+
+37 examples, 0 failures

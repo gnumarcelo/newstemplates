@@ -1,0 +1,1058 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/httpclient-2.1.4/lib/httpclient/cookie.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(255, 255, 240);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(255, 255, 240);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Fri Jun 12 17:27:54 +0100 2009 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-httpclient-2_1_4-lib-httpclient-cookie_rb.html'>/Library/Ruby/Gems/1.8/gems/httpclient-2.1.4/lib/httpclient/cookie.rb</a>
+        </td>
+      <td class='lines_total'><tt>448</tt>
+        </td>
+      <td class='lines_code'><tt>365</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>27.2%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='27'/>
+                  <td class='uncovered' width='73'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>17.8%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='18'/>
+                  <td class='uncovered' width='82'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="inferred1"><a name="line1"></a>  1 # cookie.rb is redistributed file which is originally included in Webagent
+</span><span class="inferred0"><a name="line2"></a>  2 # version 0.6.2 by TAKAHASHI `Maki' Masayoshi.  And it contains some bug fixes.
+</span><span class="inferred1"><a name="line3"></a>  3 # You can download the entire package of Webagent from
+</span><span class="inferred0"><a name="line4"></a>  4 # http://www.rubycolor.org/arc/.
+</span><span class="inferred1"><a name="line5"></a>  5 
+</span><span class="inferred0"><a name="line6"></a>  6 
+</span><span class="inferred1"><a name="line7"></a>  7 # Cookie class
+</span><span class="inferred0"><a name="line8"></a>  8 #
+</span><span class="inferred1"><a name="line9"></a>  9 # I refered to w3m's source to make these classes. Some comments
+</span><span class="inferred0"><a name="line10"></a> 10 # are quoted from it. I'm thanksful for author(s) of it.
+</span><span class="inferred1"><a name="line11"></a> 11 #
+</span><span class="inferred0"><a name="line12"></a> 12 #    w3m homepage:  http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/eng/
+</span><span class="inferred1"><a name="line13"></a> 13 
+</span><span class="marked0"><a name="line14"></a> 14 require 'uri'
+</span><span class="marked1"><a name="line15"></a> 15 require 'time'
+</span><span class="marked0"><a name="line16"></a> 16 require 'monitor'
+</span><span class="inferred1"><a name="line17"></a> 17 
+</span><span class="marked0"><a name="line18"></a> 18 class WebAgent
+</span><span class="inferred1"><a name="line19"></a> 19 
+</span><span class="marked0"><a name="line20"></a> 20   module CookieUtils
+</span><span class="inferred1"><a name="line21"></a> 21 
+</span><span class="marked0"><a name="line22"></a> 22     def head_match?(str1, str2)
+</span><span class="uncovered1"><a name="line23"></a> 23       str1 == str2[0, str1.length]
+</span><span class="uncovered0"><a name="line24"></a> 24     end
+</span><span class="inferred1"><a name="line25"></a> 25 
+</span><span class="marked0"><a name="line26"></a> 26     def tail_match?(str1, str2)
+</span><span class="uncovered1"><a name="line27"></a> 27       if str1.length &gt; 0
+</span><span class="uncovered0"><a name="line28"></a> 28 	str1 == str2[-str1.length..-1].to_s
+</span><span class="uncovered1"><a name="line29"></a> 29       else
+</span><span class="uncovered0"><a name="line30"></a> 30 	true
+</span><span class="uncovered1"><a name="line31"></a> 31       end
+</span><span class="uncovered0"><a name="line32"></a> 32     end
+</span><span class="inferred1"><a name="line33"></a> 33 
+</span><span class="marked0"><a name="line34"></a> 34     def domain_match(host, domain)
+</span><span class="uncovered1"><a name="line35"></a> 35       domainname = domain.sub(/\.\z/, '').downcase
+</span><span class="uncovered0"><a name="line36"></a> 36       hostname = host.sub(/\.\z/, '').downcase
+</span><span class="uncovered1"><a name="line37"></a> 37       case domain
+</span><span class="uncovered0"><a name="line38"></a> 38       when /\d+\.\d+\.\d+\.\d+/
+</span><span class="uncovered1"><a name="line39"></a> 39 	return (hostname == domainname)
+</span><span class="uncovered0"><a name="line40"></a> 40       when '.' 
+</span><span class="uncovered1"><a name="line41"></a> 41 	return true
+</span><span class="uncovered0"><a name="line42"></a> 42       when /^\./
+</span><span class="uncovered1"><a name="line43"></a> 43         # allows; host == rubyforge.org, domain == .rubyforge.org
+</span><span class="uncovered0"><a name="line44"></a> 44 	return tail_match?(domainname, '.' + hostname)
+</span><span class="uncovered1"><a name="line45"></a> 45       else
+</span><span class="uncovered0"><a name="line46"></a> 46 	return (hostname == domainname)
+</span><span class="uncovered1"><a name="line47"></a> 47       end
+</span><span class="uncovered0"><a name="line48"></a> 48     end
+</span><span class="inferred1"><a name="line49"></a> 49 
+</span><span class="marked0"><a name="line50"></a> 50     def total_dot_num(string)
+</span><span class="uncovered1"><a name="line51"></a> 51       string.scan(/\./).length()
+</span><span class="uncovered0"><a name="line52"></a> 52     end
+</span><span class="uncovered1"><a name="line53"></a> 53 
+</span><span class="uncovered0"><a name="line54"></a> 54   end
+</span><span class="inferred1"><a name="line55"></a> 55 
+</span><span class="marked0"><a name="line56"></a> 56   class Cookie
+</span><span class="marked1"><a name="line57"></a> 57     include CookieUtils
+</span><span class="inferred0"><a name="line58"></a> 58 
+</span><span class="marked1"><a name="line59"></a> 59     attr_accessor :name, :value
+</span><span class="marked0"><a name="line60"></a> 60     attr_accessor :domain, :path
+</span><span class="marked1"><a name="line61"></a> 61     attr_accessor :expires      ## for Netscape Cookie
+</span><span class="marked0"><a name="line62"></a> 62     attr_accessor :url
+</span><span class="marked1"><a name="line63"></a> 63     attr_writer :use, :secure, :discard, :domain_orig, :path_orig, :override
+</span><span class="inferred0"><a name="line64"></a> 64 
+</span><span class="marked1"><a name="line65"></a> 65     USE = 1
+</span><span class="marked0"><a name="line66"></a> 66     SECURE = 2
+</span><span class="marked1"><a name="line67"></a> 67     DOMAIN = 4
+</span><span class="marked0"><a name="line68"></a> 68     PATH = 8
+</span><span class="marked1"><a name="line69"></a> 69     DISCARD = 16
+</span><span class="marked0"><a name="line70"></a> 70     OVERRIDE = 32
+</span><span class="marked1"><a name="line71"></a> 71     OVERRIDE_OK = 32
+</span><span class="inferred0"><a name="line72"></a> 72 
+</span><span class="marked1"><a name="line73"></a> 73     def initialize()
+</span><span class="uncovered0"><a name="line74"></a> 74       @name = @value = @domain = @path = nil
+</span><span class="uncovered1"><a name="line75"></a> 75       @expires = nil
+</span><span class="uncovered0"><a name="line76"></a> 76       @url = nil
+</span><span class="uncovered1"><a name="line77"></a> 77       @use = @secure = @discard = @domain_orig = @path_orig = @override = nil
+</span><span class="uncovered0"><a name="line78"></a> 78     end
+</span><span class="inferred1"><a name="line79"></a> 79 
+</span><span class="marked0"><a name="line80"></a> 80     def discard?
+</span><span class="uncovered1"><a name="line81"></a> 81       @discard
+</span><span class="uncovered0"><a name="line82"></a> 82     end
+</span><span class="inferred1"><a name="line83"></a> 83 
+</span><span class="marked0"><a name="line84"></a> 84     def use?
+</span><span class="uncovered1"><a name="line85"></a> 85       @use
+</span><span class="uncovered0"><a name="line86"></a> 86     end
+</span><span class="inferred1"><a name="line87"></a> 87 
+</span><span class="marked0"><a name="line88"></a> 88     def secure?
+</span><span class="uncovered1"><a name="line89"></a> 89       @secure
+</span><span class="uncovered0"><a name="line90"></a> 90     end
+</span><span class="inferred1"><a name="line91"></a> 91 
+</span><span class="marked0"><a name="line92"></a> 92     def domain_orig?
+</span><span class="uncovered1"><a name="line93"></a> 93       @domain_orig
+</span><span class="uncovered0"><a name="line94"></a> 94     end
+</span><span class="inferred1"><a name="line95"></a> 95 
+</span><span class="marked0"><a name="line96"></a> 96     def path_orig?
+</span><span class="uncovered1"><a name="line97"></a> 97       @path_orig
+</span><span class="uncovered0"><a name="line98"></a> 98     end
+</span><span class="inferred1"><a name="line99"></a> 99 
+</span><span class="marked0"><a name="line100"></a>100     def override?
+</span><span class="uncovered1"><a name="line101"></a>101       @override
+</span><span class="uncovered0"><a name="line102"></a>102     end
+</span><span class="inferred1"><a name="line103"></a>103 
+</span><span class="marked0"><a name="line104"></a>104     def flag
+</span><span class="uncovered1"><a name="line105"></a>105       flg = 0
+</span><span class="uncovered0"><a name="line106"></a>106       flg += USE  if @use
+</span><span class="uncovered1"><a name="line107"></a>107       flg += SECURE  if @secure
+</span><span class="uncovered0"><a name="line108"></a>108       flg += DOMAIN  if @domain_orig
+</span><span class="uncovered1"><a name="line109"></a>109       flg += PATH  if @path_orig
+</span><span class="uncovered0"><a name="line110"></a>110       flg += DISCARD if @discard
+</span><span class="uncovered1"><a name="line111"></a>111       flg += OVERRIDE if @override
+</span><span class="uncovered0"><a name="line112"></a>112       flg
+</span><span class="uncovered1"><a name="line113"></a>113     end
+</span><span class="inferred0"><a name="line114"></a>114 
+</span><span class="marked1"><a name="line115"></a>115     def set_flag(flag)
+</span><span class="uncovered0"><a name="line116"></a>116       flag = flag.to_i
+</span><span class="uncovered1"><a name="line117"></a>117       @use = true      if flag &amp; USE &gt; 0
+</span><span class="uncovered0"><a name="line118"></a>118       @secure = true   if flag &amp; SECURE &gt; 0
+</span><span class="uncovered1"><a name="line119"></a>119       @domain_orig = true if flag &amp; DOMAIN &gt; 0
+</span><span class="uncovered0"><a name="line120"></a>120       @path_orig = true if flag &amp; PATH &gt; 0
+</span><span class="uncovered1"><a name="line121"></a>121       @discard  = true if flag &amp; DISCARD &gt; 0
+</span><span class="uncovered0"><a name="line122"></a>122       @override = true if flag &amp; OVERRIDE &gt; 0
+</span><span class="uncovered1"><a name="line123"></a>123     end
+</span><span class="inferred0"><a name="line124"></a>124 
+</span><span class="marked1"><a name="line125"></a>125     def match?(url)
+</span><span class="uncovered0"><a name="line126"></a>126       domainname = url.host
+</span><span class="uncovered1"><a name="line127"></a>127       if (!domainname ||
+</span><span class="uncovered0"><a name="line128"></a>128 	  !domain_match(domainname, @domain) ||
+</span><span class="uncovered1"><a name="line129"></a>129 	  (@path &amp;&amp; !head_match?(@path, url.path)) ||
+</span><span class="uncovered0"><a name="line130"></a>130 	  (@secure &amp;&amp; (url.scheme != 'https')) )
+</span><span class="uncovered1"><a name="line131"></a>131 	return false
+</span><span class="uncovered0"><a name="line132"></a>132       else
+</span><span class="uncovered1"><a name="line133"></a>133 	return true
+</span><span class="uncovered0"><a name="line134"></a>134       end
+</span><span class="uncovered1"><a name="line135"></a>135     end
+</span><span class="inferred0"><a name="line136"></a>136 
+</span><span class="marked1"><a name="line137"></a>137     def join_quotedstr(array, sep)
+</span><span class="uncovered0"><a name="line138"></a>138       ret = Array.new()
+</span><span class="uncovered1"><a name="line139"></a>139       old_elem = nil
+</span><span class="uncovered0"><a name="line140"></a>140       array.each{|elem|
+</span><span class="uncovered1"><a name="line141"></a>141 	if (elem.scan(/&quot;/).length % 2) == 0
+</span><span class="uncovered0"><a name="line142"></a>142 	  if old_elem
+</span><span class="uncovered1"><a name="line143"></a>143 	    old_elem &lt;&lt; sep &lt;&lt; elem
+</span><span class="uncovered0"><a name="line144"></a>144 	  else
+</span><span class="uncovered1"><a name="line145"></a>145 	    ret &lt;&lt; elem
+</span><span class="uncovered0"><a name="line146"></a>146 	    old_elem = nil
+</span><span class="uncovered1"><a name="line147"></a>147 	  end  
+</span><span class="uncovered0"><a name="line148"></a>148 	else
+</span><span class="uncovered1"><a name="line149"></a>149 	  if old_elem
+</span><span class="uncovered0"><a name="line150"></a>150 	    old_elem &lt;&lt; sep &lt;&lt; elem
+</span><span class="uncovered1"><a name="line151"></a>151 	    ret &lt;&lt; old_elem
+</span><span class="uncovered0"><a name="line152"></a>152 	    old_elem = nil
+</span><span class="uncovered1"><a name="line153"></a>153 	  else
+</span><span class="uncovered0"><a name="line154"></a>154 	    old_elem = elem.dup
+</span><span class="uncovered1"><a name="line155"></a>155 	  end
+</span><span class="uncovered0"><a name="line156"></a>156 	end
+</span><span class="uncovered1"><a name="line157"></a>157       }
+</span><span class="uncovered0"><a name="line158"></a>158       ret
+</span><span class="uncovered1"><a name="line159"></a>159     end
+</span><span class="inferred0"><a name="line160"></a>160 
+</span><span class="marked1"><a name="line161"></a>161     def parse(str, url)
+</span><span class="uncovered0"><a name="line162"></a>162       @url = url
+</span><span class="uncovered1"><a name="line163"></a>163       cookie_elem = str.split(/;/)
+</span><span class="uncovered0"><a name="line164"></a>164       cookie_elem = join_quotedstr(cookie_elem, ';')
+</span><span class="uncovered1"><a name="line165"></a>165       first_elem = cookie_elem.shift
+</span><span class="uncovered0"><a name="line166"></a>166       if first_elem !~ /([^=]*)(\=(.*))?/
+</span><span class="uncovered1"><a name="line167"></a>167 	return
+</span><span class="uncovered0"><a name="line168"></a>168 	## raise ArgumentError 'invalid cookie value'
+</span><span class="uncovered1"><a name="line169"></a>169       end
+</span><span class="uncovered0"><a name="line170"></a>170       @name = $1.strip
+</span><span class="uncovered1"><a name="line171"></a>171       @value = normalize_cookie_value($3)
+</span><span class="uncovered0"><a name="line172"></a>172       cookie_elem.each{|pair|
+</span><span class="uncovered1"><a name="line173"></a>173 	key, value = pair.split(/=/)  ## value may nil
+</span><span class="uncovered0"><a name="line174"></a>174 	key.strip!
+</span><span class="uncovered1"><a name="line175"></a>175         value = normalize_cookie_value(value)
+</span><span class="uncovered0"><a name="line176"></a>176 	case key.downcase
+</span><span class="uncovered1"><a name="line177"></a>177 	when 'domain'
+</span><span class="uncovered0"><a name="line178"></a>178 	  @domain = value
+</span><span class="uncovered1"><a name="line179"></a>179 	when 'expires'
+</span><span class="uncovered0"><a name="line180"></a>180           @expires = nil
+</span><span class="uncovered1"><a name="line181"></a>181 	  begin
+</span><span class="uncovered0"><a name="line182"></a>182 	    @expires = Time.parse(value).gmtime() if value
+</span><span class="uncovered1"><a name="line183"></a>183 	  rescue ArgumentError
+</span><span class="uncovered0"><a name="line184"></a>184 	  end
+</span><span class="uncovered1"><a name="line185"></a>185 	when 'path'
+</span><span class="uncovered0"><a name="line186"></a>186 	  @path = value
+</span><span class="uncovered1"><a name="line187"></a>187 	when 'secure'
+</span><span class="uncovered0"><a name="line188"></a>188 	  @secure = true  ## value may nil, but must 'true'.
+</span><span class="uncovered1"><a name="line189"></a>189 	else
+</span><span class="uncovered0"><a name="line190"></a>190 	  ## ignore
+</span><span class="uncovered1"><a name="line191"></a>191 	end
+</span><span class="uncovered0"><a name="line192"></a>192       }
+</span><span class="uncovered1"><a name="line193"></a>193     end
+</span><span class="inferred0"><a name="line194"></a>194 
+</span><span class="marked1"><a name="line195"></a>195     def normalize_cookie_value(value)
+</span><span class="uncovered0"><a name="line196"></a>196       if value
+</span><span class="uncovered1"><a name="line197"></a>197         value = value.strip.sub(/\A&quot;(.*)&quot;\z/) { $1 }
+</span><span class="uncovered0"><a name="line198"></a>198         value = nil if value.empty?
+</span><span class="uncovered1"><a name="line199"></a>199       end
+</span><span class="uncovered0"><a name="line200"></a>200       value
+</span><span class="uncovered1"><a name="line201"></a>201     end
+</span><span class="marked0"><a name="line202"></a>202     private :normalize_cookie_value
+</span><span class="inferred1"><a name="line203"></a>203   end
+</span><span class="inferred0"><a name="line204"></a>204 
+</span><span class="marked1"><a name="line205"></a>205   class CookieManager
+</span><span class="marked0"><a name="line206"></a>206     include CookieUtils
+</span><span class="inferred1"><a name="line207"></a>207 
+</span><span class="inferred0"><a name="line208"></a>208     ### errors
+</span><span class="marked1"><a name="line209"></a>209     class Error &lt; StandardError; end
+</span><span class="marked0"><a name="line210"></a>210     class ErrorOverrideOK &lt; Error; end
+</span><span class="marked1"><a name="line211"></a>211     class SpecialError &lt; Error; end
+</span><span class="inferred0"><a name="line212"></a>212 
+</span><span class="marked1"><a name="line213"></a>213     attr_reader :cookies
+</span><span class="marked0"><a name="line214"></a>214     attr_accessor :cookies_file
+</span><span class="marked1"><a name="line215"></a>215     attr_accessor :accept_domains, :reject_domains
+</span><span class="inferred0"><a name="line216"></a>216 
+</span><span class="inferred1"><a name="line217"></a>217     # for conformance to http://wp.netscape.com/newsref/std/cookie_spec.html
+</span><span class="marked0"><a name="line218"></a>218     attr_accessor :netscape_rule
+</span><span class="marked1"><a name="line219"></a>219     SPECIAL_DOMAIN = [&quot;.com&quot;,&quot;.edu&quot;,&quot;.gov&quot;,&quot;.mil&quot;,&quot;.net&quot;,&quot;.org&quot;,&quot;.int&quot;]
+</span><span class="inferred0"><a name="line220"></a>220 
+</span><span class="marked1"><a name="line221"></a>221     def initialize(file=nil)
+</span><span class="uncovered0"><a name="line222"></a>222       @cookies = Array.new()
+</span><span class="uncovered1"><a name="line223"></a>223       @cookies.extend(MonitorMixin)
+</span><span class="uncovered0"><a name="line224"></a>224       @cookies_file = file
+</span><span class="uncovered1"><a name="line225"></a>225       @is_saved = true
+</span><span class="uncovered0"><a name="line226"></a>226       @reject_domains = Array.new()
+</span><span class="uncovered1"><a name="line227"></a>227       @accept_domains = Array.new()
+</span><span class="uncovered0"><a name="line228"></a>228       @netscape_rule = false
+</span><span class="uncovered1"><a name="line229"></a>229     end
+</span><span class="inferred0"><a name="line230"></a>230 
+</span><span class="marked1"><a name="line231"></a>231     def cookies=(cookies)
+</span><span class="uncovered0"><a name="line232"></a>232       @cookies = cookies
+</span><span class="uncovered1"><a name="line233"></a>233       @cookies.extend(MonitorMixin)
+</span><span class="uncovered0"><a name="line234"></a>234     end
+</span><span class="inferred1"><a name="line235"></a>235 
+</span><span class="marked0"><a name="line236"></a>236     def save_all_cookies(force = nil, save_unused = true, save_discarded = true)
+</span><span class="uncovered1"><a name="line237"></a>237       @cookies.synchronize do
+</span><span class="uncovered0"><a name="line238"></a>238         check_expired_cookies()
+</span><span class="uncovered1"><a name="line239"></a>239         if @is_saved and !force
+</span><span class="uncovered0"><a name="line240"></a>240           return
+</span><span class="uncovered1"><a name="line241"></a>241         end
+</span><span class="uncovered0"><a name="line242"></a>242         File.open(@cookies_file, 'w') do |f|
+</span><span class="uncovered1"><a name="line243"></a>243           @cookies.each do |cookie|
+</span><span class="uncovered0"><a name="line244"></a>244             if (cookie.use? or save_unused) and
+</span><span class="uncovered1"><a name="line245"></a>245                 (!cookie.discard? or save_discarded)
+</span><span class="uncovered0"><a name="line246"></a>246               f.print(cookie.url.to_s,&quot;\t&quot;,
+</span><span class="uncovered1"><a name="line247"></a>247                       cookie.name,&quot;\t&quot;,
+</span><span class="uncovered0"><a name="line248"></a>248                       cookie.value,&quot;\t&quot;,
+</span><span class="uncovered1"><a name="line249"></a>249                       cookie.expires.to_i,&quot;\t&quot;,
+</span><span class="uncovered0"><a name="line250"></a>250                       cookie.domain,&quot;\t&quot;,
+</span><span class="uncovered1"><a name="line251"></a>251                       cookie.path,&quot;\t&quot;,
+</span><span class="uncovered0"><a name="line252"></a>252                       cookie.flag,&quot;\n&quot;)
+</span><span class="uncovered1"><a name="line253"></a>253             end
+</span><span class="uncovered0"><a name="line254"></a>254           end
+</span><span class="uncovered1"><a name="line255"></a>255         end
+</span><span class="uncovered0"><a name="line256"></a>256       end
+</span><span class="uncovered1"><a name="line257"></a>257       @is_saved = true
+</span><span class="uncovered0"><a name="line258"></a>258     end
+</span><span class="inferred1"><a name="line259"></a>259 
+</span><span class="marked0"><a name="line260"></a>260     def save_cookies(force = nil)
+</span><span class="uncovered1"><a name="line261"></a>261       save_all_cookies(force, false, false)
+</span><span class="uncovered0"><a name="line262"></a>262     end
+</span><span class="inferred1"><a name="line263"></a>263 
+</span><span class="marked0"><a name="line264"></a>264     def check_expired_cookies()
+</span><span class="uncovered1"><a name="line265"></a>265       @cookies.reject!{|cookie|
+</span><span class="uncovered0"><a name="line266"></a>266         is_expired = (cookie.expires &amp;&amp; (cookie.expires &lt; Time.now.gmtime))
+</span><span class="uncovered1"><a name="line267"></a>267         if is_expired &amp;&amp; !cookie.discard?
+</span><span class="uncovered0"><a name="line268"></a>268           @is_saved = false
+</span><span class="uncovered1"><a name="line269"></a>269         end
+</span><span class="uncovered0"><a name="line270"></a>270         is_expired
+</span><span class="uncovered1"><a name="line271"></a>271       }
+</span><span class="uncovered0"><a name="line272"></a>272     end
+</span><span class="inferred1"><a name="line273"></a>273 
+</span><span class="marked0"><a name="line274"></a>274     def parse(str, url)
+</span><span class="uncovered1"><a name="line275"></a>275       cookie = WebAgent::Cookie.new()
+</span><span class="uncovered0"><a name="line276"></a>276       cookie.parse(str, url)
+</span><span class="uncovered1"><a name="line277"></a>277       add(cookie)
+</span><span class="uncovered0"><a name="line278"></a>278     end
+</span><span class="inferred1"><a name="line279"></a>279 
+</span><span class="marked0"><a name="line280"></a>280     def make_cookie_str(cookie_list)
+</span><span class="uncovered1"><a name="line281"></a>281       if cookie_list.empty?
+</span><span class="uncovered0"><a name="line282"></a>282 	return nil
+</span><span class="uncovered1"><a name="line283"></a>283       end
+</span><span class="uncovered0"><a name="line284"></a>284 
+</span><span class="uncovered1"><a name="line285"></a>285       ret = ''
+</span><span class="uncovered0"><a name="line286"></a>286       c = cookie_list.shift
+</span><span class="uncovered1"><a name="line287"></a>287       ret += &quot;#{c.name}=#{c.value}&quot;
+</span><span class="uncovered0"><a name="line288"></a>288       cookie_list.each{|cookie|
+</span><span class="uncovered1"><a name="line289"></a>289 	ret += &quot;; #{cookie.name}=#{cookie.value}&quot;
+</span><span class="uncovered0"><a name="line290"></a>290       }
+</span><span class="uncovered1"><a name="line291"></a>291       return ret
+</span><span class="uncovered0"><a name="line292"></a>292     end
+</span><span class="marked1"><a name="line293"></a>293     private :make_cookie_str
+</span><span class="inferred0"><a name="line294"></a>294 
+</span><span class="inferred1"><a name="line295"></a>295 
+</span><span class="marked0"><a name="line296"></a>296     def find(url)
+</span><span class="uncovered1"><a name="line297"></a>297       return nil if @cookies.empty?
+</span><span class="uncovered0"><a name="line298"></a>298 
+</span><span class="uncovered1"><a name="line299"></a>299       cookie_list = Array.new()
+</span><span class="uncovered0"><a name="line300"></a>300       @cookies.each{|cookie|
+</span><span class="uncovered1"><a name="line301"></a>301         is_expired = (cookie.expires &amp;&amp; (cookie.expires &lt; Time.now.gmtime))
+</span><span class="uncovered0"><a name="line302"></a>302         if cookie.use? &amp;&amp; !is_expired &amp;&amp; cookie.match?(url)
+</span><span class="uncovered1"><a name="line303"></a>303           if cookie_list.select{|c1| c1.name == cookie.name}.empty?
+</span><span class="uncovered0"><a name="line304"></a>304             cookie_list &lt;&lt; cookie
+</span><span class="uncovered1"><a name="line305"></a>305           end
+</span><span class="uncovered0"><a name="line306"></a>306         end
+</span><span class="uncovered1"><a name="line307"></a>307       }
+</span><span class="uncovered0"><a name="line308"></a>308       return make_cookie_str(cookie_list)
+</span><span class="uncovered1"><a name="line309"></a>309     end
+</span><span class="inferred0"><a name="line310"></a>310 
+</span><span class="marked1"><a name="line311"></a>311     def find_cookie_info(domain, path, name)
+</span><span class="uncovered0"><a name="line312"></a>312       @cookies.find{|c|
+</span><span class="uncovered1"><a name="line313"></a>313 	c.domain == domain &amp;&amp; c.path == path &amp;&amp; c.name == name
+</span><span class="uncovered0"><a name="line314"></a>314       }
+</span><span class="uncovered1"><a name="line315"></a>315     end
+</span><span class="marked0"><a name="line316"></a>316     private :find_cookie_info
+</span><span class="inferred1"><a name="line317"></a>317 
+</span><span class="inferred0"><a name="line318"></a>318     # not tested well; used only netscape_rule = true.
+</span><span class="marked1"><a name="line319"></a>319     def cookie_error(err, override)
+</span><span class="uncovered0"><a name="line320"></a>320       if !err.kind_of?(ErrorOverrideOK) || !override
+</span><span class="uncovered1"><a name="line321"></a>321 	raise err
+</span><span class="uncovered0"><a name="line322"></a>322       end
+</span><span class="uncovered1"><a name="line323"></a>323     end
+</span><span class="marked0"><a name="line324"></a>324     private :cookie_error
+</span><span class="inferred1"><a name="line325"></a>325 
+</span><span class="marked0"><a name="line326"></a>326     def add(cookie)
+</span><span class="uncovered1"><a name="line327"></a>327       url = cookie.url
+</span><span class="uncovered0"><a name="line328"></a>328       name, value = cookie.name, cookie.value
+</span><span class="uncovered1"><a name="line329"></a>329       expires, domain, path = 
+</span><span class="uncovered0"><a name="line330"></a>330 	cookie.expires, cookie.domain, cookie.path
+</span><span class="uncovered1"><a name="line331"></a>331       secure, domain_orig, path_orig = 
+</span><span class="uncovered0"><a name="line332"></a>332 	cookie.secure?, cookie.domain_orig?, cookie.path_orig?
+</span><span class="uncovered1"><a name="line333"></a>333       discard, override = 
+</span><span class="uncovered0"><a name="line334"></a>334 	cookie.discard?, cookie.override?
+</span><span class="uncovered1"><a name="line335"></a>335 
+</span><span class="uncovered0"><a name="line336"></a>336       domainname = url.host
+</span><span class="uncovered1"><a name="line337"></a>337       domain_orig, path_orig = domain, path
+</span><span class="uncovered0"><a name="line338"></a>338       use_security = override
+</span><span class="uncovered1"><a name="line339"></a>339 
+</span><span class="uncovered0"><a name="line340"></a>340       if domain
+</span><span class="uncovered1"><a name="line341"></a>341 
+</span><span class="uncovered0"><a name="line342"></a>342 	# [DRAFT 12] s. 4.2.2 (does not apply in the case that
+</span><span class="uncovered1"><a name="line343"></a>343 	# host name is the same as domain attribute for version 0
+</span><span class="uncovered0"><a name="line344"></a>344 	# cookie)
+</span><span class="uncovered1"><a name="line345"></a>345 	# I think that this rule has almost the same effect as the
+</span><span class="uncovered0"><a name="line346"></a>346 	# tail match of [NETSCAPE].
+</span><span class="uncovered1"><a name="line347"></a>347 	if domain !~ /^\./ &amp;&amp; domainname != domain
+</span><span class="uncovered0"><a name="line348"></a>348 	  domain = '.'+domain
+</span><span class="uncovered1"><a name="line349"></a>349 	end
+</span><span class="uncovered0"><a name="line350"></a>350 
+</span><span class="uncovered1"><a name="line351"></a>351         # [NETSCAPE] rule
+</span><span class="uncovered0"><a name="line352"></a>352         if @netscape_rule
+</span><span class="uncovered1"><a name="line353"></a>353           n = total_dot_num(domain)
+</span><span class="uncovered0"><a name="line354"></a>354           if n &lt; 2
+</span><span class="uncovered1"><a name="line355"></a>355             cookie_error(SpecialError.new(), override)
+</span><span class="uncovered0"><a name="line356"></a>356           elsif n == 2
+</span><span class="uncovered1"><a name="line357"></a>357             ## [NETSCAPE] rule
+</span><span class="uncovered0"><a name="line358"></a>358             ok = SPECIAL_DOMAIN.select{|sdomain|
+</span><span class="uncovered1"><a name="line359"></a>359               sdomain == domain[-(sdomain.length)..-1]
+</span><span class="uncovered0"><a name="line360"></a>360             }
+</span><span class="uncovered1"><a name="line361"></a>361             if ok.empty?
+</span><span class="uncovered0"><a name="line362"></a>362               cookie_error(SpecialError.new(), override)
+</span><span class="uncovered1"><a name="line363"></a>363             end
+</span><span class="uncovered0"><a name="line364"></a>364           end
+</span><span class="uncovered1"><a name="line365"></a>365         end
+</span><span class="uncovered0"><a name="line366"></a>366 
+</span><span class="uncovered1"><a name="line367"></a>367         # this implementation does not check RFC2109 4.3.2 case 2;
+</span><span class="uncovered0"><a name="line368"></a>368         # the portion of host not in domain does not contain a dot.
+</span><span class="uncovered1"><a name="line369"></a>369         # according to nsCookieService.cpp in Firefox 3.0.4, Firefox 3.0.4
+</span><span class="uncovered0"><a name="line370"></a>370         # and IE does not check, too.
+</span><span class="uncovered1"><a name="line371"></a>371       end
+</span><span class="uncovered0"><a name="line372"></a>372 
+</span><span class="uncovered1"><a name="line373"></a>373       path ||= url.path.sub(%r|/[^/]*|, '')
+</span><span class="uncovered0"><a name="line374"></a>374       domain ||= domainname
+</span><span class="uncovered1"><a name="line375"></a>375       @cookies.synchronize do
+</span><span class="uncovered0"><a name="line376"></a>376         cookie = find_cookie_info(domain, path, name)
+</span><span class="uncovered1"><a name="line377"></a>377         if !cookie
+</span><span class="uncovered0"><a name="line378"></a>378           cookie = WebAgent::Cookie.new()
+</span><span class="uncovered1"><a name="line379"></a>379           cookie.use = true
+</span><span class="uncovered0"><a name="line380"></a>380           @cookies &lt;&lt; cookie
+</span><span class="uncovered1"><a name="line381"></a>381         end
+</span><span class="uncovered0"><a name="line382"></a>382         check_expired_cookies()
+</span><span class="uncovered1"><a name="line383"></a>383       end
+</span><span class="uncovered0"><a name="line384"></a>384 
+</span><span class="uncovered1"><a name="line385"></a>385       cookie.url = url
+</span><span class="uncovered0"><a name="line386"></a>386       cookie.name = name
+</span><span class="uncovered1"><a name="line387"></a>387       cookie.value = value
+</span><span class="uncovered0"><a name="line388"></a>388       cookie.expires = expires
+</span><span class="uncovered1"><a name="line389"></a>389       cookie.domain = domain
+</span><span class="uncovered0"><a name="line390"></a>390       cookie.path = path
+</span><span class="uncovered1"><a name="line391"></a>391 
+</span><span class="uncovered0"><a name="line392"></a>392       ## for flag
+</span><span class="uncovered1"><a name="line393"></a>393       cookie.secure = secure
+</span><span class="uncovered0"><a name="line394"></a>394       cookie.domain_orig = domain_orig
+</span><span class="uncovered1"><a name="line395"></a>395       cookie.path_orig = path_orig
+</span><span class="uncovered0"><a name="line396"></a>396       if discard || cookie.expires == nil
+</span><span class="uncovered1"><a name="line397"></a>397 	cookie.discard = true
+</span><span class="uncovered0"><a name="line398"></a>398       else
+</span><span class="uncovered1"><a name="line399"></a>399 	cookie.discard = false
+</span><span class="uncovered0"><a name="line400"></a>400 	@is_saved = false
+</span><span class="uncovered1"><a name="line401"></a>401       end
+</span><span class="uncovered0"><a name="line402"></a>402     end
+</span><span class="inferred1"><a name="line403"></a>403 
+</span><span class="marked0"><a name="line404"></a>404     def load_cookies()
+</span><span class="uncovered1"><a name="line405"></a>405       return if !File.readable?(@cookies_file)
+</span><span class="uncovered0"><a name="line406"></a>406       @cookies.synchronize do
+</span><span class="uncovered1"><a name="line407"></a>407         @cookies.clear
+</span><span class="uncovered0"><a name="line408"></a>408         File.open(@cookies_file,'r'){|f|
+</span><span class="uncovered1"><a name="line409"></a>409           while line = f.gets
+</span><span class="uncovered0"><a name="line410"></a>410             cookie = WebAgent::Cookie.new()
+</span><span class="uncovered1"><a name="line411"></a>411             @cookies &lt;&lt; cookie
+</span><span class="uncovered0"><a name="line412"></a>412             col = line.chomp.split(/\t/)
+</span><span class="uncovered1"><a name="line413"></a>413             cookie.url = URI.parse(col[0])
+</span><span class="uncovered0"><a name="line414"></a>414             cookie.name = col[1]
+</span><span class="uncovered1"><a name="line415"></a>415             cookie.value = col[2]
+</span><span class="uncovered0"><a name="line416"></a>416             if col[3].empty? or col[3] == '0'
+</span><span class="uncovered1"><a name="line417"></a>417               cookie.expires = nil
+</span><span class="uncovered0"><a name="line418"></a>418             else
+</span><span class="uncovered1"><a name="line419"></a>419               cookie.expires = Time.at(col[3].to_i).gmtime
+</span><span class="uncovered0"><a name="line420"></a>420             end
+</span><span class="uncovered1"><a name="line421"></a>421             cookie.domain = col[4]
+</span><span class="uncovered0"><a name="line422"></a>422             cookie.path = col[5]
+</span><span class="uncovered1"><a name="line423"></a>423             cookie.set_flag(col[6])
+</span><span class="uncovered0"><a name="line424"></a>424           end
+</span><span class="uncovered1"><a name="line425"></a>425         }
+</span><span class="uncovered0"><a name="line426"></a>426       end
+</span><span class="uncovered1"><a name="line427"></a>427     end
+</span><span class="inferred0"><a name="line428"></a>428 
+</span><span class="marked1"><a name="line429"></a>429     def check_cookie_accept_domain(domain)
+</span><span class="uncovered0"><a name="line430"></a>430       unless domain
+</span><span class="uncovered1"><a name="line431"></a>431 	return false
+</span><span class="uncovered0"><a name="line432"></a>432       end
+</span><span class="uncovered1"><a name="line433"></a>433       @accept_domains.each{|dom|
+</span><span class="uncovered0"><a name="line434"></a>434 	if domain_match(domain, dom)
+</span><span class="uncovered1"><a name="line435"></a>435 	  return true
+</span><span class="uncovered0"><a name="line436"></a>436 	end
+</span><span class="uncovered1"><a name="line437"></a>437       }
+</span><span class="uncovered0"><a name="line438"></a>438       @reject_domains.each{|dom|
+</span><span class="uncovered1"><a name="line439"></a>439 	if domain_match(domain, dom)
+</span><span class="uncovered0"><a name="line440"></a>440 	  return false
+</span><span class="uncovered1"><a name="line441"></a>441 	end
+</span><span class="uncovered0"><a name="line442"></a>442       }
+</span><span class="uncovered1"><a name="line443"></a>443       return true
+</span><span class="uncovered0"><a name="line444"></a>444     end
+</span><span class="uncovered1"><a name="line445"></a>445   end
+</span><span class="uncovered0"><a name="line446"></a>446 end
+</span><span class="inferred1"><a name="line447"></a>447 
+</span><span class="inferred0"><a name="line448"></a>448 __END__
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.2.1.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

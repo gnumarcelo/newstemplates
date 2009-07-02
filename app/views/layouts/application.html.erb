@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title><%= @controller.controller_name %></title>
+  
+    <!-- Blueprint Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print"> 
+    <!--[if IE]>
+      <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    
+    <%= javascript_include_tag :defaults %>
+    <%= active_scaffold_includes %>
+    
+    <script type="text/javascript" src="http://bloxham.ie/imagemanager/js/mcimagemanager.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="span-24">
+        <a href="/">Home</a> &bull;
+        <a href="/articles">Write or Edit Articles</a> &bull;
+        <a href="/editions">Editions</a> &bull;
+        <a href='/search'>Search</a>
+    </div>
+    <br /><br />
+    <div class="span-24">
+        <p style="color: green"><%= flash[:notice] %></p>
+        <p style="color: red"><%= flash[:warning] %></p>
+        <%= yield %>
+    </div>
+    <div class="span-24">
+        <h4>Article Formatting Codes</h4>
+        <ul>
+            <li><code>* bullet point</code> (make sure you place a space after the asterisk)</li>
+            <li>to make text <b>bold</b> surround it with asterisks <code>*bold text*</code></li>
+            <li>to include an image, surround the image URL with exclamation marks <code>!http://farm3.static.flickr.com/2443/3615598587_25823176e5_m.jpg!</code></li>
+            <li>Comprehensive textile references <a href="http://redcloth.org/textile" target="_blank">Red Cloth Textile Reference</a> <a href="http://hobix.com/textile/quick.html" target="_blank">hobix quick</a> <a href="http://hobix.com/textile/" target="_blank">hobix full</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

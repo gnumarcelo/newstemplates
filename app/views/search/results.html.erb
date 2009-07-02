@@ -1,0 +1,10 @@
+<table>
+    <tr><th>Title</th><th>Edition</th><th>Excerpt</th></tr>
+<% @search.each do |s| -%>
+<tr>
+    <td><%= s.title %></td><td><%= link_to s.edition.to_label, :controller => 'preview', :action => 'index', :id => s.edition.id, :view => 'preview' %></td><td><%= link_to s.content, :controller => 'articles', :action => 'source', :id => s.id %></td>
+</tr>
+<% end -%>
+</table>
+
+<p><%= link_to 'Search Again', :action => 'index' %></p>
